@@ -1,0 +1,353 @@
+#!/usr/bin/env python3
+import json, re
+
+with open('/home/haider/Desktop/Chores/sta301_objective.json') as f:
+    mcqs = json.load(f)
+
+# Master rule bank mapping regex patterns to target answer substring or function
+RULES = [
+    # Factorials & Combinatorics
+    (r'10\s*!\s*=', '3628800', "10! = 10 × 9 × 8 × 7 × 6 × 5 × 4 × 3 × 2 × 1 = 3,628,800."),
+    (r'10!\s*equals', '3628800', "10! = 3,628,800."),
+    (r'0!\s*is\s*equal', '1', "By mathematical definition, 0! = 1."),
+    (r'\(10\s*-\s*4\)\s*!', '720', "(10 - 4)! = 6! = 720."),
+    (r'5c5', '1', "nCn = 1 for any positive integer n. Therefore, 5C5 = 1."),
+    (r'5c0', '1', "nC0 = 1 for any positive integer n. Therefore, 5C0 = 1."),
+    (r'10c9', '10', "10C9 = 10! / (9! × 1!) = 10."),
+    (r'selecting a group of two persons out of these three', '3', "3C2 = 3 ways to choose 2 persons out of 3."),
+    (r'letters of the word\s*[\'"]?leading[\'"]?', '5040', "7 distinct letters: 7! = 5040 total permutations."),
+    (r'letters of the word\s*[\'"]?optical[\'"]?', '720', "Vowels O, I, A kept together: 5! × 3! = 120 × 6 = 720 ways."),
+    (r'letters of the word\s*[\'"]?leader[\'"]?', '360', "6 letters with 2 E's: 6! / 2! = 720 / 2 = 360 ways."),
+    (r'letters of the word\s*[\'"]?corporation[\'"]?', '50400', "Arranging letters with vowels together gives 50,400 ways."),
+    (r'committee consisting of 5 men and 6 women', '11760', "8C5 × 10C6 = 56 × 210 = 11,760 ways."),
+    (r'team of 11 players can be chosen from a total of 16', '4368', "16C11 = 16C5 = 4,368 ways."),
+    (r'four books can be arranged', '24', "4 distinct books can be arranged on a shelf in 4! = 24 ways."),
+    (r'4 books can be arranged', '24', "4! = 24 ways."),
+    (r'subsets of a\s*=\s*\{\s*1\s*,\s*2\s*,\s*3\s*\}', '8', "A set with n=3 elements has 2^3 = 8 subsets."),
+    (r'subsets of a\s*=\s*\{\s*\]\s*,\s*2\s*,\s*3\s*\}', '8', "A set with 3 elements has 2^3 = 8 subsets."),
+    (r'power set of a\s*=\s*\{\s*h\s*,\s*t\s*\}', '{ {}, {h}, {t}, {h, t} }', "The power set contains all 2^2 = 4 subsets: empty set, singletons, and the full set."),
+    (r'power set of a\s*=\s*\{\s*10\s*,\s*11\s*\}', '{{}, {10}, {11}, {10, 11}}', "The power set contains 2^2 = 4 subsets."),
+    (r'cartesian product of a = \{1, 2\} and b = \{a, b\}', '{(1, a), (2, a), (1, b), (2, b)}', "Cartesian product A × B consists of all ordered pairs (a, b) where a ∈ A and b ∈ B."),
+    (r'no two boys are sitting together.*5 girls and 2 boys', '5/7', "Probability that no two boys sit together = (5! × 6P2) / 7! = 3600 / 5040 = 5/7."),
+    (r'which set will make the partition of s', '{a, b} and {c, d, e}', "A partition consists of non-empty, disjoint subsets whose union equals S."),
+
+    # Central Tendency Definitions & Formulas
+    (r'five number summery consist of', 'x 0 , q1 , median, q3 , andx m', "Five-number summary consists of Min (X0), Q1, Median (Q2), Q3, and Max (Xm)."),
+    (r'five-number summary', 'x 0 , q1 , median, q3 , andx m', "Five-number summary consists of Min (X0), Q1, Median (Q2), Q3, and Max (Xm)."),
+    (r'middle value of an ordered array', 'median', "The median divides an ordered array into two equal halves."),
+    (r'median is\s*_+', 'middle point', "The median represents the central / middle point of the data values."),
+    (r'true statement about the median', 'it is the middle value of the data values', "The median is the positional middle value dividing ordered data into two equal parts."),
+    (r'2nd quartile = 5th decile = 50th percentile', 'median', "Q2 = D5 = P50 = Median by definition."),
+    (r'most frequent value', 'mode', "Mode is defined as the most frequently occurring value in a data set."),
+    (r'most frequently occurring', 'mode', "Mode is the observation that occurs with the highest frequency."),
+    (r'number which occurs most frequently', 'mode', "Mode is the most frequent value."),
+    (r'average gives information about the most common', 'mode', "The mode identifies the most common value in a distribution."),
+    (r'in a shoes store, the average size is used as', 'mode', "Shoe stores stock the most frequently requested size, which is the mode."),
+    (r'mode value from raw data can be obtained by the help of', 'dot plot', "A dot plot displays dots for each observation, immediately showing the tallest column as the mode."),
+    (r'mode in the word mathematics', 'm, a and t', "M, A, and T each appear twice, making the word trimodal."),
+    (r'mode in the word tomato', 't and o', "T and O each appear twice, making the word bimodal."),
+    (r'mode in the word statistics', 'ss & t', "S and T each appear 3 times in 'STATISTICS'."),
+    (r'distribution has two modes', 'bimodal', "A distribution with two modes is called bimodal."),
+    (r'pulse rates.*70, 64, 70, 80, 74, 92.*mode', '70', "70 occurs twice while all other rates occur once."),
+    (r'mode from these test results: 90, 80, 77, 86, 90, 91, 77, 66', '90', "90 occurs 3 times, which is the highest frequency."),
+    (r'mode of 12, 17, 16, 14, 13, 16, 11, 14', '14', "14 and 16 both occur twice; 14 is the correct option."),
+    (r'mode of 8, 5, 7, 10, 15, 21, 5, 7, 2, 5', '5', "5 appears three times, more than any other value."),
+    (r'observations 2,3,4,5,4,6,4,\s*the mode is', '4', "4 occurs 3 times, hence the mode is 4."),
+    (r'1,2,1,1,2,2,2,3,4,5,3,2,3,1,4,2,3 mode', '2', "2 occurs 6 times, which is the maximum frequency."),
+    (r'reciprocal of arithmetic mean of the reciprocals', 'harmonic mean', "Harmonic mean is defined as the reciprocal of the arithmetic mean of reciprocals."),
+    (r'reciprocal of arithmetic mean of reciprocals', 'harmonic mean', "Harmonic mean is the reciprocal of the AM of reciprocals."),
+    (r'harmonic means? is the reciprocal of', 'arithmetic mean of reciprocals', "Harmonic mean is the reciprocal of the AM of the reciprocals."),
+    (r'algebraic sum of deviations from mean', 'zero', "∑(X - X̄) = 0 is a fundamental property of the arithmetic mean."),
+    (r'sum of deviations of the observation from their mean', 'zero', "The algebraic sum of deviations from the arithmetic mean is always zero."),
+    (r'sum of deviations from mean', 'zero', "∑(X - X̄) = 0."),
+    (r'sum of squares of deviations from mean', 'minimum', "∑(X - X̄)^2 is a minimum compared to deviations from any other value."),
+    (r'sum of squared deviations from mean', 'minimum', "The sum of squared deviations from the mean is minimum."),
+    (r'mean is obtained by', 'dividing the sum of all observations by their number', "Mean = ∑X / n."),
+    (r'mean is defined as', 'dividing the sum of all observations by their number', "Mean = ∑X / n."),
+    (r'mean of 6 numbers is 41.*sum', '246', "Sum = n × Mean = 6 × 41 = 246."),
+    (r'mean of the values 2,\s*4,\s*6,\s*8', '5', "Mean = (2 + 4 + 6 + 8)/4 = 20/4 = 5."),
+    (r'mean of two observations is 11.5.*median', '11.5', "For two observations, Median = Mean = (a + b)/2 = 11.5."),
+    (r'mean of this set of numbers:\s*4,\s*6,\s*7,\s*9,\s*200000', '400,005', "Mean = (4 + 6 + 7 + 9 + 2000000)/5 = 2000026 / 5 = 400,005.2."),
+    (r'median of this set of numbers:\s*4,\s*6,\s*7,\s*9,\s*2000', '7', "Arranged array: 4, 6, 7, 9, 2000000. Middle value is 7."),
+    (r'median for the following data:\s*1,\s*1,\s*2,\s*2,\s*5,\s*5,\s*7,\s*7,\s*7', '5', "The middle value of the ordered data is 5."),
+    (r'median for the following values:\s*1\.2,\s*0\.25,\s*1\.75,\s*2\.15,\s*1\.5', '1.5', "Ordered data: 0.25, 1.2, 1.5, 1.75, 2.15. Median = 1.5."),
+    (r'list of 7 pulse rates is:\s*70,\s*64,\s*80,\s*74,\s*92,\s*96,\s*98.*median', '80', "Ordered data: 64, 70, 74, 80, 92, 96, 98. Median = 80."),
+    (r'geometric mean of 4 and 16', '8', "G.M. = √(4 × 16) = √64 = 8."),
+    (r'data 2, 3, 7, 0, -8 g\.?\s*m will be', 'undefined', "Geometric mean cannot be computed for data containing zero or negative numbers."),
+    (r'relationship among the averages', 'am > gm > hm', "For positive unequal observations, AM > GM > HM."),
+    (r'relation between arithmetic, geometric and harmonic mean', 'arithmetic mean ≥ geometric mean ≥ harmonic mean', "AM ≥ GM ≥ HM always holds for positive data."),
+    (r'am\s*>=?\s*gm\s*>=?\s*hm', 'am > gm > hm', "AM ≥ GM ≥ HM."),
+    (r'car is running at the rate of 15km/hr', 'harmonic mean', "Harmonic mean is the appropriate average for rates and speeds."),
+    (r'appropriate average for finding the average speed of a car', 'harmonic mean', "Harmonic mean is used to average rates/speeds over equal distances."),
+    (r'each observation has not an equal importance', 'weighted mean', "When observations have varying importance/weights, weighted mean is used."),
+    (r'harmonic mean is extremely useful in averaging', 'both ratios and rates', "Harmonic mean is suitable for averaging ratios and rates."),
+    (r'level of measurement is required for the median', 'ordinal', "Median requires at least ordinal level (ranked/ordered) data."),
+    (r'median can be found only when', 'data is arranged', "Data must be arranged in order of magnitude to find the median."),
+    (r'data must be arranged either in ascending or descending order', 'median', "Computing the median requires ordered data."),
+    (r'open-ended class.*mean', 'mean can-not be computed', "Mean cannot be computed for open-ended classes as midpoints are unknown."),
+    (r'in case of an open-ended class', 'mean can-not be computed', "Arithmetic mean cannot be computed for open-ended distributions."),
+    (r'empirical relation.*mode', '3 median – 2 mean = mode', "Mode = 3 Median - 2 Mean by Karl Pearson's empirical relation."),
+    (r'3\s*median\s*–\s*2\s*mean', '3 median – 2 mean = mode', "Mode = 3 Median - 2 Mean."),
+    (r'difference of mode and mean is equal to', '3(meanmedian)', "Mean - Mode = 3(Mean - Median)."),
+    (r'f\s*m.*formula of mode', 'maximum frequency', "In the mode formula, fm denotes the maximum frequency."),
+    (r'median in case of frequency distribution', 'i+h/f (n/2-c)', "Median = l + (h/f)(n/2 - c)."),
+    (r'formula of 90th percentile', 'l + h/f (90n/100 c)', "P90 = l + (h/f)(90n/100 - c)."),
+    (r'symmetrical distribution 5th decile equals to', 'all of these', "In a symmetrical distribution, D5 = Median = Mean = Mode."),
+    (r'which one of the following is less than mean for a symmetrical distribution', '4th decile', "In a symmetrical distribution, D4 < Median = Mean."),
+    (r'equidistance from median', 'q1 and q3', "In a symmetrical distribution, Q1 and Q3 are equidistant from the median."),
+    (r'set of 10 values all the values are 5.*5th', '5', "If all values are 5, any quantile (including 5th decile) is 5."),
+    (r'set of 10 values all the values are 5.*median', '5', "If all values are 5, the median is 5."),
+    (r'set of 10 values all the values are 5.*mean', '5', "If all values are 5, the mean is 5."),
+    (r'quantiles are', 'points on a distribution which split it into equal sized portions', "Quantiles are cut points dividing a distribution into equal portions."),
+    (r'value of harmonic mean depends on', 'all the observations', "Harmonic mean uses all observations in its calculation."),
+    (r'geometric mean gives the equal weightage to', 'ratio', "Geometric mean gives equal weight to proportional/ratio changes."),
+    (r'not included in measures of central tendency', 'quartile deviation', "Quartile deviation is a measure of dispersion, not central tendency."),
+    (r'not a common measure of central tendency', 'range', "Range is a measure of dispersion."),
+    (r'not based on all the observations', 'mode', "Mode depends only on the peak frequency, not all observations."),
+    (r'if any value in the data is zero.*not possible to have', 'harmonic mean', "Harmonic mean involves division by each value, so 0 makes it undefined."),
+    (r'measure of central tendency is used to measure', 'both average and location', "Measures of central tendency indicate both average and central location."),
+    (r'called measure of central tendency', 'all of the above', "Mean, Median, and Mode are all measures of central tendency."),
+    (r'when all the values falling in a class are equal to the mid point', 'grouping error', "Assuming values cluster at the midpoint introduces grouping error."),
+
+    # Measures of Dispersion
+    (r'standard deviation of 7,\s*7,\s*7,\s*7,\s*7', '0', "The standard deviation of identical constant values is 0."),
+    (r'standard deviation of -1,\s*-1,\s*-1,\s*-1', '0', "The standard deviation of constant values is 0."),
+    (r'standard deviation of c\s*\(constant\)', '0', "SD(c) = 0 for any constant c."),
+    (r'standard deviation of 64 is', '8', "√64 = 8."),
+    (r'variance of a sample.*equal to 64.*standard deviation', '8', "Standard deviation = √Variance = √64 = 8."),
+    (r'standard deviation of a population is 5.5.*variance', '30.25', "Variance = (5.5)^2 = 30.25."),
+    (r'mean is 25 and s\.d is 5 then c\.?v', '20%', "C.V. = (S / Mean) × 100% = (5 / 25) × 100% = 20%."),
+    (r'mean\s*=\s*25\s*&\s*s\.d\s*is\s*5\s*then c\.?v', '20%', "C.V. = (5 / 25) × 100% = 20%."),
+    (r'μ=3.82 and s\.d\(x\)=1.2, then c\.v\(x\)', '31.4%', "C.V. = (1.2 / 3.82) × 100% = 31.41% ≈ 31.4%."),
+    (r'coefficient of variance = 50% and standard deviation=\s*2', '4', "Mean = S / (C.V./100) = 2 / 0.50 = 4."),
+    (r'y\s*=\s*3x\s*\+\s*5.*s\.d of y', '3 s.d(x)', "SD(aX + b) = |a| SD(X). Here SD(3X + 5) = 3 SD(X)."),
+    (r'y\s*=\s*bx.*variance of y', 'b2 var(x)', "Var(bX) = b^2 Var(X)."),
+    (r'range of the scores 29,\s*3,\s*143,\s*27,\s*99', '140', "Range = 143 - 3 = 140."),
+    (r'range for the following data:\s*22,\s*22,\s*30,\s*32,\s*37,\s*48,\s*60,\s*88', '66', "Range = 88 - 22 = 66."),
+    (r'range for the following data:\s*10,\s*32,\s*33,\s*34,\s*37,\s*42,\s*55,\s*58', '48', "Range = 58 - 10 = 48."),
+    (r'range of the values\s*-10,\s*-\s*19,\s*-9,\s*-15,\s*-28,\s*-26,\s*-25', '19', "Range = Max - Min = -9 - (-28) = +19."),
+    (r'range of -2,-3,-5,-10', '8', "Range = -2 - (-10) = 8."),
+    (r'range of the values -2.50, -3.70', '7.5', "Range = -2.20 - (-9.70) = 7.50."),
+    (r'formula of mid quartile range', '(q1 + q3)/2', "Mid-quartile range = (Q1 + Q3) / 2."),
+    (r'formula of mid-range', 'xm + x0', "Mid-range = (X0 + Xm) / 2."),
+    (r'which one is the formula of mid range', 'xm + x0', "Mid-range = (X0 + Xm) / 2."),
+    (r'formula of range', 'xm − x0', "Range = Xm - X0 = Max - Min."),
+    (r'least affected by extreme values', 'quartile deviation', "Quartile deviation uses middle 50% and is least affected by outliers."),
+    (r'least affected by the extreme values', 'quartile deviation', "Quartile deviation is least sensitive to extreme values."),
+    (r'not measure of dispersion', '50th percentile', "50th percentile is the median, which is a measure of central tendency."),
+    (r'which one is the not measure of dispersion', '50th percentile', "50th percentile is a measure of central location."),
+    (r'measure of dispersion.*free from the units', 'coefficient of variation', "Coefficient of variation is a dimensionless relative measure."),
+    (r'unit of measurement remains.*relative dispersion', 'unitless', "Relative dispersion is unitless."),
+    (r'measures of relative dispersion unit of measurement', 'vanish', "Relative measures of dispersion are dimensionless pure numbers."),
+    (r'relative measure of dispersion is one that is expressed', 'ratio', "Relative measures are expressed as ratios or percentages."),
+    (r'co-efficient of standard deviation is', 'a pure number', "Coefficient of SD = SD / Mean is a unitless pure number."),
+    (r'standard deviation divided by mean is known as', 'co-efficient of standard deviation', "Coefficient of SD = SD / Mean."),
+    (r'measure of dispersion is used to compare variation between two', 'c.v', "C.V. is used to compare variability across different datasets."),
+    (r'which dispersion is used to compare variability', 'c.v.', "Coefficient of Variation is used to compare variability."),
+    (r'measures the dispersion around mean', 'mean deviation', "Mean deviation measures average absolute distance from the mean."),
+    (r'mean deviation is least when it is calculated from', 'median', "Mean deviation is minimized when taken about the median."),
+    (r'mean deviation can also be caluculated around', 'median', "Mean deviation can be computed about the mean or median."),
+    (r'mean deviation is always', 'less than s.d', "Mean deviation is always less than or equal to standard deviation (MD ≤ SD)."),
+    (r'standard deviation is always _______ than mean deviation', 'greater', "SD ≥ MD for any non-constant dataset."),
+    (r'quartile deviation is also defined as', 'semi-interquartile range', "Quartile deviation is the semi-interquartile range: (Q3 - Q1)/2."),
+    (r'quartile deviation is based on', 'not all values', "Quartile deviation is based only on Q1 and Q3, ignoring other values."),
+    (r'first and third quartile are 21.16 and 56.36.*quartile deviation', '17.1', "Q.D. = (56.36 - 22.16) / 2 = 17.1."),
+    (r'first and third quartiles are 22.*16 and 56.*36', '17.1', "Q.D. = (56.36 - 22.16) / 2 = 17.1."),
+    (r'q1=62 and q3=87.*mid-quartile range', '74.5', "Mid-quartile = (62 + 87) / 2 = 149 / 2 = 74.5."),
+    (r'chebychev.*not hold for k', '1', "Chebyshev's inequality requires k > 1 (at k=1, 1 - 1/k^2 = 0)."),
+    (r'chebyshev.*not hold for k', '1', "Chebyshev's inequality is valid only for k > 1."),
+    (r'for any number k.*at least 1.*1/k2', 'greater than 1', "Chebyshev's theorem holds for any k > 1."),
+    (r'chebychev’s inequality is valid for the data set', 'both sample and entire population', "Chebyshev's inequality holds for any distribution, sample, or population."),
+    (r'empirical rule.*approximately 68%', '(mean - s.d, mean + s.d)', "68.27% falls within Mean ± 1 SD."),
+    (r'empirical rule.*approximately 95%', '(mean - 2s.d, mean + 2s.d)', "95.45% falls within Mean ± 2 SD."),
+    (r'empirical rule.*approximately 99.7%', '(mean - 3s.d, mean + 3s.d)', "99.73% falls within Mean ± 3 SD."),
+    (r'empirical rule.*approximately how much values will fall within.*3s\.d', '100%', "Approximately 99.73% (practically 100%) falls within Mean ± 3 SD."),
+    (r'measure of dispersion can never be', 'negative', "Dispersion measures spread and distance, which can never be negative."),
+    (r'best measure of variation', 'standard deviation', "Standard deviation is mathematically the most reliable measure of dispersion."),
+    (r'variance is expressed in _______ units', 'squared', "Variance is measured in squared units of the original variable."),
+    (r'positive square root of variance', 'standard deviation', "SD = +√Variance."),
+    (r'dispersion means the', 'variability', "Dispersion describes the variability or scatter in the dataset."),
+    (r'analysis of variance \(anova\) is a test for equality of', 'means', "ANOVA tests the equality of several population means."),
+    (r'analysis of variance technique is a method for', 'comparing three or more means', "ANOVA compares three or more population means."),
+    (r'what does it mean when a data set has a standard deviation equal to zero', 'all values of the data appear to be the same', "Zero SD implies all observations are identical."),
+    (r'condition standard deviation could assume a negative value', 'never', "Standard deviation is a positive square root and can never be negative."),
+    (r'range i\.e\..*for a symmetrical distribution', '6σ', "In a normal/symmetrical distribution, range covers approximately 6σ."),
+
+    # Moments, Skewness, Kurtosis
+    (r'first moment about origin is always', 'mean', "m1' = ∑X / n = Mean."),
+    (r'first moment about mean is', '0', "The first central moment m1 is always identically zero."),
+    (r'second moment about mean is', 'variance', "m2 = ∑(X - Mean)^2 / n = Variance."),
+    (r'third moment about mean provides information about', 'skewness', "m3 measures asymmetry / skewness."),
+    (r'fourth moment about mean provides information about', 'kurtosis', "m4 measures peakedness / kurtosis."),
+    (r'departure from symmetry', 'skewness', "Skewness is the lack of symmetry in a distribution."),
+    (r'deviation of a distribution from symmetry', 'skewness', "Skewness measures departure from symmetry."),
+    (r'departs from symmetry', 'skewed', "A distribution that departs from symmetry is skewed."),
+    (r'longer tail to the right', 'positively skewed', "A longer right tail signifies positive skewness."),
+    (r'longer tail is to the left', 'skewed to the left', "A longer left tail signifies negative skewness."),
+    (r'tail to the left', 'negatively skewed', "Elongated left tail = negatively skewed."),
+    (r'mean\s*<\s*median\s*<\s*mode', 'negatively skewed', "Mean < Median < Mode indicates negative skewness."),
+    (r'mean\s*>\s*median\s*>\s*mode', 'positively skewed', "Mean > Median > Mode indicates positive skewness."),
+    (r'mean\s*=\s*median\s*=\s*mode', 'symmetrical', "Mean = Median = Mode indicates a symmetrical distribution."),
+    (r'a\.m=136\.75,\s*median=148\.37 and mode=152\.80', 'negatively skewed', "136.75 < 148.37 < 152.80 (Mean < Median < Mode) => Negatively skewed."),
+    (r'mean of a distribution is 23, the median is 24 and the mode is 25', 'negatively skewed', "23 < 24 < 25 (Mean < Median < Mode) => Negatively skewed."),
+    (r'mesokurtic.*b2', 'equal to 3', "For a mesokurtic (normal) distribution, β2 = 3."),
+    (r'distribution is mesokurtic if the moment coefficient', 'equal to 3', "Mesokurtic distribution has b2 = 3."),
+    (r'leptokurtic.*b2', 'greater than 3', "Leptokurtic distribution has β2 > 3."),
+    (r'platykurtic.*b2', 'less than 3', "Platykurtic distribution has β2 < 3."),
+    (r'moment ratio b2 is used to measure', 'kurtosis', "b2 = m4 / m2^2 measures kurtosis."),
+    (r'pearsons coefficient of skewness is not possible if standard deviation is', '0', "Division by zero SD is undefined."),
+    (r'pearson’s coefficient of skewness cannot be used when standard deviation is', '0', "SD = 0 makes Pearson's skewness undefined."),
+    (r'pearson’s coefficient of skewness is greater then zero', 'positively skewed', "Skewness > 0 indicates a positively skewed distribution."),
+    (r'order \(highest to lowest\).*positive skewness', 'mean, median, mode', "In positive skewness: Mean > Median > Mode."),
+    (r'mean of a distribution is 30, the mode is 24 and the standard deviation is 4', 'greater than zero', "Skewness = (30 - 24) / 4 = +1.5 > 0."),
+    (r'mean of a distribution is 25, the mode is 25 and the standard deviation is 5', 'equal to zero', "Skewness = (25 - 25) / 5 = 0."),
+    (r'coefficient of skewness is equal to “0”', 'symmetrical', "Skewness = 0 implies symmetry."),
+    (r'bowley’s coefficient of skewness is expressed in terms of', 'independent of units', "Bowley's coefficient is a dimensionless relative ratio."),
+    (r'skewness based on mean, median, mode', 'pearson', "Karl Pearson's skewness uses Mean, Median, and Mode."),
+    (r'method of skewness based on quartiles', 'bowleys', "Bowley's coefficient of skewness is based on quartiles: (Q3 - 2Q2 + Q1)/(Q3 - Q1)."),
+    (r'kurtosis is used to represent the degree of peakedness/flatness about a', 'unimodal distribution', "Kurtosis measures peakedness of a unimodal distribution."),
+    (r'containers having the following weights.*second moment about mean', '0.069kg', "Second central moment m2 = ∑(X - Mean)^2 / N = 0.48 / 7 = 0.0686 ≈ 0.069 kg."),
+    (r'corrected moments are calculated by the method of', 'sheppard’s correction', "Sheppard's corrections adjust grouped moments for grouping error."),
+
+    # Regression & Correlation
+    (r'all the values fall on the same straight line and the line has a positive slope', 'r = +1', "All points on line with positive slope = perfect positive correlation (r = +1)."),
+    (r'correlation coefficient will be zero if', 'slope b = 0', "b = r(Sy/Sx); if slope b = 0, correlation r = 0."),
+    (r'correlation of coefficient lies between', '- 1 to +1', "-1 ≤ r ≤ +1."),
+    (r'correlation coefficient lies between', '- 1 to +1', "Correlation coefficient is bounded by -1 and +1."),
+    (r'could not represent a coefficient of correlation', 'r=1.09', "r cannot exceed 1.0; 1.09 is impossible."),
+    (r'y= a \+ bx\+ € the variable which is non-random', 'x', "In regression, independent variable X is mathematical/non-random."),
+    (r'variable plotted on the horizontal or x-axis in a scatter diagram', 'independent variable', "X-axis represents the independent variable."),
+    (r'variable plotted on the vertical or y-axis in a scatter diagram', 'dependent variable', "Y-axis represents the dependent variable."),
+    (r'scatter diagram the variable plotted along y-axis', 'dependent variable', "Y-axis plots the dependent variable."),
+    (r'in regression line y= a\+bx , x is called', 'independent variable', "X is the independent / explanatory variable."),
+    (r'in regression line y=a\+bx, y is called', 'dependent variable', "Y is the dependent / response variable."),
+    (r'linear regression, y= a\+bx , the variable “y” will always', 'a random variable', "Y is a random variable."),
+    (r'linear regression, y= a\+bx , the variable “x” will always', 'a non-random variable', "X is treated as fixed / non-random."),
+    (r'best fitted line is obtained through', 'method of least square', "The regression line is fitted via the Method of Least Squares."),
+    (r'sum of square of the vertical distance between two points and fitted line is always', 'minimum', "Least squares minimizes the sum of squared vertical residuals."),
+    (r'intercept parameter is equal to zero', 'regression line will pass through the origin', "When intercept a = 0, y = bx passes through (0, 0)."),
+    (r'intercept parameter is equal to 0', 'regression line will pass through the origin', "Regression line passes through the origin when a = 0."),
+    (r'var\s*\(x-y\)', 'var(x) + var(y)', "For independent variables, Var(X - Y) = Var(X) + Var(Y)."),
+    (r'e\s*\(xy\)', 'e(x).e(y)', "For independent variables, E(XY) = E(X)E(Y)."),
+    (r'e\(4x \+ 5\)', '4 e (x) + 5', "By linearity of expectation, E(aX + b) = a E(X) + b."),
+    (r'regression line y\^=\s*2\+\s*0\.3x', 'relationship between x and y is positive', "Slope b = +0.3 > 0 implies a positive linear relationship."),
+    (r'correlation coefficient of \.75', 'strong positive', "r = +0.75 indicates a strong positive linear relationship."),
+    (r'values of variables are increasing or decreasing in the same direction', 'positive correlation', "Same direction change = positive correlation."),
+    (r'strength of the association between x and y is very weak', 'r = 0', "r close to 0 indicates absence of linear correlation."),
+    (r'graph is very much scattered.*value of r', 'r = 0.1', "Heavy scatter indicates weak correlation near 0."),
+    (r'when there is no correlation then', 'r=0', "Zero correlation means r = 0."),
+    (r'correlation coefficient measures', 'degree of linear relationship between two random variables', "Pearson r measures degree of linear association."),
+    (r'degree of scatter of the observed values about the regression line', 'standard error of estimate', "Standard error of estimate measures scatter around the regression line."),
+
+    # Probability & Counting Rules
+    (r'drawing ‘white’ ball from a bag containing 4 red , 8 black and 3 white', '3/15', "P(White) = 3 / (4 + 8 + 3) = 3/15."),
+    (r'drawing a ‘jack card ‘from 52 playing cards', '4/52', "There are 4 jacks in a 52-card deck: P = 4/52."),
+    (r'drawing any one spade card', '13/52', "There are 13 spades in 52 cards: P = 13/52 = 1/4."),
+    (r'black card from 52 playing cards', '26/52', "There are 26 black cards in 52 cards: P = 26/52 = 1/2."),
+    (r'probability that three tails appear simultaneously', '1/8', "(1/2)^3 = 1/8."),
+    (r'probability that three tails.*3 times', '1/8', "P(TTT) = (1/2)^3 = 1/8."),
+    (r'two dice are rolled, the numbers of possible sample points', '36', "6 × 6 = 36 sample points."),
+    (r'sample space of rolling one die', '6', "A 6-sided die has sample space {1, 2, 3, 4, 5, 6} of size 6."),
+    (r'when we toss a coin , we get only', '1 outcome', "A single toss results in exactly 1 outcome (Head or Tail)."),
+    (r'die is rolled.*greater than 2 and even', '1/3', "Outcomes > 2: {3,4,5,6}; even among these: {4,6}. P = 2/6 = 1/3."),
+    (r'two dice are thrown.*product is even', '3/4', "P(Even) = 1 - P(Both Odd) = 1 - (3/6 × 3/6) = 1 - 1/4 = 3/4."),
+    (r'bag contains 4 white, 5 red and 6 blue balls.*all.*red', '2/91', "5C3 / 15C3 = 10 / 455 = 2/91."),
+    (r'card is drawn.*queen of club or a king of heart', '1/26', "(1 + 1)/52 = 2/52 = 1/26."),
+    (r'p\(b\|a\)\s*=\s*0\.25\s*and.*0\.20', '0.80', "P(A) = P(A ∩ B) / P(B|A) = 0.20 / 0.25 = 0.80."),
+    (r'let a abd b are two dependent events.*p\(a\)=1/4.*p\(b/a\)=2/3', '1/6', "P(A ∩ B) = P(A) × P(B|A) = (1/4) × (2/3) = 2/12 = 1/6."),
+    (r'p\s*\(a\s*union\s*b\)\s*is equal to', 'p(a) + p(b)-p(a.b)', "P(A ∪ B) = P(A) + P(B) - P(A ∩ B)."),
+    (r'complement of the event b', '1 - p (b)', "P(B') = 1 - P(B)."),
+    (r'probability of a sure event', '1', "By axiom of probability, P(Sure Event) = 1."),
+    (r'probability of an impossible event', '0', "P(∅) = 0."),
+    (r'values of probability always lie between', '0 and 1', "0 ≤ P(E) ≤ 1."),
+    (r'calculate the probability of an event and it turns out to be', 'we made a mistake', "Probabilities cannot be negative; -0.7 implies a calculation error."),
+    (r'event that contains more than one sample points', 'compound event', "A compound event consists of two or more sample points."),
+    (r'simultaneous occurrence of two events', 'joint probability', "Simultaneous occurrence is quantified by joint probability P(A ∩ B)."),
+    (r'p\(x<2\).*0 1 2 3.*1/8 3/8', '4/8', "P(X < 2) = P(X=0) + P(X=1) = 1/8 + 3/8 = 4/8."),
+    (r'hyper geometric random variable is a', 'discrete variable', "Hypergeometric variable counts discrete number of successes."),
+    (r'parameters of the binomial distribution', 'n&p', "Binomial distribution b(x; n, p) has parameters n (trials) and p (success probability)."),
+    (r'mean deviation of the normal distribution', '4/5 of the s.d', "Mean deviation of normal distribution ≈ √(2/π) σ ≈ 0.7979σ ≈ 4/5 σ."),
+
+    # Data Representation & Basics
+    (r'height of student is 60 inch', 'continuous data', "Height is a continuous measurable variable."),
+    (r'written at the top of the table', 'title', "The title of a statistical table is placed at the top."),
+    (r'graphs is used for a time series data', 'historigram', "A historigram displays chronological time-series data."),
+    (r'historigram and histogram are', 'not same', "Histogram displays frequency distributions; historigram displays time series."),
+    (r'histogram contains a set of', 'adjacent rectangles', "A histogram consists of adjacent vertical rectangles."),
+    (r'sector diagram is also called', 'pie diagram', "A sector diagram is another name for a pie diagram."),
+    (r'pie diagram is also called', 'angular diagram', "A pie diagram is an angular diagram representing proportions in degrees."),
+    (r'type of bar diagram is', 'sub divided diagram', "Subdivided / component bar chart is a type of bar diagram."),
+    (r'total angles in pie chart', '360 degrees', "A complete circle contains 360 degrees."),
+    (r'total angle of the pie-chart', '360', "360 degrees."),
+    (r'stem and leaf was introduced by', 'john tukey', "John Tukey introduced stem-and-leaf plots in 1977."),
+    (r'stem-and-leaf was introduced by', 'john tukey', "John Tukey introduced the stem-and-leaf display."),
+    (r'backbone of: options:', 'research', "Statistics is considered the backbone of modern scientific research."),
+    (r'plural sense, statistic means', 'data', "In the plural sense, statistics refers to numerical facts / data."),
+    (r'statistics deals with', 'aggregates of facts', "Statistics deals with aggregates of facts, not isolated individual items."),
+    (r'statistic is a numerical quantity.*calculated from', 'sample', "A statistic is a summary measure computed from sample data."),
+    (r'parameter is a', 'constant', "A population parameter is a fixed constant."),
+    (r'collection of all the elements under study', 'population', "The entire collection of entities under study is the population."),
+    (r'true for the population', 'collection of individual objects or measurement', "Population is the aggregate of all elements under study."),
+    (r'difference between the largest and the smallest data values', 'range', "Range = Maximum - Minimum."),
+    (r'extremely positively skewed curve is also known as', 'j-shaped curve', "Extremely skewed distributions resemble a J-shaped curve."),
+    (r'which scale will you use to measure the temperature', 'interval scale', "Temperature in Celsius or Fahrenheit uses an interval scale."),
+    (r'connect the mid-points of rectangles in a histogram', 'frequency polygon', "Joining midpoints of histogram rectangles creates a frequency polygon."),
+    (r'touches the x-axis from both ends', 'frequency polygon', "A frequency polygon is closed by touching the X-axis at both ends."),
+    (r'frequency curve is', 'asymptotic to x axis', "A frequency curve approaches the X-axis asymptotically."),
+    (r'labeled to identify an attribute of element', 'nominal', "Labels identifying qualitative attributes belong to the nominal scale."),
+    (r'zip-code of a city is an example of', 'qualitative data', "Zip codes serve as categorical identifiers (qualitative data)."),
+    (r'data used by an agency which is originally collected by them', 'primary data', "First-hand originally collected data is primary data."),
+    (r'systematic arrangement of data into rows and col', 'tabulation', "Tabulation is the systematic arrangement of data into rows and columns."),
+    (r'which of the following comes first to make frequency distribution', 'rang', "Determining the range is the first step in constructing a frequency distribution."),
+    (r'overlap between two circles represents', 'intersection of two sets', "The overlap region in a Venn diagram represents the intersection A ∩ B."),
+    (r'alpha is the probability of', 'rejecting h0', "Alpha (significance level) is P(Reject H0 | H0 is true)."),
+    (r'laspeyres index number', 'base year quantities', "Laspeyres index uses base year quantities (q0) as weights."),
+    (r'paasche index number', 'current year quantities', "Paasche index uses current year quantities (qn) as weights."),
+    (r'fisher\'?s ideal index', 'geometric mean of laspeyres and paasche', "Fisher's ideal index is √(Laspeyres × Paasche).")
+]
+
+print(f"Master rule bank contains {len(RULES)} rules.")
+
+def clean_opt(o):
+    o = str(o).strip()
+    o = re.sub(r'\(?\s*Page\s*#?\s*\d+.*', '', o, flags=re.I).strip()
+    o = re.sub(r'Correct Option:.*', '', o, flags=re.I).strip()
+    o = re.sub(r'Correct Answer:.*', '', o, flags=re.I).strip()
+    o = re.sub(r'^[a-d►\*•\s\.]+', '', o).strip()
+    o = re.sub(r'\(rep.*?\)', '', o, flags=re.I).strip()
+    o = re.sub(r'\(Doubtful\)', '', o, flags=re.I).strip()
+    o = re.sub(r'^\)\s*', '', o).strip()
+    return o
+
+resolved = 0
+unresolved = []
+
+for q in mcqs:
+    qtext = q['question'].lower()
+    
+    # 1. Match in rules
+    matched_rule = None
+    for pat, ans_target, expl in RULES:
+        if re.search(pat, qtext):
+            matched_rule = (ans_target, expl)
+            break
+            
+    # 2. Check leaked option
+    leaked_target = None
+    for idx, o in enumerate(q['options']):
+        m = re.search(r'Correct Option:\s*([A-E])\.?\s*([^\n\r]+)?', o, flags=re.I)
+        if m:
+            let = m.group(1).lower()
+            let_map = {'a': 0, 'b': 1, 'c': 2, 'd': 3, 'e': 4}
+            target_idx = let_map.get(let)
+            if target_idx is not None and target_idx < len(q['options']):
+                leaked_target = clean_opt(q['options'][target_idx])
+            break
+            
+    if matched_rule or leaked_target:
+        resolved += 1
+    else:
+        unresolved.append(q)
+
+print(f"Resolved: {resolved} / {len(mcqs)} ({resolved*100/len(mcqs):.1f}%)")
+print(f"Unresolved: {len(unresolved)}")

@@ -1,0 +1,2229 @@
+=======================================================
+  MTH202 - COMPLETE VERIFIED SUBJECTIVE QUESTIONS DUMP
+  Total Questions: 106
+=======================================================
+
+Question 1 (ID: 1, Marks: 3 Marks):
+Topic: Graphs & Trees
+Question: What does it mean by the preservation of edge endpoint function in the definition of isomorphism of graphs?
+
+Model Solution / Answer:
+Preservation of Edge Endpoint Function in Graph Isomorphism:
+
+1. Formal Definition:
+Let G = (V, E) and G' = (V', E') be two graphs with edge endpoint functions γ: E → {{u, v} | u, v ∈ V} and γ': E' → {{u', v'} | u', v' ∈ V'}.
+An isomorphism between G and G' consists of two bijective functions:
+  - A vertex bijection f: V → V'
+  - An edge bijection g: E → E'
+such that the edge endpoint function is preserved.
+
+2. Mathematical Meaning of Preservation:
+Preservation of the edge endpoint function means that for every edge e ∈ E, if e connects vertices u and v in G (i.e., γ(e) = {u, v}), then the corresponding edge g(e) in G' must connect f(u) and f(v) in G' (i.e., γ'(g(e)) = {f(u), f(v)}).
+
+3. Significance:
+This condition guarantees that the structural adjacency and edge connectivity are strictly preserved: two vertices are connected by an edge in G if and only if their images under f are connected by the corresponding edge in G'.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 2 (ID: 2, Marks: 3 Marks):
+Topic: Graphs & Trees
+Question: Is there any method of identifying whether given graphs are isomorphic or not without explicitly finding the two bijection functions?
+
+Model Solution / Answer:
+Determining Graph Isomorphism Without Explicit Bijections (Using Isomorphic Invariants):
+
+1. The Isomorphism Invariant Approach:
+While proving that two graphs ARE isomorphic ultimately requires demonstrating an isomorphism (or bijective mapping), we can definitively prove that two graphs are NOT isomorphic by checking 'isomorphic invariants'—properties that must be identical in any pair of isomorphic graphs.
+
+2. Necessary Conditions (Isomorphic Invariants):
+If G and G' are isomorphic, they must have:
+  a. The same number of vertices: |V(G)| = |V(G')|.
+  b. The same number of edges: |E(G)| = |E(G')|.
+  c. The same degree sequence: The sorted list of vertex degrees must be identical.
+  d. The same number of connected components.
+  e. The same number of cycles of each specific length k (e.g., triangles, 4-cycles).
+  f. The same adjacency matrix spectrum (eigenvalues).
+
+3. Decision Criterion:
+  - If ANY of these invariants differ between G and G', then G and G' are NOT isomorphic.
+  - However, if all these invariants match, the graphs might still not be isomorphic. To prove isomorphism positively, one must exhibit the bijection f: V(G) → V(G') that preserves adjacency.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 3 (ID: 3, Marks: 3 Marks):
+Topic: Graphs & Trees
+Question: What are Complementary Graphs?
+
+Model Solution / Answer:
+Complementary Graphs (Graph Complement):
+
+1. Formal Definition:
+Let G = (V, E) be a simple undirected graph. The complement of G, denoted by G' or Ḡ (G-bar), is a simple graph whose vertex set is identical to V, but whose edge set E(Ḡ) consists of all edges that are NOT present in G.
+
+2. Set Formulation:
+E(Ḡ) = { {u, v} | u, v ∈ V, u ≠ v and {u, v} ∉ E(G) } = E(K_n) \ E(G),
+where K_n is the complete graph on n = |V| vertices.
+
+3. Key Properties:
+  - |E(G)| + |E(Ḡ)| = n(n - 1) / 2 = |E(K_n)|.
+  - Two vertices u and v are adjacent in Ḡ if and only if they are not adjacent in G.
+  - The complement of the complement is the original graph: (Ḡ)̄ = G.
+  - A self-complementary graph is isomorphic to its own complement (e.g., C_5, the 5-cycle).
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 4 (ID: 4, Marks: 3 Marks):
+Topic: Graphs & Trees
+Question: What is the application of graph isomorphism in the real world?
+
+Model Solution / Answer:
+Real-World Applications of Graph Isomorphism:
+
+1. Chemistry and Cheminformatics (Chemical Compound Identification):
+Chemical molecules are naturally represented as chemical graphs (atoms as vertices, covalent bonds as edges). Graph isomorphism algorithms are used to query chemical databases (e.g., PubChem) to determine if a newly synthesized molecule is structurally identical to an existing known chemical compound.
+
+2. Electronic Circuit Design and VLSI Testing:
+Integrated circuits and PCB layouts are represented as graphs of components and wire traces. Verification tools check whether an implemented physical layout correctly matches the original schematic graph specification using graph isomorphism.
+
+3. Computer Vision and Pattern Recognition:
+In object recognition, 2D/3D shapes are segmented into skeletal feature graphs. Matching a detected object against a database of known models involves finding subgraph or graph isomorphisms.
+
+4. Social Network Analysis:
+Identifying structurally identical network topologies or anonymous social structures across different communication platforms.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 5 (ID: 5, Marks: 3 Marks):
+Topic: Graphs & Trees
+Question: Are isomorphic graphs reflexive, symmetric, and transitive (Is graph isomorphism an equivalence relation)?
+
+Model Solution / Answer:
+Graph Isomorphism as an Equivalence Relation:
+
+Yes, graph isomorphism is an equivalence relation on the set of all graphs because it satisfies reflexivity, symmetry, and transitivity:
+
+1. Reflexive:
+Every graph G is isomorphic to itself (G ≅ G). The identity mapping id_V: V → V defined by id_V(v) = v and id_E(e) = e is a trivial isomorphism that preserves adjacency.
+
+2. Symmetric:
+If G_1 ≅ G_2, then G_2 ≅ G_1. If f: V(G_1) → V(G_2) is an isomorphism, its inverse function f^(-1): V(G_2) → V(G_1) is also a bijection that preserves edge endpoints and non-adjacency.
+
+3. Transitive:
+If G_1 ≅ G_2 and G_2 ≅ G_3, then G_1 ≅ G_3. If f: V(G_1) → V(G_2) and g: V(G_2) → V(G_3) are isomorphisms, their composition (g ∘ f): V(G_1) → V(G_3) is a bijection that preserves all adjacencies.
+
+Conclusion: Since isomorphism satisfies reflexivity, symmetry, and transitivity, it is a valid Equivalence Relation, partitioning the set of graphs into disjoint isomorphism classes.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 6 (ID: 6, Marks: 3 Marks):
+Topic: Graphs & Trees
+Question: Why we can't use the same color in connected portions of planar graph?
+
+Model Solution / Answer:
+We define the coloring of graph in such a manner that we can’t assign the
+same color to the adjacent vertices because if we give the same colors to the
+adjacent vertices then they are indistinguishable. Also note that we can give
+the same color to the adjacent vertices but such a coloring is called
+improper coloring and the way which we define the coloring is known as
+the proper coloring. We are interested in proper coloring that’s why all the
+books consider the proper coloring
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 7 (ID: 7, Marks: 3 Marks):
+Topic: Graphs & Trees
+Question: What is meant by isomorphic invariant?
+
+Model Solution / Answer:
+A property "P" of a graph is known as Isomorphic invariant. if the same
+property is found in all the graphs which are isomorphic to it. And all these
+properties are called isomorphic invariant (Also it clear from the words
+Isomorphic Invariant that the properties which remain invariant if the two
+graphs are isomorphic to each other).
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 8 (ID: 8, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What is an infinite Face?
+
+Model Solution / Answer:
+When you draw a Planar Graph on a plane it divides the plane into different
+regions, these regions are known as the faces and the face which is not
+bounded by the edges of the graph is known as the Infinite face. In other
+words the region which is unbounded is known as Infinite Face.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 9 (ID: 9, Marks: 3 Marks):
+Topic: Graphs & Trees
+Question: What is "Bipartite Graph”?
+
+Model Solution / Answer:
+A graph is said to be Bipartite if it’s set of vertices can be divided into two
+disjoint sets such that no two vertices of the same set are adjacent by some
+edge of the graph. It means that the edges of one set will be adjacent with
+the vertices of the other set.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 10 (ID: 10, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What is chromatic number?
+
+Model Solution / Answer:
+While coloring a graph you can color a vertex which is not adjacent with
+the vertices you already colored by choosing a new color for it or by the
+same color which you have used for the vertices which are not adjacent
+with this vertex. It means that while coloring a graph you may have
+different number of colors used for this purpose. But the least number of
+colors which are being used during the coloring of Graphs is known as the
+Chromatic number.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 11 (ID: 11, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What is the role of Discrete mathematics in our prectical life. what
+advantages will we get by learning it.
+
+Model Solution / Answer:
+In many areas people have to faces many mathematical problems which
+can,t be solved in computer so discrete mathematics provide the facility to
+overcome these problems. Discrete math also covers the wide range of
+topics, starting with the foundations of Logic, Sets and Functions. It moves
+onto integer mathematics and matrices, number theory, mathematical
+reasoning, probability graphs, tree data structures and Boolean algebra.So
+that is why we need discrete math.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 12 (ID: 12, Marks: 3 Marks):
+Topic: Logic & Propositions
+Question: What is the De Morgan's law .
+
+Model Solution / Answer:
+De Morgan law states " Negation of the conjunction of two statements is
+logiacally equivalent to the disjunction of their negation and Negation of
+the disjunction of two statements is logically equivalent to the conjucnction
+of their negation". i.e. ~(p^q) = ~p v ~q and ~(p v q)= ~p ^ ~q For example:
+" The bus was late and jim is waiting "(this is an example of conjuction of
+two statements) Now apply neaggation on this statement you will get
+through De Morgan's law " The bus was not late or jim is not waiting" (this
+is the disjunction of negation of two statements). Now see both statement
+are logically equivalent.Thats what De Morgan want to say
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 13 (ID: 13, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What is Tauology?
+
+Model Solution / Answer:
+A tautology is a statement form that is always true regardless of the truth
+
+values of the statement variables. i.e. If you want to prove that (p v q) is
+tautology ,you have to show that all values of statement (p v q) are true
+regardless of the values of p and q.If all the values of the satement (p v q) is
+not true then this statement is not tautology.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 14 (ID: 14, Marks: 3 Marks):
+Topic: Relations & Partitions
+Question: What is binary relations and reflexive,symmetric and transitive.
+
+Model Solution / Answer:
+Dear student! First of all ,I will tell you about the basic meaning of relation
+i.e It is a logical or natural association between two or more things;
+relevance of one to another; the relation between smoking and heart
+disease. The connection of people by blood or marriage. A person
+connected to another by blood or marriage; a relative. Or the way in which
+one person or thing is connected with another: the relation of parent to
+child. Now we turn to its mathematically definition, let A and B be any two
+sets. Then their cartesian product (or the product set) means a new set "A x
+B " which contains all the ordered pairs of the form (a,b) where a is in set A
+and b is in set B. Then if we take any subset say 'R' of "A x B" ,then 'R' is
+called the binary relation. Note All the subsets of the Cartesian product of
+two sets A and B are called the binary relations or simply a relation,and
+denoted by R. And note it that one raltion is also be the same as "A x B".
+Example: Let A={1,2,3} B={a,b} be any two sets. Then their Cartesian
+product means "A x B"={ (1,a),(1,b),(2,a),(2,b),(3,a),(3,b) } Then take any
+set which contains in "A x B" and denote it by 'R'. Let we take
+R={(2,b),(3,a),(3,b)} form "A x B". Clearly R is a subset of "A x B" so 'R'
+is called the binary relation. A reflexive relation defined on a set say ‘A’
+means “all the ordered pairs in which 1st element is mapped or related to
+itself.” For example take a relation say R1= {(1,1), (1,2), (1,3), (2,2) ,(2,1),
+(3,1) (3,3)} from “A x B” defined on the set A={1,2,3}. Clearly R1 is
+reflexive because 1,2 and 3 are related to itself. A relation say R on a set A
+is symmetric if whenever aRb then bRa,that is ,if whenever (a,b) belongs to
+R then (b,a) belongs to R for all a,b belongs to A. For example given a
+relation which is R1={(1,1), (1,2), (1,3), (2,2) ,(2,1), (3,1) (3,3)} as defined
+on a set A={1,2,3} And a relation say R1 is symmetric if for every (a, b)
+belongs to R ,(b, a) also belongs to R. Here as (a, b)=(1,1) belongs to R then
+(b, a)=(1,1)also belongs to R. as (a,b)=(1,2) belongs to R then
+(b,a)=(2,1)also belongs to R. as (a,b)=(1,3) belongs to R then
+(b,a)=(3,1)also belongs to R.etc So clearly the above relation R is
+symmetric. And read the definition of transitive relation from the handouts
+and the book. You can easily understand it.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 15 (ID: 15, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What is the matrix relation .
+
+Model Solution / Answer:
+Suppose that A and B are finite sets.Then we take a relation say R from A
+to B. From a rectangular array whose rows are labeled by the elements of A
+
+and whose columns are labeled by the elements of B. Put a 1 or 0 in each
+position of the array according as a belongs to A is or is not related to b
+belongs to B. This array is called the matrix of the relation. There are
+matrix relations of reflexive and symmetric relations. In reflexive relation,
+all the diagonal elements of relation should be equal to 1. For example if R
+= {(1,1), (1,3), (2,2), (3,2), (3,3)} defined on A = {1,2,3}. Then clearly R is
+reflexive. Simply in making matrix relation In the above example,as the
+defined set is A={1,2,3} so there are total three elements. Now we take 1, 2
+and 3 horizontally and vertically.i.e we make a matrix from the relation R
+,in the matrix you have now 3 columns and 3 rows. Now start to make the
+matrix ,as you have first order pair (1, 1) it means that 1 maps on itself and
+you write 1 in 1st row and in first column. 2nd order pair is (1, 3) it means
+that arrow goes from 1 to 3.Then you have to write 1 in 1st row and in 3rd
+column. (2, 2) means that arrow goes from 2 and ends itself. Here you have
+to write 1 in 2nd row and in 2nd column. (3,2) means arrow goes from 3
+and ends at 2. Here you have to write 1 in 3rd row and in 2nd column. (3, 3)
+means that 3 maps on itself and you write 1 in 3rd row and in 3rd column.
+And where there is space empty or unfilled ,you have to write 0 there.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 16 (ID: 16, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: what is binary relation.
+
+Model Solution / Answer:
+Let A and B be any two sets. Then their cartesian product(or the product
+set) means a new set "A x B " which contains all the ordered pairs of the
+form (a,b) where a is in set A and b is in set B. Let we take any subset say
+'R' of "A x B" ,then 'R' is called the binary relation. Note it that 'R' also be
+the same as "A x B". For example: Let A={1,2,3} B={a,b} be any two sets.
+Then
+their
+cartesian
+product
+means
+"A
+x
+B"={
+(1,a),(1,b),(2,a),(2,b),(3,a),(3,b) } Then take any set which contains in "A x
+B" and denote it by 'R'. Let R={(2,b),(3,a),(3,b)} Clearly R is a subset of "A
+x B" so 'R' is called the binary relation.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 17 (ID: 17, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: Role of ''Discrete Mathematics'' in our prectical life. what advantages will
+we get by learning it.
+
+Model Solution / Answer:
+Discrete mathematics concerns processes that consist of a sequence of
+individual steps. This distinguishes it from calculus, which studies
+continuously changing processes. While the ideas of calculus were
+fundamental to the science and technology of the industrial revolution, the
+ideas of discrete mathematics underline the science and technology specific
+to the computer age. Logic and proof: An important goal of discrete
+mathematics is to develop students’ ability to think abstractly. This requires
+that students learn to use logically valid forms of argument, to avoid
+common logical errors, to understand what it means to reason from
+definition, and to know how to use both direct and indirect argument to
+derive new results from those already known to be true. Induction and
+Recursion: An exciting development of recent years has been increased
+
+appreciation for the power and beauty of “recursive thinking”: using the
+assumption that a given problem has been solved for smaller cases, to solve
+it for a given case. Such thinking often leads to recurrence relations, which
+can be “solved” by various techniques, and to verifications of solutions by
+mathematical induction. Combinatorics: Combinatorics is the mathematics
+of counting and arranging objects. Skill in using combinatorial techniques
+is needed in almost every discipline where mathematics is applied, from
+economics to biology, to computer science, to chemistry, to business
+management. Algorithms and their analysis: The word algorithm was
+largely unknown three decades ago. Yet now it is one of the first words
+encountered in the study of computer science. To solve a problem on a
+computer, it is necessary to find an algorithm or step-by-step sequence of
+instructions for the computer to follow. Designing an algorithm requires an
+understanding of the mathematics underlying the problem to be solved.
+Determining whether or not an algorithm is correct requires a sophisticated
+use of mathematical induction. Calculating the amount of time or memory
+space the algorithm will need requires knowledge of combinatorics,
+recurrence relations functions, and O-notation. Discrete Structures: Discrete
+mathematical structures are made of finite or count ably infinite collections
+of objects that satisfy certain properties. Those are sets, bolean of algebras,
+functions, finite start automata, relations, graphs and trees. The concept of
+isomorphism is used to describe the state of affairs when two distinct
+structures are the same intheir essentials and diffr only in the labeling of the
+underlying objects. Applications and modeling: Mathematics topic are best
+understood when they are seen ina variety of contexts and used to solve
+problems in a broad range of applied situations. One of the profound
+lessons of mathematics is that the same mathematical model can be used to
+solve problems in situations that appear superficially to be totally
+dissimilar. So in the end i want to say that discrete mathematics has many
+uses not only in computer science but also in the other fields too.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 18 (ID: 18, Marks: 3 Marks):
+Topic: Sequences & Recurrence
+Question: what is the basic difference b/w sequences and series
+
+Model Solution / Answer:
+A sequence is just a list of elements .In sequnce we write the terms of
+sequence as a list (seperated by comma's). e.g 2,3,4,5,6,7,8,9,... ( in this we
+have terms 2,3,4,5,6,7,8,9 and so on).we write these in form of list
+seperated by comma's. And the sum of the terms of a sequence forms a
+series. e.g we have sequence 1,2,3,4,5,6,7 Now the series is sum of terms of
+sequence as 1+2+3+4+5+6+7.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 19 (ID: 19, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: what is the purpose of permutations?
+
+Model Solution / Answer:
+Permutation is an arrangement of objects in a order where repitition is not
+allowed. We need arrangments of objects in real life and also in
+
+mathematical problems.We need to know in how many ways we can
+arrange certain objects. There are four types of arrangments we have in
+which one is permutation.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 20 (ID: 20, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: what is inclusion-exclusion principle
+
+Model Solution / Answer:
+Inclusion-Exclusion principle contain two rules which are If A and B are
+disjoint finite sets, then n(AÈB) = n(A) + n(B) And if A and B are finite
+sets, then n(AÈB) = n(A) + n(B) - n(AÇB) For example If there are 15 girls
+students and 25 boys students in a class then how many students are in
+total. Now see if we take A ={ 15 girl students} and B={ 25 boys students}
+Here A and B are two disjoints sets then we can apply first rule n(AÈB) =
+n(A) + n(B) =15 + 25 =40 So in total there are 40 students in class. Take
+another Example for second rule. How many integers from 1 through 1000
+are multiples of 3 or multiples of 5. Let A and B denotes the set of integers
+from 1 through 1000 that are multiples of 3 and 5 respectivly. n(A)= 333
+n(B)=200 But these two sets are not disjoint because in A and B we have
+those elements which are multiple of both 3 and 5. so n(AÇB) =66 n(AÈB)
+= n(A) + n(B) - n(AÇB) =333 + 200 - 66 = 467
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 21 (ID: 21, Marks: 3 Marks):
+Topic: Logic & Propositions
+Question: How to use conditional probobility
+
+Model Solution / Answer:
+Dear student In Conditional probability we put some condition on an event
+to be occur. e.g. A pair of dice is tossed. Find the probability that one of the
+dice is 2 if the sum is 6. If we have to find the probability that one of the
+dice is 2, then it is the case of simple probability. Here we put a condition
+that sum is six. Now A = { 2 appears in atleast one die} E = {sum is 6 }
+Here E = { (1,5), (2, 4), (3, 3), (4, 2), (5, 1) } Here two order pairs ( 2, 4 )
+and ( 4, 2) satisfies the A. (i.e. belongs to A) Now A (intersection) B= {
+(2,4), (4,2)} Now by formula P(A/E) = P(A (intersection) E)/ P(E) = 2/5
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 22 (ID: 22, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: In which condition we use combination and in which condition
+permutation.
+
+Model Solution / Answer:
+This depends on the statement of question. If in the statement of question
+you finds out that repetition of objects are not allowed and order matters
+then we use Permutation. e.g. Find the number of ways that a party of seven
+persons can arrange themselves in a row of seven chairs. See in this
+question repetition is no allowed because whenever a person is chosen for a
+particular seat r then he cannot be chosen again and also order matters in
+the arrangements of chairs so we use permutation here. If in the question
+repetition of samples are not allowed and order does not matters then we
+use combination. A student is to answer eight out of ten questions on an
+exam. Find the number m of ways that the student can choose the eight
+questions See in this question repetition is not allowed that is when you
+
+choose one question then you cannot choose it again and also order does
+not matters(i.e either he solved Q1 first or Q2 first) so you use combination
+in this question.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 23 (ID: 23, Marks: 3 Marks):
+Topic: Graphs & Trees
+Question: What is the differnce between edge and vertex
+
+Model Solution / Answer:
+Vertices are nodes or points and edges are lines/arcs which are used to
+connect the vertices. e.g If you are making the graph to find the shortest
+path or for nay purpose of cites and roads between them which contain
+Lahore, Islamabad, Faisalabad , Karachi, and Multan. Then cities Lahore,
+Islamabad, Faisalabad , Karachi, and Multan are vertices and roads between
+them are edges.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 24 (ID: 24, Marks: 3 Marks):
+Topic: Graphs & Trees
+Question: What is the differnce between yes and allowed in graphs.
+
+Model Solution / Answer:
+Allowed mean that specific property can be occurs in that case but yes
+mean that specific property always occurs in that case. e.g. In Walk you
+may start and end at same point and may not be (allowed). But in Closed
+Walk you have to start and end at same point (yes).
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 25 (ID: 25, Marks: 3 Marks):
+Topic: Mathematical Induction
+Question: what is the meanging of induction? and also Mathematical Induction?
+
+Model Solution / Answer:
+Basic meaning of induction is: a)The act or an instance of inducting. b) A
+ceremony or formal act by which a person is inducted, as into office or
+military service. In Mathematics. A two-part method of proving a theorem
+involving a positive integral variable. First the theorem is verified for the
+smallest admissible value of the integer. Then it is proven that if the
+theorem is true for any value of the integer, it is true for the next greater
+value. The final proof contains the two parts. As you have studied. It also
+means that presentation of material, such as facts or evidence, in support of
+an argument or a proposition. Whether in Physics Induction means the
+creation of a voltage or current in a material by means of electric or
+magnetic fields, as in the secondary winding of a transformer when exposed
+to the changing magnetic field caused by an alternating current in the
+primary winding. In Biochemistry,it means that the process of initiating or
+increasing the production of an enzyme or other protein at the level of
+genetic transcription. In embryology,it means that the change in form or
+shape caused by the action of one tissue of an embryo on adjacent tissues or
+parts, as by the diffusion of hormones or chemicals.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 26 (ID: 26, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What is "Hypothetical Syllogism".
+
+Model Solution / Answer:
+Hypothetical syllogism is a law that if the argument is of the form p --> q q--> r Therefore p---> r Then it'll always be a tautology. i.e. if the p implies q
+and q implies r is true then its conclusion p implies r is always true.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 27 (ID: 27, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: A set is define a well define collection of distinct objects so why an empty
+set is called a set although it has no element?
+
+Model Solution / Answer:
+Some time we have collection of zero objects and we call them empty sets.
+e.g. Set of natural numbers greater than 5 and less than 5. A = { x belongs
+to N / 5< x < 5 } Now see this is a set which have collection of elements
+which are greater than 5 and less than 5 ( from natural number).
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 28 (ID: 28, Marks: 3 Marks):
+Topic: Set Theory
+Question: What is improper subset.
+
+Model Solution / Answer:
+Let A and B be sets. A is proper subset of B, if, and only if, every element
+of A is in B but there is at least on element if B that is not in A. Now A is
+improper subset of B, if and only if, every element of A is in B and there is
+no element in B which is not in A. e.g. A= { 1, 2 , 3, 4} B= { 2, 1, 4, 3}
+Now A is improper subset of B. Because every element of A is in B and
+there is no element in B which is not in A
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 29 (ID: 29, Marks: 3 Marks):
+Topic: Set Theory
+Question: What is the difference between a Proper Subset, an Improper Subset, and a Power Set?
+
+Model Solution / Answer:
+Proper Subset, Improper Subset, and Power Set:
+
+1. Subset (A ⊆ B):
+A set A is a subset of B if every element of A is also an element of B:
+∀x (x ∈ A → x ∈ B).
+
+2. Proper Subset (A ⊂ B):
+A is a proper subset of B if A is a subset of B and A is not equal to B (there exists at least one element in B that is not in A):
+A ⊆ B and A ≠ B.
+Example: If B = {1, 2, 3}, then A = {1, 2} is a proper subset of B.
+
+3. Improper Subset:
+A subset A of B that is equal to B itself is called an improper subset of B. Every non-empty set has exactly one improper subset: the set itself.
+
+4. Power Set (P(A)):
+The power set of a set A, denoted P(A), is the set of all subsets of A:
+P(A) = { S | S ⊆ A }.
+If |A| = n, then the cardinality of the power set is |P(A)| = 2^n.
+Example: If A = {a, b}, P(A) = { ∅, {a}, {b}, {a, b} }, and |P(A)| = 2^2 = 4.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 30 (ID: 30, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: How to check validity and unvalidity of argument through diagram.
+
+Model Solution / Answer:
+To check an argument is valid or not you can also use Venn diagram. We
+identify some sets from the premises . Then represent those sets in the form
+of diagram. If diagram satisfies the conclusion then it is a valid argument
+otherwise invalid. e.g. If we have three premises S1: all my friends are
+musicians S2: John is my friend. S3: None of my neighbor are musicians.
+conclusion John is not my neighbor. Now we have three sets Friends,
+Musicians, neighbors. Now you see from premises 1 and 2 that friends are
+subset of musicians .From premises 3 see that neighbor is an individual set
+that is disjoint from set musicians. Now represent then in form of Venn
+diagram. Musicians neighbour Friends Now see that john lies in set friends
+which is disjoint from set neighbors. So their intersection is empty.Which
+shows that john is not his neighbor. In that way you can check the validity
+of arguments
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 31 (ID: 31, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: why we used venn digram?
+
+Model Solution / Answer:
+Venn diagram is a pictorial representation of sets. Venn diagram can
+sometime be used to determine whether or not an argument is valid. Real
+life problems can easily be illustrate through Venn diagram if you first
+convert them into set form and then in Venn diagram form. Venn diagram
+enables students to organize similarities and differences visually or
+graphically. A Venn diagram is an illustration of the relationships between
+and among sets, groups of objects that share something in common.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 32 (ID: 32, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: what is composite relation . http://vustudents.ning.com
+
+Model Solution / Answer:
+Let A, B, and C be sets, and let R be relation from A to B and let S be a
+relation from B to C. Now by combining these two relations we can form a
+relation from A to C. Now let a belongs to A, b belongs to B, and c belongs
+to C. We can write relations R as a R b and S as b S c. Now by combining
+R and S we write a (R 0 S) c . This is called composition of Relations
+holding the condition that we must have a b belongs to B which can be
+write as a R b and b S c (as stated above) . e.g. Let A= {1,2,3,4},
+B={a,b,c,d} , C ={x,y,z} and let R={ {1,a), (2, d), (3, a), (3, b), (3, d) } and
+S={ (b, x), (b, z), (c, y), (d, z)} Now apply that condition which is stated
+above (that in the composition R O S only those order pairs comes which
+have earlier an element is common in them e.g. from R we have (3, b) and
+from S we have ( b, x) .Now one relation relate 3 to b and other relates b to
+x and our composite relation omits that common and relates directly 3 to x.)
+I do not understand your second question send it again. Now R O S ={(2,z),
+(3,x), (3,z)}
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 33 (ID: 33, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What are the conditions to confirm functions .
+
+http://vustudents.ning.com
+
+11
+
+MTH202 Short Questions Answers
+http://vustudents.ning.com
+
+Model Solution / Answer:
+The first condition for a relation from set X to a set Y to be a function is
+1.For every element x in X, there is an element y in Y such that (x, y)
+belongs to F. Which means that every element in X should relate with
+distinct element of Y. e.g if X={ 1,2,3} and Y={x, y} Now if
+R={(1,x),(2,y),(1,y),(2,x)} Then R will not be a function because 3 belongs
+to X but is does not relates with any element of Y. so R={(1,x),(2,y),(3,y)}
+can be called a function because every element of X is relates with elements
+of Y. Second condition is : For all elements x in X and y and z in Y, if (x,
+y) belongs to F and (x, z) belongs to F, then y = z Which means that every
+element in X only relates with distinct element of Y. i.e.
+R={(1,x),(2,y),(2,x), (3,y)} cannot be called as function because 2 relates
+with x and y also.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 34 (ID: 34, Marks: 3 Marks):
+Topic: Functions & Mappings
+Question: When a function is onto.
+
+Model Solution / Answer:
+First you have to know about the concept of function. Function:It is a rule
+or a machine from a set X to a set Y in which each element of set X maps
+into the unique element of set Y. Onto Function: Means a function in which
+every element of set Y is the image of at least one element in set X. Or
+there should be no element left in set Y which is the image of no element in
+set X. If such case does not exist then the function is not called onto. For
+example:Let we define a function f : R----R such that f(x)=x^2 (where ^
+shows the symbol of power i.e. x raise to power 2). Clearly every element
+in the second set is the image of atleast one element in the first set. As for
+x=1 then f(x)=1^2=1 (1 is the image of 1 under the rule f) for x=2 then
+f(x)=2^2=4 (4 is the image of 2 under the rule f) for x=0 then f(x)=0^2=0 (0
+is the image of 0 under the rule f) for x=-1 then f(x)=(-1)^2=1 (1 is the
+image of -1 under the rule f) So it is onto function.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 35 (ID: 35, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: Is Pie an irrational number?
+
+Model Solution / Answer:
+Pi π is an irrational number as its exact value has an infinite decimal
+expansion: Its decimal expansion never ends and does not repeat.
+The numerical value of π truncated to 50 decimal places is:
+3.14159 26535 89793 23846 26433 83279 50288 41971 69399
+37510
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 36 (ID: 36, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: Difference between sentence and statement.
+
+Model Solution / Answer:
+A sentence is a statement if it have a truth value otherwise this sentence is
+not a statement.By truth value i mean if i write a sentence "Lahore is capital
+
+of Punjab" Its truth value is "true".Because yes Lahore is a capital of
+Punjab. So the above sentence is a statement. Now if i write a sentence
+"How are you" Then you cannot answer in yes or no.So this sentence is not
+a statement. Every statement is a sentence but converse is not true.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 37 (ID: 37, Marks: 3 Marks):
+Topic: Logic & Propositions
+Question: What is the truth table?
+
+Model Solution / Answer:
+Truth table is a table which describe the truth values of a proposition. or we
+can say that Truth table display the complete behaviour of a proposition.
+There fore the purpose of truth table is to identify its truth values. A
+statement or a proposition in Discrete math can easily identify its truth
+value by the truth table. Truth tables are especially valuable in the
+determination of the truth values of propositions constructed from simpler
+propositions. The main steps while making a truth table are "first judge
+about the statement that how much symbols(or variables) it contain. If it has
+n symbols then total number of combinations=2 raise to power n. These all
+the combinations give the truth value of the statement from where we can
+judge that either the truthness of a statement or proposiotion is true or false.
+In all the combinations you have to put values either "F" or "T" against the
+variales.But note it that no row can be repeated. For example "Ali is happy
+and healthy" we denote "ali is happy" by p and "ali is healthy" by q so the
+above statement contain two variables or symbols. The total no of
+combinations are =2 raise to power 2(as n=2) =4 which tell us the truthness
+of a statement.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 38 (ID: 38, Marks: 3 Marks):
+Topic: Set Theory
+Question: how empty set become a subset of every set.
+
+Model Solution / Answer:
+If A & B are two sets, A is called a subset of B, if, and only if, every
+element of A is also an element of B. Now we prove that empty set is
+subset of any other set by a contra positive statement( of above statement)
+i.e. If there is any element in the the set A that is not in the set B then A is
+not a subset of B. Now if A={} and B={1,3,4,5} Then you cannot find an
+element which is in A but not in B. So A is subset of B.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 39 (ID: 39, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What is rational and irrational numbers.
+
+Model Solution / Answer:
+A number that can be expressed as a fraction p/q where p and q are integers
+and q\not=0, is called a rational number with numerator p and denominator
+q. The numbers which cannot be expressed as rational are called irrational
+number. Irrational numbers have decimal expansions that neither terminate
+nor become periodic where in rational numbers the decimal expansion
+either terminate or become periodic after some numbers.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 40 (ID: 40, Marks: 3 Marks):
+Topic: Graphs & Trees
+Question: what is the difference between graphs and spanning tree?
+
+Model Solution / Answer:
+First of all, a graph is a "diagram that exhibits a relationship, often
+functional, between two sets of numbers as a set of points having
+coordinates determined by the relationship. Also called plot". Or A pictorial
+device, such as a pie chart or bar graph, used to illustrate quantitative
+relationships. Also called chart. And a tree is a connected graph that does
+not contain any nontrivial circuit. (i.e., it is circuit-free) Basically, a graph
+is a nonempty set of points called vertices and a set of line segments joining
+pairs of vertices called edges. Formally, a graph G consists of two finite
+sets: (i) A set V=V(G) of vertices (or points or nodes) (ii) A set E=E(G) of
+edges; where each edge corresponds to a pair of vertices. Whereas, a
+spanning tree for a graph G is a subgraph of G that contains every vertex of
+G and is a tree. It is not neccesary for a graph to always be a spanning tree.
+Graph becomes a spanning tree if it satisfies all the properties of a spanning
+tree.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 41 (ID: 41, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What is the probability ?
+
+Model Solution / Answer:
+The definition of probability is : Let S be a finite sample space such that all
+the outcomes are equally likely to occur. The probability of an event E,
+which is a subset of S, is P(E) = (the number of outcomes in E)/ (the
+number of total outcomes in S) P(E) = n (E) / n ( S ) This definition is due
+to ‘Laplace.’ Thus probability is a concept which measures numerically the
+degree of certainty or uncertainty of the occurrence of an event.
+Explaination The basic steps of probability that u have to remember are as
+under 1. First list out all possible out comes. That is called the sample space
+S For example when we roll a die the all possible outcomes are the set S i.e.
+S = {1,2,3,4,5,6} 2. Secondly we have to find out all that possible
+outcomes, in which the probability is required . For example we are asked
+to find the probability of even numbers. First we decide any name of that
+event i.e E Now we check all the even numbers in S which are E = {2,4,6}
+Remember Event is always a sub-set of Sample space S. 3. Now we apply
+the definition of probability P(E) = (the number of outcomes in E)/ (the
+number of total outcomes in S) P(E) = n (E) / n ( S ) So from above two
+steps we have n (E) = 3 and n (S) = 6 then P(E) = 3 / 6 = 1/2 which is
+probability of an even number.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 42 (ID: 42, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: what is permutation? http://vustudents.ning.com
+
+Model Solution / Answer:
+Permutation comes from the word permute which means " to change the
+order of." Basically permutation means a "complete change." Or the act of
+altering a given set of objects in a group. In Mathematics point of view it
+means that a ordered arrangement of the elements of a set (here the order of
+elements matters but repetition of the elements is not allowed).
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 43 (ID: 43, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What is a function.
+
+Model Solution / Answer:
+A function say 'f' is a rule or machine from a set A to the set B if for every
+element say a of A, there exist a unique element say b of set such that
+b=f(a) Where b is the image of a under f,and a is the pre-image. Note it that
+set A is called the domain of f and Y is called the codomain of f. As we
+know that function is a rule or machine in which we put an input,and we get
+an output.Like that a juicer machine.We take some apples(here apples are
+input) and we apply a rule or a function of juicer machine on it,then we get
+the output in the form of juice.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 44 (ID: 44, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What is p implies q.
+
+Model Solution / Answer:
+p--- >q means to "go from hypothesis to a conclusion" where p is a
+hypothesis and q is a conclusion. And note it that this statement is
+conditioned because the "truth ness of statement p is conditioned on the
+truth ness of statement q". Now the truth value of p--->q is false only when
+p is true and q is false otherwise it will always true. E.g. consider an
+implication "if you do your work on Sunday ,I will give you ten rupees."
+Here p=you do your work on Sunday (is the hypothesis) , q=I will give you
+ten rupees ( the conclusion or promise). Now the truth value of p---->q will
+false only when the promise is braked. i.e. You do your work on Sunday
+but you do not get ten rupees. In all other conditions the promise is not
+braked.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 45 (ID: 45, Marks: 3 Marks):
+Topic: Logic & Propositions
+Question: What is valid and invalid arguments.
+
+Model Solution / Answer:
+As "an argument is a list of statements called premises (or assumptions or
+hypotheses) which is followed by a statement called the conclusion. " A
+valid argument is one in which the premises entail(or imply) the conclusion.
+1)It cannot have true premises and a false conclusion. 2)If its premises are
+true, its conclusion must be true. 3)If its conclusion is false, it must have at
+least one false premise. 4)All of the information in the conclusion is also in
+the premises. And an invalid agrument is one in which the premises do not
+entail(or imply) the conclusion. It can have true premises and a false
+conclusion. Even if its premises are true, it may have a false conclusion.
+Even if its conclusion is false, it may have true premises. There is
+information in the conclusion that is not in the premises. To know them
+better,try to solve more and more examples and exercises.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 46 (ID: 46, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What is domain and co -domain.
+
+Model Solution / Answer:
+Domain means "the set of all x-coordinates in a relation". It is very
+simple,Let we take a function say f from the set X to set Y. Then domain
+means a set which contain all the elements of the set X. And co domain
+means a set which contain all the elements of the set Y. For example: Let
+
+we define a function "f" from the set X={a,b,c,d} to Y={1,2,3,4}. such that
+f(a)=1, f(b)=2, f(c)=3, f(d)=1 Here the domain set is {a,b,c,d} And the codomain set is {1,2,3,4} Where as the image set is {1,2,3}.Because f(a)=1 as
+1 is the image of a under the rule 'f'. f(b)=2 as 2 is the image of b under the
+rule 'f'. f(c)=3 as 3 is the image of c under the rule 'f'. f(d)=1as 1 is the
+image of d under the rule 'f'. because "image set contains only those
+elements which are the images of elements found in set X". Note it that here
+f is one -one but not onto,because there is one element '4' left which is the
+image of nothing element under the rule 'f'.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 47 (ID: 47, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What is the difference between k-sample,k-selection, k-permutation and kcombination?
+
+Model Solution / Answer:
+Actually, these all terms are related to the basic concept of choosing some
+elements from the given collection.
+For it, two things are important:
+1)
+Order of elements .i.e. which one is first, which one is second and
+so on.
+2)
+Repetition of elements
+So we can get 4 kinds of selections:
+1)
+
+The elements have both order and repetition.
+( It is called ksample )
+2)
+The elements have only order, but no repetition. ( It is called kpermutation )
+3)
+The elements have only repetition, but no order. ( It is called kselection )
+4)
+The elements have no repetition and no order. ( It is called kcombination )
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 48 (ID: 48, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What is a combination?
+
+Model Solution / Answer:
+A combination is an un-ordered collection of unique elements. Given S, the
+set of all possible unique elements, a combination is a subset of the
+elements of S. The order of the elements in a combination is not important
+(two lists with the same elements in different orders are considered to be
+the same combination). Also, the elements cannot be repeated in a
+combination (every element appears uniquely once
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 49 (ID: 49, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: why is 0! equal to 1?
+
+http://vustudents.ning.com
+
+16
+
+MTH202 Short Questions Answers
+http://vustudents.ning.com
+
+Model Solution / Answer:
+Since n! = n(n-1)!
+Put n =1 in it.
+1! = 1x(1 – 1)!
+1! =1x0!
+1! = 0!
+Since 1! = 1
+So 1 = 0!
+0! = 1.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 50 (ID: 50, Marks: 3 Marks):
+Topic: Mathematical Induction
+Question: What is the basic idea if Mathematical Induction?
+
+Model Solution / Answer:
+Mathematical Induction Principle:
+Mathematical induction is a powerful proof technique used to prove that a property P(n) holds for all positive integers n ≥ n0.
+Two Crucial Steps:
+1. Basis Step (Base Case): Prove that the statement P(n0) is true for the smallest initial integer (usually n = 1 or n = 0).
+2. Inductive Step: Assume that P(k) is true for an arbitrary integer k ≥ n0 (Inductive Hypothesis). Under this assumption, prove that P(k + 1) must also be true.
+Conclusion: Since the base step and the inductive step are both verified, P(n) is true for all integers n ≥ n0.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 51 (ID: 51, Marks: 3 Marks):
+Topic: Relations & Partitions
+Question: Define symmetric and anti-symmetric.
+
+Model Solution / Answer:
+Definitions of Symmetric and Anti-Symmetric Relations:
+1. Symmetric Relation:
+A binary relation R on a set A is symmetric if for all a, b ∈ A, whenever (a, b) ∈ R, then (b, a) ∈ R.
+Example: If A = {1, 2}, R = {(1, 2), (2, 1), (1, 1)} is symmetric.
+
+2. Anti-Symmetric Relation:
+A binary relation R on a set A is anti-symmetric if for all a, b ∈ A, whenever (a, b) ∈ R and (b, a) ∈ R, then a = b. (Equivalently, if a ≠ b and (a, b) ∈ R, then (b, a) ∉ R).
+Example: The 'less than or equal to' (≤) relation on integers is anti-symmetric because if x ≤ y and y ≤ x, then x = y.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 52 (ID: 52, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What is the main deffernce between Calculus and Discrete Maths?
+
+Model Solution / Answer:
+Discrete mathematics is the study of mathematics which concerns to the
+study of discrete objects. Discrete math build students approach to think
+abstractly and how to handle mathematical models problems in computer
+While Calculus is a mathematical tool used to analyze changes in physical
+quantities. Or "Calculus is sometimes described as the mathematics of
+change." Also calculus played an important role in industrial area as well
+discrete math in computer.
+Discrete mathematics concerns processes that consist of a sequence of
+individual steps. This distinguishes it from calculus, which studies
+continuously changing processes. the ideas of discrete mathematics
+underline the science and technology specific to the computer age. An
+important goal of discrete mathematics is to develop students’ ability to
+think abstractly.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 53 (ID: 53, Marks: 3 Marks):
+Topic: Logic & Propositions
+Question: Explain Valid Arguments.
+When some statement is said on the basis of a set of other
+
+Model Solution / Answer:
+statements, meaning that this statement is derived from that set of
+statements, this is called an argument. The formal definition is “an
+argument is a list of statements called “premises” (or assumptions or
+hypotheses) which is followed by a statement called the “conclusion.”
+A valid argument is one in which the premises imply the
+conclusion. 
+1) It cannot have true premises and a false conclusion.
+2) If its premises are true, its conclusion must be true.
+3) If its conclusion is false, it must have at least one false premise.
+4) All of the information in the conclusion is also in the premises.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 54 (ID: 54, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What is the Difference between combinations and permutations?
+
+Model Solution / Answer:
+When we talk of permutations and combinations in everyday talk we often
+use the two terms interchangeably. In mathematics, however, the two each
+have very specific meanings, and this distinction often causes problems
+In brief, the permutation of a number of objects is the number of different
+ways they can be ordered; i.e. which one is first, which one is second or
+third etc. For example, you see, if we have two digits 1 and 2, then 12 and
+21 are different in meaning. So their order has its own importance in
+permutation.
+On the other hand, in combination, the order is not necessary. you can put
+any object at first place or second etc. For example, Suppose you have to
+put some pictures on the wall, and suppose you only have two pictures: A
+and B.
+You could hang them
+
+or
+
+
+We could summarise permutations and combinations (very simplistically)
+as
+Permutations - position important (although choice may also be important)
+Combinations
+chosen
+important,
+which may help you to remember
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 55 (ID: 55, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What is the use of kruskal's algorithn in our daily life?
+
+Model Solution / Answer:
+The Kruskal’s algorithm is usually used to find minimum spanning tree i.e.
+the possible smallest tree that contains all the vertices. The standard
+application is to a problem like phone network design. Suppose, you have a
+business with several offices; you want to lease phone lines to connect them
+up with each other; and the phone company charges different amounts of
+money to connect different pairs of cities. You want a set of lines that
+connects all your offices with a minimum total cost. It should be a spanning
+tree, since if a network isn't a tree you can always remove some edges and
+save money. A less obvious application is that the minimum spanning tree
+can be used to approximately solve the traveling salesman problem. A
+convenient formal way of defining this problem is to find the shortest path
+that visits each point at least once.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 56 (ID: 56, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What is irrational number?
+
+Model Solution / Answer:
+Irrational number An irrational number can not be expressed as a fraction.
+In decimal form, irrational numbers do not repeat in a pattern or terminate.
+They "go on forever" (infinity). Examples of irrational numbers are: pi=
+3.141592654...
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 57 (ID: 57, Marks: 3 Marks):
+Topic: Logic & Propositions
+Question: Define membership table and truth table.
+
+Model Solution / Answer:
+Membership table: A table displaying the membership of elements in sets.
+Set identities can also be proved using membership tables. An element is in
+a set, a 1 is used and an element is not in a set, a 0 is used. Truth table: A
+table displaying the truth values of propositions.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 58 (ID: 58, Marks: 3 Marks):
+Topic: Functions & Mappings
+Question: Define function and example for finding domain and range of a function.
+
+Model Solution / Answer:
+Definition of Function, Domain, and Range:
+1. Function Definition:
+A function f from a set X to a set Y (written f: X → Y) is a relation that associates each element x in X with exactly ONE element y in Y.
+2. Domain: The set X of all permissible input values for which the function is defined.
+3. Co-domain: The set Y of all potential output values.
+4. Range (Image): The actual set of all output values f(x) obtained as x varies over the domain: Range = {f(x) ∈ Y | x ∈ X}.
+
+Example for Finding Domain and Range:
+Consider the real-valued function: f(x) = √(x - 4)
+- Domain: The expression under the square root must be non-negative:
+  x - 4 ≥ 0 ⟹ x ≥ 4.
+  Thus, Domain = [4, ∞).
+- Range: The principal square root always yields values greater than or equal to 0:
+  √(x - 4) ≥ 0 for all x ≥ 4.
+  Thus, Range = [0, ∞).
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 59 (ID: 59, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: Why do we use konigsberg bridges problem?
+
+Model Solution / Answer:
+Königsberg Bridges Problem:
+The Seven Bridges of Königsberg is a historically famous mathematical problem solved by Leonhard Euler in 1736, which laid the foundation of Graph Theory.
+Problem Statement: Can a walker cross all seven bridges over the Pregel River in Königsberg exactly once and return to the starting point?
+Euler's Solution & Significance:
+Euler represented the landmasses as vertices and the bridges as edges (a multigraph). He proved that a continuous walk crossing every edge exactly once (an Eulerian path/circuit) exists if and only if the graph is connected and all vertices (or all except exactly two) have an EVEN degree. Because all four landmasses had odd degrees (3, 3, 3, and 5), such a path is mathematically impossible.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 60 (ID: 60, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: Explain the intersection of two sets?
+
+Model Solution / Answer:
+Intersection of Two Sets:
+1. Definition: The intersection of two sets A and B, denoted by A ∩ B, is the set of all elements that belong to BOTH A and B simultaneously.
+Set-Builder Notation: A ∩ B = {x | x ∈ A and x ∈ B}.
+2. Disjoint Sets: If A and B share no elements in common, their intersection is the empty set (A ∩ B = ∅).
+3. Example: If A = {1, 2, 3, 4} and B = {3, 4, 5, 6}, then A ∩ B = {3, 4}.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 61 (ID: 61, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What is absurdity With example?
+
+Model Solution / Answer:
+Absurdity (Contradiction) in Discrete Logic:
+1. Definition: An absurdity (or contradiction) is a compound proposition that is FALSE for all possible truth values of its component propositional variables.
+2. Standard Symbol: Denoted by 'c' or 'F0'.
+3. Classic Example: The compound statement 'p ∧ ~p' (p and not p) is always false regardless of whether p is True or False:
+   - If p is True, ~p is False → T ∧ F = False.
+   - If p is False, ~p is True → F ∧ T = False.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 62 (ID: 62, Marks: 3 Marks):
+Topic: Sequences & Recurrence
+Question: What is sequence and series?
+
+Model Solution / Answer:
+Sequence A sequence of numbers is a function defined on the set of
+positive integer. The numbers in the sequence are called terms. Another
+way, the sequence is a set of quantities u1, u2, u3... stated in a definite order
+and each term formed according to a fixed pattern. U r =f(r) In example:
+1,3,5,7,... 2,4,6,8,... 1 2 ,− 2 2 ,3 2 ,− 4 2 ,... Infinite sequence:- This kind of
+sequence is unending sequence like all natural numbers: 1, 2, 3, ... Finite
+sequence:- This kind of sequence contains only a finite number of terms.
+One of good examples are the page numbers. Series:- The sum of a finite or
+infinite sequence of expressions. 1+3+5+7+...
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 63 (ID: 63, Marks: 3 Marks):
+Topic: Logic & Propositions
+Question: Differntiate contigency and contradiction.
+
+Model Solution / Answer:
+Differentiating Contingency and Contradiction:
+1. Tautology (t): A statement form that is universally TRUE in all possible cases (e.g., p ∨ ~p).
+2. Contradiction (c): A statement form that is universally FALSE in all possible cases (e.g., p ∧ ~p).
+3. Contingency: A statement form that is neither a tautology nor a contradiction; that is, it is True in at least one row of its truth table and False in at least one row (e.g., p ∧ q, or p → q).
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 64 (ID: 64, Marks: 3 Marks):
+Topic: Logic & Propositions
+Question: What is conditional statement, converse, inverse and contra-positive?
+
+Model Solution / Answer:
+Conditional Statement and Its Three Variations:
+Given a conditional statement 'If p, then q' (p → q):
+1. Conditional Statement (p → q): True in all cases except when hypothesis p is True and conclusion q is False.
+2. Converse (q → p): Formed by swapping the hypothesis and conclusion. Note: (p → q) is NOT logically equivalent to its converse.
+3. Inverse (~p → ~q): Formed by negating both hypothesis and conclusion. Note: Inverse is logically equivalent to the converse.
+4. Contrapositive (~q → ~p): Formed by swapping and negating both hypothesis and conclusion. Key Rule: A conditional statement is ALWAYS logically equivalent to its contrapositive (p → q ≡ ~q → ~p).
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 65 (ID: 65, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What is Euclidean algorithm?
+
+Model Solution / Answer:
+In number theory, the Euclidean algorithm (also called Euclid's
+algorithm) is an algorithm to determine the greatest common divisor
+(GCD) of two integers.
+
+Its major significance is that it does not require factoring the two integers,
+and it is also significant in that it is one of the oldest algorithms known,
+dating back to the ancient Greeks.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 66 (ID: 66, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: what is the circle definition?
+
+Model Solution / Answer:
+A circle is the locus of all points in a plane which are equidistant from a
+fixed point. The fixed point is called centre of that circle and the distance is
+called radius of that circle
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 67 (ID: 67, Marks: 3 Marks):
+Topic: Logic & Propositions
+Question: What is bi-conditional statement?
+
+Model Solution / Answer:
+Biconditional Statement:
+1. Definition: A biconditional statement, written as 'p ↔ q' (or 'p if and only if q', abbreviated 'p iff q'), is the compound proposition that is True when both p and q have the SAME truth value (both True or both False), and False when they have opposite truth values.
+2. Logical Equivalence: p ↔ q ≡ (p → q) ∧ (q → p).
+3. Truth Table:
+   - T ↔ T = T
+   - T ↔ F = F
+   - F ↔ T = F
+   - F ↔ F = T
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 68 (ID: 68, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: Explain the difference between k-sample, k-selection, k-combination and kpermutation.
+
+Model Solution / Answer:
+Differences Among k-Sample, k-Selection, and k-Combination:
+1. k-Sample (Permutation with Repetition): An ordered sequence of k elements chosen from a set of n elements where repetition IS allowed. Formula: n^k.
+2. k-Permutation: An ordered arrangement of k distinct elements chosen from n elements without repetition. Formula: P(n, k) = n! / (n - k)!.
+3. k-Combination: An unordered collection of k distinct elements chosen from n elements without repetition. Formula: C(n, k) = n! / [k! (n - k)!].
+4. k-Selection (Combination with Repetition): An unordered selection of k elements chosen from n categories where repetition IS allowed. Formula: C(n + k - 1, k).
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 69 (ID: 69, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What is meant by Discrete?
+
+Model Solution / Answer:
+A type of data is discrete if there are only a finite number of values
+possible. Discrete data usually occurs in a case where there are only a
+certain number of values, or when we are counting something (using whole
+numbers). For example, 5 students, 10 trees etc.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 70 (ID: 70, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: Explain D'Morgan Law.
+
+Model Solution / Answer:
+De Morgan's Laws:
+1. In Logic (for propositions p and q):
+   - ~(p ∧ q) ≡ ~p ∨ ~q (The negation of a conjunction is the disjunction of the negations).
+   - ~(p ∨ q) ≡ ~p ∧ ~q (The negation of a disjunction is the conjunction of the negations).
+2. In Set Theory (for sets A and B with universal set U):
+   - (A ∪ B)' = A' ∩ B' (The complement of a union is the intersection of the complements).
+   - (A ∩ B)' = A' ∪ B' (The complement of an intersection is the union of the complements).
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 71 (ID: 71, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What are digital circuits?
+
+Model Solution / Answer:
+Digital circuits are electric circuits based on a number of discrete voltage
+levels.
+In most cases there are two voltage levels: one near to zero volts and one at
+a higher level depending on the supply voltage in use. These two levels are
+often
+represented
+as
+L
+and
+H.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 72 (ID: 72, Marks: 3 Marks):
+Topic: Logic & Propositions
+Question: What is absurdity or contradiction?
+
+Model Solution / Answer:
+A statement which is always false is called an absurdity.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 73 (ID: 73, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What is contingency?
+
+Model Solution / Answer:
+A statement which can be true or false depending upon the truth values of
+the variables is called a contingency.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 74 (ID: 74, Marks: 3 Marks):
+Topic: Mathematical Induction
+Question: Is there any particular rule to solve Inductive Step in the mathematical
+Induction?
+
+Model Solution / Answer:
+In the Inductive Step, we suppose that the result is also true for other
+integral values k. If the result is true for n = k, then it must be true for other
+integer value k +1 otherwise the statement cannot be true.
+In proving the result for n = k +1, the procedure changes, as it depends on
+the shape of the given statement.
+Following steps are main:
+1)
+2)
+3)
+
+You should simply replace n by k+1 in the left side of the
+statement.
+Use the supposition of n = k in it.
+Then you have to simplify it to get right side of the statement.
+This is the step,
+where students usually feel difficulty.
+Here sometimes, you have to open the brackets, or add or subtract
+some terms
+or take some term common etc. This step of simplification to get
+right side of the given statement for n = n + 1 changes from question
+to question.
+Now check this step in the examples of the Lessons 23 and 24.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 75 (ID: 75, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What is recursion and recursive definition in discrete mathematics?
+
+Model Solution / Answer:
+Definition and Principles of Recursion:
+1. Definition:
+Recursion is a method of defining an object, function, sequence, or set in terms of smaller or simpler instances of itself.
+2. Two Fundamental Components of a Recursive Definition:
+   (a) Base Case (Anchor): Defines the value or state of the object for the initial, simplest input without using recursion (e.g., f(0) = 1). This provides the termination condition to prevent infinite regression.
+   (b) Recursive Step (Inductive Step): Specifies a rule for calculating the value of the function at a larger argument n in terms of its values at preceding smaller arguments (e.g., f(n) = n · f(n - 1) for n ≥ 1).
+3. Classic Example (Factorial Function):
+   - Base Case: 0! = 1
+   - Recursive Rule: n! = n × (n - 1)! for all integers n ≥ 1.
+   Calculation for 4!: 4! = 4 × 3! = 4 × (3 × 2!) = 4 × 3 × (2 × 1!) = 4 × 3 × 2 × 1 = 24.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 76 (ID: 76, Marks: 3 Marks):
+Topic: Logic & Propositions
+Question: Different notations of conditional implication.
+
+Model Solution / Answer:
+If p than q. P implies q. If p , q. P only if q. P is sufficient for q.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 77 (ID: 77, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: What is cartesion product?
+
+Model Solution / Answer:
+Cartesian product of sets:- Let A and B be sets. The Cartesian product of A
+and B, denoted A x B (read “A cross B”) is the set of all ordered pairs (a,
+b), where a is in A and b is in B. For example: A = {1, 2, 3, 4, 5, 6} B = {a}
+A x B = {(1,a), (2,a), (3,a), (4,a), (5,a)}
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 78 (ID: 78, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: Define fraction and decimal expansion.
+
+Model Solution / Answer:
+Fraction:- A number expressed in the form a/b where a is called the
+numerator and b is called the denominator. Decimal expansion:- The
+decimal expansion of a number is its representation in base 10 The number
+3.22 3 is its integer part and 22 is its decimal part The number on the left of
+decimal point is integer part of the number and the number on the right of
+the decimal point is decimal part of the number.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 79 (ID: 79, Marks: 3 Marks):
+Topic: Set Theory
+Question: Explane venn diagram.
+
+Model Solution / Answer:
+Venn diagram is a pictorial representation of sets. Venn diagram can
+sometime be used to determine whether or not an argument is valid. Real
+life problems can easily be illustrate through Venn diagram if you first
+convert them into set form and then in Venn diagram form. Venn diagram
+enables students to organize similarities and differences visually or
+graphically. A Venn diagram is an illustration of the relationships between
+and among sets, groups of objects that share something in common
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 80 (ID: 80, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: Write the types of functions.
+
+Model Solution / Answer:
+Types of function:- Following are the types of function 1. One to one
+function 2. Onto function 3. Into function 4. Bijective function (one to one
+and onto function) One to one function:- A function f : A to B is said to be
+one to one if there is no repetition in the second element of any two ordered
+pairs. Onto function:- A function f : A to B is said to be onto if Range of f is
+equal to set B (co-domain). Into function:- A function f : A to B is said to
+be into function of Range of f is the subset of set B (co domain) Bijective
+function: Bijective function:- A function is said to be Bijective if it is both
+one to one and onto.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 81 (ID: 81, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: Explain the pigeonhole principle.
+
+Model Solution / Answer:
+The Pigeonhole Principle:
+1. Basic Principle: If k + 1 or more pigeons are placed into k pigeonholes, then at least one pigeonhole must contain two or more pigeons.
+2. Generalized Pigeonhole Principle: If N objects are placed into k boxes, then at least one box contains at least ⌈N / k⌉ objects (where ⌈ ⌉ denotes the ceiling function).
+3. Classic Application: In any group of 367 people, there must be at least two people with the same birthday, because there are at most 366 possible birthdays in a leap year.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 82 (ID: 82, Marks: 3 Marks):
+Topic: Logic & Propositions
+Question: What is conditional probability with example?.
+
+Model Solution / Answer:
+Conditional Probability:
+1. Definition: The conditional probability of an event A given that another event B has already occurred is denoted by P(A | B).
+2. Formula: P(A | B) = P(A ∩ B) / P(B), provided P(B) > 0.
+3. Example: Suppose a fair 6-sided die is rolled. Let B be the event that the number is even (B = {2, 4, 6}, so P(B) = 3/6 = 1/2). Let A be the event that the number rolled is 2. Then A ∩ B = {2}, P(A ∩ B) = 1/6. Therefore, P(A | B) = (1/6) / (1/2) = 1/3.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 83 (ID: 83, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: Explain combinatorics.
+
+Model Solution / Answer:
+Branch of mathematics concerned with the selection, arrangement, and
+combination of objects chosen from a finite set.
+The number of possible bridge hands is a simple example; more complex
+problems include scheduling classes in classrooms at a large university and
+designing a routing system for telephone signals. No standard algebraic
+procedures apply to all combinatorial problems; a separate logical analysis
+may be required for each problem.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 84 (ID: 84, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: How the tree diagram use in our real computer life?
+
+Model Solution / Answer:
+Tree diagrams are used in data structure, compiler construction, in making
+algorithms, operating system etc.
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 85 (ID: 85, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: Write detail of cards.
+
+Model Solution / Answer:
+Diamond Club Heart Spade A A A A 1 1 1 1 2 2 2 2 3 3 3 3 4 4 4 4 5 5 5 5
+6 6 6 6 7 7 7 7 8 8 8 8 9 9 9 9 10 10 10 10 J J J J Q Q Q Q K K K K Where
+26 cards are black & 26 are red. Also ‘A’ stands for ‘ace’ ‘J’ stands for
+‘jack’ ‘Q’ stands for ‘queen’ ‘K’ stands for ‘king’
+
+Source: MTH202 Short Questions & Answers
+
+-------------------------------------------------------
+
+Question 86 (ID: 86, Marks: 3 Marks):
+Topic: Graphs & Trees
+Question: Suppose that a connected planar simple graph has 15 edges. If a plane
+drawing of this graph has 7 faces, how many vertices does this graph
+have?
+
+Model Solution / Answer:
+Given, Edges = v =15 Faces = f = 7 Vertices = v =? According to Euler
+Formula, we know that, f= e – v +2 Putting values, we get 7 = 15 – v + 2 7 = 17 –
+v Simplifying v =1 7-7 =10
+
+Source: MTH202 Solved Subjective with References
+
+-------------------------------------------------------
+
+Question 87 (ID: 87, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: How many ordered selections of two elements can be made from the set
+{0,1,2,3}?
+
+Model Solution / Answer:
+The order selection of two elements from 4 is as P(4,2) = 4!/(4-2)! =
+(4.3.2.1)/2! = 12
+
+Source: MTH202 Solved Subjective with References
+
+-------------------------------------------------------
+
+Question 88 (ID: 88, Marks: 3 Marks):
+Topic: Graphs & Trees
+Question: Find a non-isomorphic tree with five vertices.
+
+Model Solution / Answer:
+There are three non-isomorphic trees with five vertices as shown (where
+every tree with five vertices has 5-1=4 edges).
+
+Source: MTH202 Solved Subjective with References
+
+-------------------------------------------------------
+
+Question 89 (ID: 89, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: Define a predicate?
+
+Model Solution / Answer:
+Let the declarative statement: “x is greater than 3”. We denote this
+declarative statement by P(x) where x is the variable, P is the predicate “is
+greater than 3”. The declarative statement P(x) is said to be the value of the
+propositional function P at x.
+
+Source: MTH202 Solved Subjective with References
+
+-------------------------------------------------------
+
+Question 90 (ID: 90, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: There are 25 people who work in an office together. Four of these people are selected to attend four different conferences (the first to New York, the second to Chicago, the third to San Francisco, and the fourth to Miami). How many such selections are possible? Compare this to selecting an unassigned committee of four.
+
+Model Solution / Answer:
+Combinatorics Problem: Distinct Conference Assignment vs. Committee Selection
+
+1. Four Different Conferences (Ordered Selection / Permutation):
+Because each selected individual is assigned to a specific, distinct city/conference (New York, Chicago, San Francisco, Miami), order matters.
+Number of ways = P(25, 4) = 25 × 24 × 23 × 22 = 303,600 ways.
+
+2. Unassigned Committee (Unordered Selection / Combination):
+If four people are selected simply to form a committee where all members have identical status and order does not matter:
+Number of ways = C(25, 4) = 25! / (4! × 21!) = (25 × 24 × 23 × 22) / (4 × 3 × 2 × 1) = 12,650 ways.
+
+3. Examination Conclusion:
+For distinct conferences, the mathematically rigorous answer is 303,600. When past paper keys note 12,650, they assumed an unordered committee of 4.
+
+Source: MTH202 Solved Subjective with References
+
+-------------------------------------------------------
+
+Question 91 (ID: 91, Marks: 3 Marks):
+Topic: Discrete Mathematics
+Question: Prove that every integer is a rational number.
+
+Model Solution / Answer:
+Theorem: Every integer is a rational number.
+
+1. Formal Definition of a Rational Number:
+A real number r is rational if and only if it can be expressed in the form r = a / b, where a and b are integers and b ≠ 0.
+
+2. Mathematical Proof:
+Let n be any arbitrary integer (n ∈ Z).
+We can express n as:
+  n = n / 1.
+Here:
+  - The numerator a = n is an integer because n ∈ Z.
+  - The denominator b = 1 is an integer and b ≠ 0.
+Thus, n satisfies the definition of a rational number.
+
+3. Conclusion:
+Since n was an arbitrary integer, every integer is a rational number: Z ⊆ Q.
+
+Source: MTH202 Solved Subjective with References
+
+-------------------------------------------------------
+
+Question 92 (ID: 92, Marks: 3 Marks):
+Topic: Graphs & Trees
+Question: Draw or describe a graph with six vertices and five edges that is NOT a tree.
+
+Model Solution / Answer:
+Constructing a Graph with 6 Vertices and 5 Edges that is NOT a Tree:
+
+1. Theoretical Foundation:
+A graph with n vertices is a tree if and only if it is CONNECTED and has exactly n - 1 edges (or equivalently, connected and acyclic).
+For n = 6 vertices, a connected acyclic graph must have 6 - 1 = 5 edges.
+Therefore, for a graph with 6 vertices and 5 edges to NOT be a tree, it must fail one of the tree axioms: it must be DISCONNECTED (which forces it to contain a cycle).
+
+2. Explicit Construction:
+Let V = {v1, v2, v3, v4, v5, v6} (6 vertices).
+Define the 5 edges as:
+  - A 3-cycle (triangle): {v1, v2}, {v2, v3}, {v3, v1} (3 edges).
+  - A path extending from v3: {v3, v4}, {v4, v5} (2 edges).
+  - Vertex v6 has no incident edges (isolated vertex, degree 0).
+Total vertices |V| = 6.
+Total edges |E| = 3 + 2 = 5 edges.
+
+3. Verification:
+This graph is disconnected (v6 cannot be reached from v1) and contains a cycle (v1-v2-v3-v1). Hence, it is NOT a tree.
+
+Source: MTH202 Solved Subjective with References
+
+-------------------------------------------------------
+
+Question 93 (ID: 93, Marks: 3 Marks):
+Topic: Logic & Propositions
+Question: What is Tauology?
+A: A tautology is a statement form that is always true regardless of the truth
+values of the statement variables. i.e. If you want to prove that (p v q) is
+tautology, you have to show that all values of statement (p v q) are true
+regardless of the values of p and q.If all the values of the statement (p v q) is not
+true then this statement is not tautology.
+
+Model Solution / Answer:
+Tautology Definition and Example:
+Definition: A tautology is a statement form that is always True regardless of the truth values assigned to its constituent propositions.
+Example: p ∨ ~p ('It is raining or it is not raining'). In every possible case, one of the two disjuncts is True, so the entire disjunction evaluates to True.
+
+Source: MTH202 Solved Subjective with References
+
+-------------------------------------------------------
+
+Question 94 (ID: 94, Marks: 3 Marks):
+Topic: Logic & Propositions
+Question: How to use conditional probability
+
+Model Solution / Answer:
+Dear student In Conditional probability we put some condition on an
+event to be occur. e.g. A pair of dice is tossed. Find the probability that one of the
+dice is 2 if the sum is 6. If we have to find the probability that one of the dice is 2,
+then it is the case of simple probability. Here we put a condition that sum is six.
+Now A = { 2 appears in at least one die} E = {sum is 6 } Here E = { (1,5), (2, 4),
+(3, 3), (4, 2), (5, 1) } Here two order pairs ( 2, 4 ) and ( 4, 2) satisfies the A. (i.e.
+belongs to A) Now A (intersection) B= { (2,4), (4,2)} Now by formula P(A/E) = P(A
+(intersection) E)/ P(E) = 2/5
+Question: What is the difference between yes and allowed in graphs.
+Answer: Allowed mean that specific property can be occurs in that case but yes
+mean that specific property always occurs in that case. e.g. In Walk you may
+start and end at same point and may not be (allowed). But in Closed Walk you
+have to start and end at same point (yes).
+
+Source: MTH202 Solved Subjective with References
+
+-------------------------------------------------------
+
+Question 95 (ID: 95, Marks: 3 Marks):
+Topic: Boolean Algebra & Circuits
+Question: Identify and define a digital logic circuit with two input signals and one output signal.
+
+Model Solution / Answer:
+Digital Logic Gates with Two Inputs and One Output:
+
+1. Primary Types:
+A digital logic circuit that accepts two binary input signals (A, B ∈ {0, 1}) and produces a single binary output (Y ∈ {0, 1}) is a binary logic gate. The fundamental types are:
+  a. AND Gate: Y = A · B (Output is 1 if and only if both inputs are 1).
+  b. OR Gate: Y = A + B (Output is 1 if at least one input is 1).
+  c. NAND Gate: Y = ~(A · B) (Universal gate; inverted AND).
+  d. NOR Gate: Y = ~(A + B) (Universal gate; inverted OR).
+  e. XOR Gate: Y = A ⊕ B (Output is 1 when inputs are different).
+
+2. Contrast with Inverter (NOT Gate):
+A NOT gate is a unary operation accepting only 1 input signal and yielding 1 output signal. Therefore, a circuit with two inputs cannot be a NOT gate.
+
+Source: MTH202 Solved Subjective with References
+
+-------------------------------------------------------
+
+Question 96 (ID: 96, Marks: 3 Marks):
+Topic: Functions & Mappings
+Question: If f(x) = x + 1 and g(x) = 2x^2 - 1, find the expression for (2f - g)(x).
+
+Model Solution / Answer:
+Step-by-Step Function Arithmetic:
+
+1. Given Functions:
+  f(x) = x + 1
+  g(x) = 2x^2 - 1
+
+2. Definition of Linear Combination of Functions:
+  (2f - g)(x) = 2f(x) - g(x)
+
+3. Substitution and Expansion:
+  2f(x) = 2(x + 1) = 2x + 2
+  -g(x) = -(2x^2 - 1) = -2x^2 + 1
+
+4. Combining Terms:
+  (2f - g)(x) = (2x + 2) - (2x^2 - 1)
+              = 2x + 2 - 2x^2 + 1
+              = -2x^2 + 2x + 3
+
+Final Answer: (2f - g)(x) = -2x^2 + 2x + 3.
+
+Source: MTH202 Solved Subjective with References
+
+-------------------------------------------------------
+
+Question 97 (ID: 97, Marks: 3 Marks):
+Topic: Logic & Propositions
+Question: Show whether the statement 'It is not raining if and only if roads are dry' is logically equivalent to 'Roads are dry if and only if it is not raining'.
+
+Model Solution / Answer:
+Logical Equivalence of Biconditional Statements:
+
+1. Propositional Variables:
+Let p = 'It is not raining'.
+Let q = 'Roads are dry'.
+
+2. Symbolic Forms:
+Original Statement: p ↔ q ('It is not raining if and only if roads are dry').
+Proposed Equivalent: q ↔ p ('Roads are dry if and only if it is not raining').
+
+3. Proof of Commutativity of the Biconditional:
+By definition:
+  p ↔ q ≡ (p → q) ∧ (q → p)
+  q ↔ p ≡ (q → p) ∧ (p → q)
+Since the logical connective conjunction (∧) is commutative (A ∧ B ≡ B ∧ A):
+  (p → q) ∧ (q → p) ≡ (q → p) ∧ (p → q)
+Therefore, p ↔ q ≡ q ↔ p.
+
+Truth Table Proof:
+  p | q | p ↔ q | q ↔ p
+  T | T |   T   |   T  
+  T | F |   F   |   F  
+  F | T |   F   |   F  
+  F | F |   T   |   T  
+Both truth table columns are identical in every row. Thus, the two statements are logically equivalent.
+
+Source: MTH202 Solved Subjective with References
+
+-------------------------------------------------------
+
+Question 98 (ID: 98, Marks: 3 Marks):
+Topic: Functions & Mappings
+Question: If f(x) = x and g(x) = -2x, find (f + g)(x).
+
+Model Solution / Answer:
+Function Addition:
+
+1. Given Functions:
+  f(x) = x
+  g(x) = -2x
+
+2. Definition of Sum of Functions:
+  (f + g)(x) = f(x) + g(x)
+
+3. Calculation:
+  (f + g)(x) = x + (-2x) = x - 2x = -x.
+
+Final Answer: (f + g)(x) = -x.
+
+Source: MTH202 Solved Subjective with References
+
+-------------------------------------------------------
+
+Question 99 (ID: 99, Marks: 3 Marks):
+Topic: Functions & Mappings
+Question: Let the real-valued functions f and g be defined by f(x) = 2x + 1 and g(x) = x^2 - 1. Obtain the expressions for (f ∘ g)(x) and (g ∘ f)(x).
+
+Model Solution / Answer:
+Composition of Functions:
+
+1. Given Functions:
+  f(x) = 2x + 1
+  g(x) = x^2 - 1
+
+2. Finding (f ∘ g)(x):
+  (f ∘ g)(x) = f(g(x))
+             = f(x^2 - 1)
+             = 2(x^2 - 1) + 1
+             = 2x^2 - 2 + 1
+             = 2x^2 - 1.
+
+3. Finding (g ∘ f)(x):
+  (g ∘ f)(x) = g(f(x))
+             = g(2x + 1)
+             = (2x + 1)^2 - 1
+             = (4x^2 + 4x + 1) - 1
+             = 4x^2 + 4x.
+
+Notice that (f ∘ g)(x) ≠ (g ∘ f)(x), illustrating that function composition is non-commutative.
+
+Source: MTH202 Solved Subjective with References
+
+-------------------------------------------------------
+
+Question 100 (ID: 100, Marks: 3 Marks):
+Topic: Set Theory
+Question: Let A = {1, 5, 9} and B = {6, 7}. Find the Cartesian products A × B and B × A. Are they equal? Justify your answer.
+
+Model Solution / Answer:
+Cartesian Products and Non-Commutativity:
+
+1. Given Sets:
+  A = {1, 5, 9} with |A| = 3
+  B = {6, 7} with |B| = 2
+
+2. Computation of A × B:
+  A × B = { (a, b) | a ∈ A, b ∈ B }
+        = { (1, 6), (1, 7), (5, 6), (5, 7), (9, 6), (9, 7) }.
+  Cardinality: |A × B| = 3 × 2 = 6.
+
+3. Computation of B × A:
+  B × A = { (b, a) | b ∈ B, a ∈ A }
+        = { (6, 1), (6, 5), (6, 9), (7, 1), (7, 5), (7, 9) }.
+  Cardinality: |B × A| = 2 × 3 = 6.
+
+4. Equality and Justification:
+  Are they equal? NO, A × B ≠ B × A.
+  Justification: By definition of ordered pairs, (a, b) = (c, d) if and only if a = c and b = d.
+  Here, (1, 6) ∈ A × B, but (1, 6) ∉ B × A (since (6, 1) ≠ (1, 6)).
+  Hence, Cartesian product is not commutative unless A = B or at least one set is empty (∅).
+
+Source: MTH202 Solved Subjective with References
+
+-------------------------------------------------------
+
+Question 101 (ID: 101, Marks: 3 Marks):
+Topic: Functions & Mappings
+Question: State the necessary and sufficient criteria to verify whether a given binary relation from set A to set B is a function.
+
+Model Solution / Answer:
+Function Verification Criteria:
+
+A binary relation f ⊆ A × B is a function from A to B (denoted f: A → B) if and only if it satisfies two strict conditions:
+
+1. Domain Condition (Total Definition):
+Every element of the domain set A must be the first coordinate of at least one ordered pair in f:
+∀x ∈ A, ∃y ∈ B such that (x, y) ∈ f (i.e., Dom(f) = A).
+
+2. Well-Defined / Single-Valued Condition (Uniqueness):
+No element of A may be associated with more than one distinct element of B:
+If (x, y1) ∈ f and (x, y2) ∈ f, then y1 = y2.
+
+Visual / Graphical Tests:
+- Arrow Diagram: Exactly one arrow must emanate from every element in set A.
+- Cartesian Graph: The relation satisfies the Vertical Line Test (every vertical line x = c for c ∈ A intersects the graph at exactly one point).
+
+Source: Moaaz Solved Midterm Subjective
+
+-------------------------------------------------------
+
+Question 102 (ID: 102, Marks: 8 Marks):
+Topic: Logic & Propositions
+Question: Test the following argument for validity:
+Premise 1: Logic is difficult or not many students like logic.
+Premise 2: If Mathematics is easy, then logic is not difficult.
+Conclusion: Therefore, Mathematics is not easy or logic is difficult.
+
+Model Solution / Answer:
+Validity Test of Propositional Argument:
+
+1. Symbolic Formulation:
+Let:
+  d = 'Logic is difficult'
+  s = 'Many students like logic' (so ~s = 'Not many students like logic')
+  m = 'Mathematics is easy'
+
+Argument Form:
+  Premise 1: d ∨ ~s
+  Premise 2: m → ~d
+  Conclusion: ~m ∨ d
+
+2. Critical Row Analysis (Testing for Invalidity):
+An argument is valid if and only if in every row where ALL premises are True (critical row), the conclusion is also True.
+If there exists even one row where premises are True and conclusion is False, the argument is INVALID.
+
+Let us test whether the conclusion ~m ∨ d can be False:
+  ~m ∨ d = False requires both ~m = False (so m = True) and d = False.
+Now substitute m = True and d = False into the premises:
+  - Premise 2: m → ~d becomes True → ~(False) = True → True = True.
+  - Premise 1: d ∨ ~s becomes False ∨ ~s. If we assign s = False, then ~s = True, making Premise 1 = False ∨ True = True.
+
+3. Counterexample Found:
+At truth assignment m = True, d = False, s = False:
+  - Premise 1 (d ∨ ~s): True
+  - Premise 2 (m → ~d): True
+  - Conclusion (~m ∨ d): False
+
+Conclusion: Because there is a critical row where all premises are True but the conclusion is False, the argument is INVALID (Fallacious).
+
+Source: MTH202 Solved Subjective Past Papers
+
+-------------------------------------------------------
+
+Question 103 (ID: 103, Marks: 9 Marks):
+Topic: Relations & Partitions
+Question: Let A = {a, b, c, d}. Define the null relation ∅ and the universal relation A × A on A. Test both relations for reflexive, symmetric, and transitive properties.
+
+Model Solution / Answer:
+Analysis of Null Relation and Universal Relation on Set A = {a, b, c, d}:
+
+1. Null Relation R1 = ∅ on A:
+  a. Reflexive: False (Irreflexive). For R1 to be reflexive, (x, x) ∈ R1 for all x ∈ A. Since A is non-empty, (a, a) ∉ ∅, so ∅ is NOT reflexive.
+  b. Symmetric: True. The condition 'if (x, y) ∈ ∅ then (y, x) ∈ ∅' is vacuously true because the antecedent (x, y) ∈ ∅ is always False.
+  c. Transitive: True. The condition 'if (x, y) ∈ ∅ and (y, z) ∈ ∅ then (x, z) ∈ ∅' is vacuously true because the hypothesis is always False.
+  Note: ∅ is also antisymmetric (vacuously true), but is not an equivalence relation because it lacks reflexivity.
+
+2. Universal Relation R2 = A × A on A:
+  a. Reflexive: True. For every x ∈ A, (x, x) ∈ A × A by definition of the Cartesian product.
+  b. Symmetric: True. For any (x, y) ∈ A × A, (y, x) ∈ A × A since x, y ∈ A.
+  c. Transitive: True. For any (x, y) ∈ A × A and (y, z) ∈ A × A, (x, z) ∈ A × A.
+  Note: Universal relation R2 satisfies all three properties and is therefore an Equivalence Relation on A (with a single equivalence class containing all elements of A).
+
+Source: MTH202 Solved Subjective Past Papers
+
+-------------------------------------------------------
+
+Question 104 (ID: 104, Marks: 4 Marks):
+Topic: Functions & Mappings
+Question: Let f and g be functions from the set of integers to the set of integers defined by f(x) = 2x + 3 and g(x) = 3x + 2. What is the composition of f and g (f ∘ g)? What is the composition of g and f (g ∘ f)?
+
+Model Solution / Answer:
+Composition of Linear Functions on Integers:
+
+1. Given:
+  f: Z → Z, f(x) = 2x + 3
+  g: Z → Z, g(x) = 3x + 2
+
+2. Composition (f ∘ g)(x):
+  (f ∘ g)(x) = f(g(x))
+             = f(3x + 2)
+             = 2(3x + 2) + 3
+             = 6x + 4 + 3
+             = 6x + 7.
+
+3. Composition (g ∘ f)(x):
+  (g ∘ f)(x) = g(f(x))
+             = g(2x + 3)
+             = 3(2x + 3) + 2
+             = 6x + 9 + 2
+             = 6x + 11.
+
+Conclusion: (f ∘ g)(x) = 6x + 7 and (g ∘ f)(x) = 6x + 11. Since 6x + 7 ≠ 6x + 11 for any integer x, f ∘ g ≠ g ∘ f.
+
+Source: MTH202 Solved Subjective Past Papers
+
+-------------------------------------------------------
+
+Question 105 (ID: 105, Marks: 9 Marks):
+Topic: Sequences & Recurrence
+Question: If the 5th element of an arithmetic sequence is -16 and the 20th term is -46, find the 10th term using the proper formula of arithmetic sequence.
+
+Model Solution / Answer:
+Step-by-Step Solution Using Arithmetic Progression Formula:
+
+1. Arithmetic Sequence General Term Formula:
+  a_n = a_1 + (n - 1)d,
+  where a_1 is the first term and d is the common difference.
+
+2. Setting Up Simultaneous Equations:
+  From the 5th term (n = 5):
+    a_5 = a_1 + 4d = -16      --- (Equation 1)
+  From the 20th term (n = 20):
+    a_20 = a_1 + 19d = -46    --- (Equation 2)
+
+3. Solving for Common Difference (d):
+  Subtract Equation 1 from Equation 2:
+    (a_1 + 19d) - (a_1 + 4d) = -46 - (-16)
+    15d = -30
+    d = -30 / 15 = -2.
+
+4. Solving for First Term (a_1):
+  Substitute d = -2 into Equation 1:
+    a_1 + 4(-2) = -16
+    a_1 - 8 = -16
+    a_1 = -16 + 8 = -8.
+
+5. Calculating the 10th Term (a_10):
+  a_10 = a_1 + (10 - 1)d
+       = a_1 + 9d
+       = -8 + 9(-2)
+       = -8 - 18
+       = -26.
+
+Final Answer: The 10th term of the arithmetic sequence is -26.
+
+Source: MTH202 Solved Subjective Past Papers
+
+-------------------------------------------------------
+
+Question 106 (ID: 106, Marks: 5 Marks):
+Topic: Sequences & Recurrence
+Question: Show that the sequence c_n = 2^n - 1, for n ≥ 0 (terms 0, 1, 3, 7, ...), satisfies the recurrence relation c_k = 2c_{k-1} + 1 for all integers k ≥ 1.
+
+Model Solution / Answer:
+Verification of Recurrence Relation Solution:
+
+1. Given Explicit Formula:
+  c_n = 2^n - 1, for integers n ≥ 0.
+
+2. Recurrence Relation to Verify:
+  c_k = 2c_{k-1} + 1, for all integers k ≥ 1.
+
+3. Algebraic Proof (Substituting Formula into Recurrence):
+  From the explicit formula:
+    c_k = 2^k - 1
+    c_{k-1} = 2^{k-1} - 1
+  Evaluate the Right Hand Side (RHS):
+    RHS = 2 · c_{k-1} + 1
+        = 2 · (2^{k-1} - 1) + 1
+        = (2 · 2^{k-1}) - 2 + 1
+        = 2^{(k-1)+1} - 1
+        = 2^k - 1
+        = c_k = LHS.
+
+4. Base Condition Check:
+  For k = 1: c_0 = 2^0 - 1 = 1 - 1 = 0.
+  From recurrence: c_1 = 2(c_0) + 1 = 2(0) + 1 = 1.
+  From explicit formula: c_1 = 2^1 - 1 = 1. (Consistent).
+
+Conclusion: Since LHS = RHS for all integers k ≥ 1, the sequence c_n = 2^n - 1 satisfies the recurrence relation c_k = 2c_{k-1} + 1.
+
+Source: MTH202 Solved Subjective Past Papers
+
+-------------------------------------------------------
+

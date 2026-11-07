@@ -1,0 +1,232 @@
+#!/usr/bin/env python3
+import json, re, math
+
+with open('/home/haider/Desktop/Chores/sta301_objective.json') as f:
+    mcqs = json.load(f)
+
+# Comprehensive pattern-matching dictionary for STA301 MCQs
+# Maps lower-case keywords/phrases to target answer substring/regex
+CORE_RULES = [
+    # Factorials & Combinatorics
+    (r'10\s*!\s*=', '3628800'),
+    (r'10!\s*equals', '3628800'),
+    (r'0!\s*is\s*equal', '1'),
+    (r'\(10\s*-\s*4\)\s*!', '720'),
+    (r'5c5\s*is\s*equal', '1'),
+    (r'5c5\s*equals', '1'),
+    (r'10c9', '10'),
+    (r'letters of the word\s*[\'"]?leading[\'"]?', '5040'),
+    (r'letters of the word\s*[\'"]?optical[\'"]?', '720'), # vowels together: 720, or total 5040
+    (r'letters of the word\s*[\'"]?leader[\'"]?', '360'),
+    (r'letters of the word\s*[\'"]?corporation[\'"]?', '50400'),
+    (r'four books can be arranged', '24'),
+    (r'4 books can be arranged', '24'),
+    (r'number of ways in which 4 books', '24'),
+
+    # Central Tendency Definitions & Properties
+    (r'five number summery consist of', 'x 0 , q1 , median, q3 , andx m'),
+    (r'five-number summary', 'x 0 , q1 , median, q3 , andx m'),
+    (r'middle value of an ordered array', 'median'),
+    (r'median is\s*_+', 'middle point'),
+    (r'most frequent value', 'mode'),
+    (r'most frequently occurring', 'mode'),
+    (r'number which occurs most frequently', 'mode'),
+    (r'mode in the word mathematics', 'm, a and t'),
+    (r'mode in the word tomato', 't and o'),
+    (r'mode value from raw data can be obtained by the help of', 'dot plot'),
+    (r'reciprocal of arithmetic mean of reciprocals', 'harmonic mean'),
+    (r'harmonic means is the reciprocal of', 'arithmetic mean of reciprocals'),
+    (r'harmonic mean is the reciprocal of', 'arithmetic mean of the reciprocals'),
+    (r'algebraic sum of deviations from mean', 'zero'),
+    (r'sum of deviations of the observation from their mean', 'zero'),
+    (r'sum of deviations from mean is always', 'zero'),
+    (r'sum of squared deviations from mean', 'minimum'),
+    (r'sum of squares of deviations from mean', 'minimum'),
+    (r'mean is obtained by', 'dividing the sum of all observations by their number'),
+    (r'does not divide a set of observ', 'standard deviations'),
+    (r'does not divide a set of data into equal parts', 'standard deviations'),
+    (r'relationship among the averages', 'am > gm > hm'),
+    (r'am\s*>=?\s*gm\s*>=?\s*hm', 'am > gm > hm'),
+    (r'car is running at the rate of 15km/hr', 'harmonic mean'),
+    (r'level of measurement is required for the median', 'ordinal'),
+    (r'median can be found only when', 'data is arranged'),
+    (r'open-ended class.*mean', 'mean can-not be computed'),
+    (r'in case of an open-ended class', 'mean can-not be computed'),
+    (r'geometric mean of 4 and 16', '8'),
+    (r'mean of the values 2,\s*4,\s*6,\s*8', '5'),
+    (r'median of this set of numbers:\s*4,\s*6,\s*7,\s*9,\s*2000', '7'),
+    (r'observations 2,3,4,5,4,6,4,\s*the mode is', '4'),
+    (r'1,2,1,1,2,2,2,3,4,5,3,2,3,1,4,2,3 mode', '2'),
+    (r'empirical relation.*mode', '3 median – 2 mean = mode'),
+    (r'3\s*median\s*–\s*2\s*mean', '3 median – 2 mean = mode'),
+
+    # Dispersion Definitions & Properties
+    (r'standard deviation of 7,\s*7,\s*7,\s*7,\s*7', '0'),
+    (r'standard deviation of -1,\s*-1,\s*-1,\s*-1', '0'),
+    (r'standard deviation of c\s*\(constant\)', '0'),
+    (r'standard deviation of 64 is', '8'),
+    (r'variance of a sample.*equal to 64.*standard deviation', '8'),
+    (r'standard deviation of a population is 5.5.*variance', '30.25'),
+    (r'mean is 25 and s\.d is 5 then c\.?v', '20%'),
+    (r'mean\s*=\s*25\s*&\s*s\.d\s*is\s*5\s*then c\.?v', '20%'),
+    (r'y\s*=\s*3x\s*\+\s*5.*s\.d of y', '3 s.d(x)'),
+    (r'y\s*=\s*bx.*variance of y', 'b2 var(x)'),
+    (r'range of the scores 29,\s*3,\s*143,\s*27,\s*99', '140'),
+    (r'range for the following data:\s*22,\s*22,\s*30,\s*32,\s*37,\s*48,\s*60,\s*88', '66'),
+    (r'range of the values\s*-10,\s*-\s*19,\s*-9,\s*-15,\s*-28,\s*-26,\s*-25', '19'),
+    (r'range of -2,-3,-5,-10', '8'),
+    (r'range of the values -2.50, -3.70', '7.5'),
+    (r'formula of mid quartile range', '(q1 + q3)/2'),
+    (r'formula of mid-range', 'xm + x0'),
+    (r'formula of range', 'xm – x0'),
+    (r'least affected by extreme values', 'quartile deviation'),
+    (r'least affected by the extreme values', 'quartile deviation'),
+    (r'measure of dispersion.*free from the units', 'coefficient of variation'),
+    (r'unit of measurement remains.*relative dispersion', 'unitless'),
+    (r'measures of relative dispersion unit of measurement', 'vanish'),
+    (r'chebychev.*not hold for k', '1'),
+    (r'chebyshev.*not hold for k', '1'),
+    (r'for any number k.*at least 1.*1/k2', 'greater than 1'),
+    (r'empirical rule.*approximately 68%', '(mean - s.d, mean + s.d)'),
+    (r'empirical rule.*approximately 95%', '(mean - 2s.d, mean + 2s.d)'),
+    (r'empirical rule.*approximately 99.7%', '(mean - 3s.d, mean + 3s.d)'),
+    (r'measure of dispersion can never be', 'negative'),
+    (r'best measure of variation', 'standard deviation'),
+
+    # Moments, Skewness, Kurtosis
+    (r'first moment about origin is always', 'mean'),
+    (r'first moment about mean is', '0'),
+    (r'second moment about mean is', 'variance'),
+    (r'third moment about mean provides information about', 'skewness'),
+    (r'fourth moment about mean provides information about', 'kurtosis'),
+    (r'departure from symmetry', 'skewness'),
+    (r'deviation of a distribution from symmetry', 'skewness'),
+    (r'departs from symmetry', 'skewed'),
+    (r'longer tail to the right', 'positively skewed'),
+    (r'longer tail is to the left', 'skewed to the left'),
+    (r'tail to the left', 'negatively skewed'),
+    (r'mean\s*<\s*median\s*<\s*mode', 'negatively skewed'),
+    (r'mean\s*>\s*median\s*>\s*mode', 'positively skewed'),
+    (r'mean\s*=\s*median\s*=\s*mode', 'symmetrical'),
+    (r'mesokurtic.*b2', 'equal to 3'),
+    (r'leptokurtic.*b2', 'greater than 3'),
+    (r'platykurtic.*b2', 'less than 3'),
+    (r'moment ratio b2 is used to measure', 'kurtosis'),
+    (r'pearsons coefficient of skewness is not possible if standard deviation is', '0'),
+    (r'pearson.*skewness.*mean=6,median =5.*sd = 4', '0.75'),
+    (r'mean of a distribution is 30, the mode is 24 and the standard deviation is 4', 'greater than zero'),
+    (r'mean of a distribution is 25, the mode is 25 and the standard deviation is 5', 'equal to zero'),
+    (r'pearson’s coefficient of skewness is greater then zero', 'positively skewed'),
+    (r'order \(highest to lowest\).*positive skewness', 'mean, median, mode'),
+    (r'corrected moments are calculated by the method of', 'sheppard’s correction'),
+    (r'sheppard’s correction', 'sheppard’s correction'),
+
+    # Regression and Correlation
+    (r'all the values fall on the same straight line and the line has a positive slope', 'r = +1'),
+    (r'correlation coefficient will be zero if', 'slope b = 0'),
+    (r'correlation of coefficient lies between', '- 1 to +1'),
+    (r'correlation coefficient lies between', '- 1 to +1'),
+    (r'could not represent a coefficient of correlation', 'r=1.09'),
+    (r'r = 1.09', 'r=1.09'),
+    (r'y= a \+ bx\+ € the variable which is non-random', 'x'),
+    (r'variable plotted on the horizontal or x-axis in a scatter diagram', 'independent variable'),
+    (r'variable plotted on the vertical or y-axis in a scatter diagram', 'dependent variable'),
+    (r'variable plotted along y-axis is', 'dependent variable'),
+    (r'in regression line y= a\+bx , x is called', 'independent variable'),
+    (r'in regression line y=a\+bx, y is called', 'dependent variable'),
+    (r'linear regression, y= a\+bx , the variable “y” will always', 'a random variable'),
+    (r'linear regression, y= a\+bx , the variable “x” will always', 'a non-random variable'),
+    (r'best fitted line is obtained through', 'method of least square'),
+    (r'degree of scatter of the observed values about the regression line', 'standard error of estimate'),
+    (r'intercept parameter is equal to zero', 'regression line will pass through the origin'),
+    (r'intercept parameter is equal to 0', 'regression line will pass through the origin'),
+    (r'var\s*\(x-y\)', 'var(x) + var(y)'),
+    (r'e\s*\(xy\)', 'e(x).e(y)'),
+    (r'e\(4x \+ 5\)', '4 e (x) + 5'),
+    (r'correlation coefficient of \.75', 'strong positive'),
+    (r'values of variables are increasing or decreasing in the same direction', 'positive correlation'),
+    (r'strength of the association between x and y is very weak', 'r = 0'),
+    (r'when there is no correlation then', 'r=0'),
+    (r'rank correlation coefficient was introduced by', 'spearman'),
+
+    # Probability
+    (r'drawing ‘white’ ball from a bag containing 4 red , 8 black and 3 white', '3/15'),
+    (r'drawing a ‘jack card ‘from 52 playing cards', '4/52'),
+    (r'drawing any one spade card', '13/52'),
+    (r'probability that three tails.*3 times', '1/8'),
+    (r'two dice are rolled, the numbers of possible sample points', '36'),
+    (r'rolling one die', '6'),
+    (r'multiplication theorem p\(\s*a\s*\s*b\s*\)', 'p(a) * p(b|a)'),
+    (r'multiplication theorem p\(\s*a\s*n\s*b\s*\)', 'p(a) * p(b|a)'),
+    (r'p\(b\|a\)\s*=\s*0\.25\s*and.*0\.20', '0.80'),
+    (r'p\s*\(a\s*union\s*b\)\s*is equal to', 'p(a) + p(b)-p(a.b)'),
+    (r'complement of the event b', '1 - p (b)'),
+    (r'probability of a sure event', '1'),
+    (r'probability of an impossible event', '0'),
+    (r'values of probability always lie between', '0 and 1'),
+    (r'classical definition of probability is not applicable', 'not equally likely'),
+    (r'simultaneous occurrence of two events', 'joint probability'),
+    (r'p\(x<2\).*0 1 2 3.*1/8 3/8', '4/8'),
+    (r'hyper geometric random variable is a', 'discrete variable'),
+    (r'parameters of the binomial distribution', 'n&p'),
+    (r'mean deviation of the normal distribution', '4/5 of the s.d'),
+
+    # Basics, Data Representation, Scales
+    (r'height of student is 60 inch', 'continuous data'),
+    (r'written at the top of the table', 'title'),
+    (r'graphs is used for a time series data', 'historigram'),
+    (r'historigram and histogram are', 'not same'),
+    (r'histogram contains a set of', 'adjacent rectangles'),
+    (r'sector diagram is also called', 'pie diagram'),
+    (r'pie diagram is also called', 'angular diagram'),
+    (r'type of bar diagram is', 'sub divided diagram'),
+    (r'total angles in pie chart', '360 degrees'),
+    (r'total angle of the pie-chart', '360'),
+    (r'stem and leaf was introduced by', 'john tukey'),
+    (r'stem-and-leaf was introduced by', 'john tukey'),
+    (r'backbone of: options:', 'research'),
+    (r'plural sense, statistic means', 'data'),
+    (r'singular sense.*statistic', 'science'),
+    (r'statistics deals with', 'aggregates of facts'),
+    (r'statistic is a numerical quantity.*calculated from', 'sample'),
+    (r'parameter is a', 'constant'),
+    (r'parameter is a ………quantity', 'constant'),
+    (r'collection of all the elements under study', 'population'),
+    (r'true for the population', 'collection of individual objects or measurement'),
+    (r'component bar chart in which', 'each bar is divided into two or more sections'),
+    (r'difference between consecutive lower class limits', 'class interval'),
+    (r'bases are marked off by', 'class boundaries'),
+    (r'class boundaries are also called', 'true class limits'),
+    (r'frequency curve is', 'asymptotic to x axis'),
+    (r'cumulative frequency curve is also called', 'ogive'),
+    (r'connect the mid-points of rectangles in a histogram', 'frequency polygon'),
+    (r'touches the x-axis from both ends', 'frequency polygon'),
+    (r'labeled to identify an attribute of element', 'nominal'),
+    (r'zip-code of a city is an example of', 'qualitative data'),
+    (r'marital status of a person', 'nominal'),
+    (r'data that have been originally collected', 'primary data'),
+    (r'alpha is the probability of', 'rejecting h0'),
+    (r'laspeyres index number', 'base year quantities'),
+    (r'paasche index number', 'current year quantities'),
+    (r'fisher\'?s ideal index', 'geometric mean of laspeyres and paasche')
+]
+
+print(f"Total CORE_RULES: {len(CORE_RULES)}")
+
+matched_count = 0
+unmatched = []
+
+for q in mcqs:
+    qtext = q['question'].lower()
+    found = False
+    for pat, ans_target in CORE_RULES:
+        if re.search(pat, qtext):
+            found = True
+            break
+    if found:
+        matched_count += 1
+    else:
+        unmatched.append(q)
+
+print(f"Matched by core rules: {matched_count} / {len(mcqs)} ({matched_count*100/len(mcqs):.1f}%)")
+print(f"Unmatched: {len(unmatched)}")

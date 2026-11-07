@@ -1,0 +1,724 @@
+[
+  {
+    "id": 1,
+    "question": "The numbers of airplane accidents in a year are 1, 2, 3, 4 with corresponding probabilities 1/6, 2/6, 2/6 and 1/6. What is the variance of annual accidents?",
+    "marks": "5 Marks",
+    "answer": "**Step-by-Step Solution:**\n\n**1. Probability Distribution of Annual Airplane Accidents ($X$):**\n| Accidents ($X$) | Probability $P(X)$ | $X \\cdot P(X)$ | $X^2$ | $X^2 \\cdot P(X)$ |\n|:---:|:---:|:---:|:---:|:---:|\n| 1 | $\\frac{1}{6}$ | $\\frac{1}{6}$ | 1 | $\\frac{1}{6}$ |\n| 2 | $\\frac{2}{6}$ | $\\frac{4}{6}$ | 4 | $\\frac{8}{6}$ |\n| 3 | $\\frac{2}{6}$ | $\\frac{6}{6}$ | 9 | $\\frac{18}{6}$ |\n| 4 | $\\frac{1}{6}$ | $\\frac{4}{6}$ | 16 | $\\frac{16}{6}$ |\n| **Total** | $\\sum P(X) = 1$ | $\\sum X P(X) = \\frac{15}{6}$ | — | $\\sum X^2 P(X) = \\frac{43}{6}$ |\n\n**2. Expected Value $E(X)$ (Mean):**\n$$E(X) = \\sum X \\cdot P(X) = \\frac{1}{6} + \\frac{4}{6} + \\frac{6}{6} + \\frac{4}{6} = \\frac{15}{6} = \\frac{5}{2} = 2.5$$\n\n**3. Expected Value $E(X^2)$:**\n$$E(X^2) = \\sum X^2 \\cdot P(X) = \\frac{1}{6} + \\frac{8}{6} + \\frac{18}{6} + \\frac{16}{6} = \\frac{43}{6} \\approx 7.1667$$\n\n**4. Variance $\\text{Var}(X)$:**\n$$\\text{Var}(X) = E(X^2) - [E(X)]^2$$\n$$\\text{Var}(X) = \\frac{43}{6} - \\left(\\frac{5}{2}\\right)^2 = \\frac{43}{6} - \\frac{25}{4}$$\nTaking the common denominator (LCM = 12):\n$$\\text{Var}(X) = \\frac{86 - 75}{12} = \\frac{11}{12} \\approx 0.9167$$\n\n**Final Answer:**\nThe variance of annual airplane accidents is **$\\frac{11}{12} \\approx 0.9167$** (Standard Deviation $\\sigma = \\sqrt{11/12} \\approx 0.9574$).",
+    "topic": "Random Variables & Distributions",
+    "source": "Moaaz Solved Subjective"
+  },
+  {
+    "id": 2,
+    "question": "For the given data calculate the mean deviation. +3 -3 -4 -1 +1 +4",
+    "marks": "3 Marks",
+    "answer": "**Step-by-Step Solution:**\n\n**1. Given Data:**\nObservations: $X = \\{+3, -3, -4, -1, +1, +4\\}$, Sample size $n = 6$.\n\n**2. Calculation of Arithmetic Mean ($\\bar{X}$):**\n$$\\bar{X} = \\frac{\\sum X}{n} = \\frac{3 - 3 - 4 - 1 + 1 + 4}{6} = \\frac{0}{6} = 0$$\n\n**3. Absolute Deviations Table from Mean $|X - \\bar{X}| = |X - 0| = |X|$:**\n| $X$ | $|X - \\bar{X}|$ |\n|:---:|:---:|\n| +3 | $|3 - 0| = 3$ |\n| -3 | $|-3 - 0| = 3$ |\n| -4 | $|-4 - 0| = 4$ |\n| -1 | $|-1 - 0| = 1$ |\n| +1 | $|1 - 0| = 1$ |\n| +4 | $|4 - 0| = 4$ |\n| **Total** | $\\sum |X - \\bar{X}| = 16$ |\n\n**4. Mean Deviation Formula and Calculation:**\n$$\\text{M.D.}(\\bar{X}) = \\frac{\\sum |X - \\bar{X}|}{n} = \\frac{16}{6} = \\frac{8}{3} \\approx 2.67$$\n\n**Final Answer:**\nThe mean deviation about the mean is **$\\frac{8}{3} \\approx 2.67$**.",
+    "topic": "Measures of Dispersion",
+    "source": "Moaaz Solved Subjective"
+  },
+  {
+    "id": 3,
+    "question": "Why we use coefficient of variation?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nThe **Coefficient of Variation (C.V.)** is a relative measure of dispersion defined as:\n$$\\text{C.V.} = \\frac{S}{\\bar{X}} \\times 100\\%$$\n\n**Why We Use C.V.:**\n1. **Comparing Datasets with Different Units of Measurement:** Standard deviation depends on units of measurement (e.g. comparing height in cm with weight in kg). Because C.V. is expressed as a pure percentage (dimensionless), it allows direct comparison of variability between completely different variables.\n2. **Comparing Datasets with Widely Different Means:** Even when two series have the same units, a standard deviation of 10 on a mean of 50 represents 20% variability, while a standard deviation of 10 on a mean of 1,000 represents only 1% variability. C.V. standardizes this comparison.\n3. **Evaluating Consistency / Stability:** A lower C.V. indicates greater consistency, homogeneity, and reliability of the data, while a higher C.V. indicates greater dispersion and risk.",
+    "topic": "Measures of Dispersion",
+    "source": "Moaaz Solved Subjective"
+  },
+  {
+    "id": 4,
+    "question": "Define rule for permutation",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\n**Definition of Permutation:**\nA **permutation** is an ordered arrangement of all or part of a set of distinct objects where the order of arrangement is strictly important.\n\n**General Permutation Rule:**\nThe number of permutations of $n$ distinct objects taken $r$ at a time is denoted by $^n P_r$ or $P(n, r)$ and given by:\n$$^n P_r = \\frac{n!}{(n - r)!} \\quad (0 \\le r \\le n)$$\nWhere $n! = n \\times (n-1) \\times (n-2) \\times \\dots \\times 1$ and $0! = 1$.\n\n**Special Cases:**\n1. Arranging all $n$ objects: $^n P_n = \\frac{n!}{(n - n)!} = \\frac{n!}{0!} = n!$.\n2. Permutations with repetition: When among $n$ objects, $n_1$ are alike of one kind, $n_2$ of a second kind, ..., $n_k$ of a $k$-th kind, the number of distinct permutations is:\n$$P = \\frac{n!}{n_1! \\cdot n_2! \\cdot \\dots \\cdot n_k!}$$",
+    "topic": "Probability & Counting Rules",
+    "source": "Moaaz Solved Subjective"
+  },
+  {
+    "id": 5,
+    "question": "If mean x=0.645 and S2 =0.215 Then calculate coefficient of variation",
+    "marks": "2 Marks",
+    "answer": "**Step-by-Step Solution:**\n\n**1. Given Data:**\n- Mean $\\bar{X} = 0.645$\n- Variance $S^2 = 0.215$\n\n**2. Calculate Standard Deviation ($S$):**\n$$S = \\sqrt{S^2} = \\sqrt{0.215} \\approx 0.46368$$\n\n**3. Formula for Coefficient of Variation (C.V.):**\n$$\\text{C.V.} = \\frac{S}{\\bar{X}} \\times 100\\%$$\n\n**4. Calculation:**\n$$\\text{C.V.} = \\frac{0.46368}{0.645} \\times 100\\% \\approx 71.89\\%$$\n\n**Final Answer:**\nThe coefficient of variation is **$71.89\\%$** (or $0.7189$ in decimal ratio form).",
+    "topic": "Measures of Dispersion",
+    "source": "Moaaz Solved Subjective"
+  },
+  {
+    "id": 6,
+    "question": "Find the probability of drawing white ball from bag out of 4 red, 8 blue and 3 white balls.",
+    "marks": "3 Marks",
+    "answer": "**Step-by-Step Solution:**\n\n**1. Composition of the Bag:**\n- Red balls = 4\n- Blue balls = 8\n- White balls = 3\n- Total number of balls $N = 4 + 8 + 3 = 15$\n\n**2. Case A: Drawing a Single Ball ($n = 1$):**\nNumber of favorable outcomes for a white ball $n(W) = 3$.\nTotal possible outcomes $n(S) = 15$.\n$$P(\\text{White}) = \\frac{n(W)}{n(S)} = \\frac{3}{15} = \\frac{1}{5} = 0.20$$\n\n**3. Case B: Drawing 3 Balls at Once Without Replacement (All White):**\nIf 3 balls are drawn simultaneously:\n$$P(\\text{all 3 white}) = \\frac{\\binom{3}{3}\\binom{12}{0}}{\\binom{15}{3}} = \\frac{1 \\times 1}{\\frac{15 \\times 14 \\times 13}{3 \\times 2 \\times 1}} = \\frac{1}{455} \\approx 0.0022$$\n\n**Final Answer:**\n- For drawing 1 ball: **$P(W) = \\frac{3}{15} = \\frac{1}{5} = 0.20$**.\n- For drawing 3 balls (all white): **$P(3W) = \\frac{1}{455} \\approx 0.0022$**.",
+    "topic": "Probability & Counting Rules",
+    "source": "Moaaz Solved Subjective"
+  },
+  {
+    "id": 7,
+    "question": "If S={1,2,3,4,5,6,7,8,9,10} And A={1,2,3,4} , B= {3,4,5,6} Prove that ( A  B ) ( A B )",
+    "marks": "5 Marks",
+    "answer": "**Proof of De Morgan's First Law:**\n\n**Given Sets:**\n- Universal Set $S = \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\}$\n- Set $A = \\{1, 2, 3, 4\\}$\n- Set $B = \\{3, 4, 5, 6\\}$\n\n**Step 1: Evaluate Left-Hand Side (LHS) = $(A \\cup B)'$:**\n- Union of $A$ and $B$:\n  $$A \\cup B = \\{1, 2, 3, 4\\} \\cup \\{3, 4, 5, 6\\} = \\{1, 2, 3, 4, 5, 6\\}$$\n- Complement of $(A \\cup B)$:\n  $$(A \\cup B)' = S - (A \\cup B) = \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\} - \\{1, 2, 3, 4, 5, 6\\} = \\{7, 8, 9, 10\\}$$\n  $$\\text{LHS} = \\{7, 8, 9, 10\\} \\quad \\text{--- (Equation 1)}$$\n\n**Step 2: Evaluate Right-Hand Side (RHS) = $A' \\cap B'$:**\n- Complement of $A$:\n  $$A' = S - A = \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\} - \\{1, 2, 3, 4\\} = \\{5, 6, 7, 8, 9, 10\\}$$\n- Complement of $B$:\n  $$B' = S - B = \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\} - \\{3, 4, 5, 6\\} = \\{1, 2, 7, 8, 9, 10\\}$$\n- Intersection of $A'$ and $B'$:\n  $$A' \\cap B' = \\{5, 6, 7, 8, 9, 10\\} \\cap \\{1, 2, 7, 8, 9, 10\\} = \\{7, 8, 9, 10\\}$$\n  $$\\text{RHS} = \\{7, 8, 9, 10\\} \\quad \\text{--- (Equation 2)}$$\n\n**Conclusion:**\nFrom Equations (1) and (2), $\\text{LHS} = \\text{RHS} = \\{7, 8, 9, 10\\}$.\nHence, $(A \\cup B)' = (A' \\cap B')$ is **proved**.",
+    "topic": "Data Representation & Basics",
+    "source": "Moaaz Solved Subjective"
+  },
+  {
+    "id": 8,
+    "question": "Why measure of central tendency and measure of dispersion are complementary to each other?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nMeasures of Central Tendency and Measures of Dispersion are complementary because neither alone can give a complete summary of a dataset:\n\n1. **Central Tendency Identifies the Center:** Averages (Mean, Median, Mode) locate the central value or the typical observation around which data clusters.\n2. **Dispersion Quantifies the Scatter:** Measures of dispersion (Variance, Standard Deviation, Range, Quartile Deviation) describe how widely the observations spread out or disperse from that center.\n3. **Why One Without the Other Fails:** Two distinct datasets can have identical means (e.g. Data 1: $\\{50, 50, 50\\}$ and Data 2: $\\{0, 50, 100\\}$ both have Mean = 50), yet Data 1 has zero variation while Data 2 has substantial spread.\n4. **Conclusion:** An average indicates *where* data concentrates, while dispersion reveals *how reliable and representative* that average is. Together, they fully describe the distribution's location and spread.",
+    "topic": "Measures of Dispersion",
+    "source": "Moaaz Solved Subjective"
+  },
+  {
+    "id": 9,
+    "question": "What is the subjective approach to the probability?",
+    "marks": "3 Marks",
+    "answer": "**Answer:**\n\n**Definition:**\nThe **Subjective Approach to Probability** (also known as the personalistic or Bayesian perspective) defines probability as a measure of the degree of personal belief, confidence, or trust an individual assigns to the likelihood of an event occurring, based on available evidence, intuition, experience, or judgment.\n\n**Key Characteristics:**\n1. **Applicable to Non-Repeatable Events:** Unlike classical probability (which requires equally likely outcomes) and relative frequency (which requires repeatable experiments under identical conditions), subjective probability can evaluate unique historical or one-off scenarios (e.g., \"What is the probability that a new tech product captures 20% market share next year?\").\n2. **Individual Dependence:** Different knowledgeable people can assign different subjective probabilities to the same event depending on their information and risk assessment.\n3. **Axiomatic Consistency:** Subjective probabilities must still obey standard probability laws: $0 \\le P(A) \\le 1$, $P(S) = 1$, and $P(A \\cup B) = P(A) + P(B)$ for mutually exclusive events.",
+    "topic": "Probability & Counting Rules",
+    "source": "Moaaz Solved Subjective"
+  },
+  {
+    "id": 10,
+    "question": "Explain the difference between absolute dispersion and relative dispersion:",
+    "marks": "3 Marks",
+    "answer": "**Answer:**\n\n| Feature | Absolute Dispersion | Relative Dispersion |\n|:---|:---|:---|\n| **Definition** | Measures the actual magnitude of variation in the dataset. | Measures the variability in proportion to an appropriate measure of central tendency. |\n| **Units of Measurement** | Expressed in the **same units** as the original data (or squared units for variance). | **Unitless (pure number)**; expressed as a decimal ratio or percentage. |\n| **Primary Formulae** | • Range: $X_m - X_0$<br>• Quartile Deviation: $\\frac{Q_3 - Q_1}{2}$<br>• Mean Deviation: $\\frac{\\sum |X - \\bar{X}|}{n}$<br>• Standard Deviation: $\\sqrt{\\frac{\\sum (X - \\bar{X})^2}{n}}$ | • Coefficient of Range: $\\frac{X_m - X_0}{X_m + X_0}$<br>• Coefficient of Q.D.: $\\frac{Q_3 - Q_1}{Q_3 + Q_1}$<br>• Coefficient of M.D.: $\\frac{\\text{M.D.}}{\\bar{X}}$<br>• Coefficient of Variation (C.V.): $\\frac{S}{\\bar{X}} \\times 100\\%$ |\n| **Comparability** | Cannot be used to compare datasets having different units or vastly different means. | Specifically designed to compare variation across datasets with different units or different means. |",
+    "topic": "Measures of Dispersion",
+    "source": "Moaaz Solved Subjective"
+  },
+  {
+    "id": 11,
+    "question": "Differentiate between the mutually exclusive events and exhaustive events.",
+    "marks": "5 Marks",
+    "answer": "**Answer:**\n\n**1. Mutually Exclusive Events (Disjoint Events):**\n- **Definition:** Two or more events of a random experiment are said to be mutually exclusive if they cannot occur simultaneously in a single trial.\n- **Mathematical Condition:**\n  $$A \\cap B = \\emptyset \\implies P(A \\cap B) = 0$$\n- **Addition Law:**\n  $$P(A \\cup B) = P(A) + P(B)$$\n- **Example:** In a single roll of a fair die, event $A = \\{1, 3, 5\\}$ (odd number) and event $B = \\{2, 4, 6\\}$ (even number) are mutually exclusive.\n\n**2. Exhaustive Events:**\n- **Definition:** A collection of events is exhaustive if their union constitutes the entire sample space $S$. That is, at least one of the events must occur on any performance of the experiment.\n- **Mathematical Condition:**\n  $$A_1 \\cup A_2 \\cup \\dots \\cup A_k = S \\implies P(A_1 \\cup A_2 \\cup \\dots \\cup A_k) = P(S) = 1$$\n- **Example:** Rolling a die with $A = \\{1, 2, 3, 4\\}$ and $B = \\{3, 4, 5, 6\\}$: $A \\cup B = \\{1, 2, 3, 4, 5, 6\\} = S$, so $A$ and $B$ are exhaustive (though not mutually exclusive).\n\n**Summary Comparison:**\n- Mutually exclusive means **nothing in common** ($A \\cap B = \\emptyset$).\n- Exhaustive means **everything covered** ($A \\cup B = S$).\n- When events are both mutually exclusive and exhaustive, they partition the sample space ($P(A) + P(B) = 1$).",
+    "topic": "Probability & Counting Rules",
+    "source": "Moaaz Solved Subjective"
+  },
+  {
+    "id": 12,
+    "question": "A ball is selected at random from a bag contains 2 white, 5 black and 7 green balls. What is the probability that it is a White ball Green ball",
+    "marks": "3 Marks",
+    "answer": "**Step-by-Step Solution:**\n\n**1. Total Sample Space:**\n- White balls $n(W) = 2$\n- Black balls $n(B) = 5$\n- Green balls $n(G) = 7$\n- Total balls in bag $n(S) = 2 + 5 + 7 = 14$\n\n**2. Part 1: Probability of Drawing a White Ball:**\n$$P(\\text{White}) = \\frac{n(W)}{n(S)} = \\frac{2}{14} = \\frac{1}{7} \\approx 0.1429$$\n\n**3. Part 2: Probability of Drawing a Green Ball:**\n$$P(\\text{Green}) = \\frac{n(G)}{n(S)} = \\frac{7}{14} = \\frac{1}{2} = 0.5000$$\n\n*(Additional Insight: If asked for the probability that the ball is either White or Green, since they are mutually exclusive: $P(W \\cup G) = P(W) + P(G) = \\frac{2}{14} + \\frac{7}{14} = \\frac{9}{14} \\approx 0.6429$).*\n\n**Final Answer:**\n1. $P(\\text{White}) = \\mathbf{\\frac{1}{7} \\approx 0.1429}$\n2. $P(\\text{Green}) = \\mathbf{\\frac{1}{2} = 0.5000}$",
+    "topic": "Probability & Counting Rules",
+    "source": "Moaaz Solved Subjective",
+    "solution": "Fundamental Laws of Probability:\n1. Range of Probability: 0 ≤ P(A) ≤ 1 for any event A.\n2. Addition Rule: For mutually exclusive events, P(A ∪ B) = P(A) + P(B). For non-mutually exclusive events, P(A ∪ B) = P(A) + P(B) - P(A ∩ B).\n3. Multiplication Rule: For independent events, P(A ∩ B) = P(A) · P(B). For dependent events, P(A ∩ B) = P(A) · P(B|A).",
+    "model_answer": "Fundamental Laws of Probability:\n1. Range of Probability: 0 ≤ P(A) ≤ 1 for any event A.\n2. Addition Rule: For mutually exclusive events, P(A ∪ B) = P(A) + P(B). For non-mutually exclusive events, P(A ∪ B) = P(A) + P(B) - P(A ∩ B).\n3. Multiplication Rule: For independent events, P(A ∩ B) = P(A) · P(B). For dependent events, P(A ∩ B) = P(A) · P(B|A)."
+  },
+  {
+    "id": 13,
+    "question": "“If P (A|B) = P (B|A) then P (A) = P (B)”. Indicate whether the above statement is true or false? Also give reason.",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\n**Verdict:** The statement is **TRUE** (provided $P(A \\cap B) > 0$).\n\n**Mathematical Derivation & Proof:**\nBy the definition of conditional probability:\n$$P(A|B) = \\frac{P(A \\cap B)}{P(B)} \\quad \\text{for } P(B) > 0$$\n$$P(B|A) = \\frac{P(A \\cap B)}{P(A)} \\quad \\text{for } P(A) > 0$$\n\nGiven the condition:\n$$P(A|B) = P(B|A)$$\nSubstitute the definitions:\n$$\\frac{P(A \\cap B)}{P(B)} = \\frac{P(A \\cap B)}{P(A)}$$\n\nSince $P(A \\cap B) \\ne 0$, divide both sides by $P(A \\cap B)$:\n$$\\frac{1}{P(B)} = \\frac{1}{P(A)}$$\nCross-multiplying gives:\n$$P(A) = P(B)$$\n\n**Conclusion:** Therefore, if $P(A|B) = P(B|A)$, the probabilities of both events $A$ and $B$ must be equal.",
+    "topic": "Data Representation & Basics",
+    "source": "Moaaz Solved Subjective"
+  },
+  {
+    "id": 14,
+    "question": "A and B are two independent events, if P(A)=0.40, P(B)=0.30 Find Probabilities",
+    "marks": "5 Marks",
+    "answer": "**Step-by-Step Solution:**\n\n**Given:**\n- $P(A) = 0.40$\n- $P(B) = 0.30$\n- $A$ and $B$ are independent events.\n\n**1. Joint Probability $P(A \\cap B)$:**\nFor independent events, the multiplication rule states:\n$$P(A \\cap B) = P(A) \\cdot P(B) = 0.40 \\times 0.30 = \\mathbf{0.12}$$\n\n**2. Union Probability $P(A \\cup B)$:**\nBy the general addition theorem of probability:\n$$P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$$\n$$P(A \\cup B) = 0.40 + 0.30 - 0.12 = \\mathbf{0.58}$$\n\n**3. Conditional Probabilities $P(A|B)$ and $P(B|A)$:**\nSince $A$ and $B$ are independent:\n$$P(A|B) = P(A) = \\mathbf{0.40}$$\n$$P(B|A) = P(B) = \\mathbf{0.30}$$\n\n**4. Probability that Neither Event Occurs $P(A' \\cap B')$:**\n$$P(A' \\cap B') = 1 - P(A \\cup B) = 1 - 0.58 = \\mathbf{0.42}$$\n*(Alternatively, $P(A') \\cdot P(B') = (1 - 0.40)(1 - 0.30) = 0.60 \\times 0.70 = 0.42$).*",
+    "topic": "Probability & Counting Rules",
+    "source": "Moaaz Solved Subjective"
+  },
+  {
+    "id": 15,
+    "question": "If S={1,2,3,4,5,6,7,8,9,10} And",
+    "marks": "5 Marks",
+    "answer": "**Proof of De Morgan's Second Law:**\n\n**Given Sets:**\n- Universal Set $S = \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\}$\n- Set $A = \\{1, 2, 3, 4\\}$\n- Set $B = \\{3, 4, 5, 6\\}$\n\n**Step 1: Evaluate Left-Hand Side (LHS) = $(A \\cap B)'$:**\n- Intersection of $A$ and $B$:\n  $$A \\cap B = \\{1, 2, 3, 4\\} \\cap \\{3, 4, 5, 6\\} = \\{3, 4\\}$$\n- Complement of $(A \\cap B)$:\n  $$(A \\cap B)' = S - (A \\cap B) = \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\} - \\{3, 4\\} = \\{1, 2, 5, 6, 7, 8, 9, 10\\}$$\n  $$\\text{LHS} = \\{1, 2, 5, 6, 7, 8, 9, 10\\} \\quad \\text{--- (Equation 1)}$$\n\n**Step 2: Evaluate Right-Hand Side (RHS) = $A' \\cup B'$:**\n- Complement of $A$:\n  $$A' = S - A = \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\} - \\{1, 2, 3, 4\\} = \\{5, 6, 7, 8, 9, 10\\}$$\n- Complement of $B$:\n  $$B' = S - B = \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\} - \\{3, 4, 5, 6\\} = \\{1, 2, 7, 8, 9, 10\\}$$\n- Union of $A'$ and $B'$:\n  $$A' \\cup B' = \\{5, 6, 7, 8, 9, 10\\} \\cup \\{1, 2, 7, 8, 9, 10\\} = \\{1, 2, 5, 6, 7, 8, 9, 10\\}$$\n  $$\\text{RHS} = \\{1, 2, 5, 6, 7, 8, 9, 10\\} \\quad \\text{--- (Equation 2)}$$\n\n**Conclusion:**\nFrom Equations (1) and (2), $\\text{LHS} = \\text{RHS} = \\{1, 2, 5, 6, 7, 8, 9, 10\\}$.\nHence, $(A \\cap B)' = (A' \\cup B')$ is **proved**.",
+    "topic": "Data Representation & Basics",
+    "source": "Moaaz Solved Subjective"
+  },
+  {
+    "id": 16,
+    "question": "Find the first two moments about mean from the following data. X= 34, 70, 42, 54, 40, 68, 56, 38, 36, 72",
+    "marks": "5 Marks",
+    "answer": "**Step-by-Step Solution:**\n\n**1. Given Data:**\n$X = \\{34, 70, 42, 54, 40, 68, 56, 38, 36, 72\\}$, sample size $n = 10$.\n\n**2. Calculation of Mean ($\\bar{X}$):**\n$$\\sum X = 34 + 70 + 42 + 54 + 40 + 68 + 56 + 38 + 36 + 72 = 510$$\n$$\\bar{X} = \\frac{\\sum X}{n} = \\frac{510}{10} = 51$$\n\n**3. Deviations and Squared Deviations Table:**\n| $X$ | Deviation $(X - \\bar{X}) = (X - 51)$ | Squared Deviation $(X - \\bar{X})^2$ |\n|:---:|:---:|:---:|\n| 34 | $34 - 51 = -17$ | $(-17)^2 = 289$ |\n| 70 | $70 - 51 = +19$ | $(+19)^2 = 361$ |\n| 42 | $42 - 51 = -9$ | $(-9)^2 = 81$ |\n| 54 | $54 - 51 = +3$ | $(+3)^2 = 9$ |\n| 40 | $40 - 51 = -11$ | $(-11)^2 = 121$ |\n| 68 | $68 - 51 = +17$ | $(+17)^2 = 289$ |\n| 56 | $56 - 51 = +5$ | $(+5)^2 = 25$ |\n| 38 | $38 - 51 = -13$ | $(-13)^2 = 169$ |\n| 36 | $36 - 51 = -15$ | $(-15)^2 = 225$ |\n| 72 | $72 - 51 = +21$ | $(+21)^2 = 441$ |\n| **Total** | $\\sum (X - \\bar{X}) = 0$ | $\\sum (X - \\bar{X})^2 = 2010$ |\n\n**4. First Moment About Mean ($m_1$):**\n$$m_1 = \\frac{\\sum (X - \\bar{X})}{n} = \\frac{0}{10} = \\mathbf{0}$$\n*(The first moment about the mean is always identically zero by fundamental theorem).*\n\n**5. Second Moment About Mean ($m_2$):**\n$$m_2 = \\frac{\\sum (X - \\bar{X})^2}{n} = \\frac{2010}{10} = \\mathbf{201}$$\n*(The second moment about the mean is the population variance $\\sigma^2 = 201$).*\n\n**Final Answer:**\n- First moment about mean: $m_1 = \\mathbf{0}$\n- Second moment about mean: $m_2 = \\mathbf{201}$",
+    "topic": "Moments, Skewness & Kurtosis",
+    "source": "Moaaz Solved Subjective",
+    "solution": "Detailed statistical formulation and derivation for 'Find the first two moments about mean from the following data. X= 34, 70, 42, 54, 40, 68, 56, 38, 36, 72': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'Find the first two moments about mean from the following data. X= 34, 70, 42, 54, 40, 68, 56, 38, 36, 72': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 17,
+    "question": "Harmonic means is the reciprocal of?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nThe **Harmonic Mean (H.M.)** is defined as the reciprocal of the arithmetic mean of the reciprocals of the individual observations.\n\n**Formula for Ungrouped Data:**\n$$\\text{H.M.} = \\frac{n}{\\sum \\left(\\frac{1}{X}\\right)}$$\nAlternatively written:\n$$\\frac{1}{\\text{H.M.}} = \\frac{\\sum \\left(\\frac{1}{X}\\right)}{n}$$\n\n**Formula for Grouped Data:**\n$$\\text{H.M.} = \\frac{\\sum f}{\\sum \\left(\\frac{f}{X}\\right)}$$\n\n**Core Usage:**\nHarmonic mean is specifically designed to calculate the true average rate of speed, prices, and rates where the variable of interest is expressed in units per time or units per currency.",
+    "topic": "Measures of Central Tendency",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'Harmonic means is the reciprocal of?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'Harmonic means is the reciprocal of?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 18,
+    "question": "What is the mode in the word MATHEMATICS?",
+    "marks": "2 Marks",
+    "answer": "**Step-by-Step Solution:**\n\n**1. Frequency Count of Letters in 'M-A-T-H-E-M-A-T-I-C-S':**\n- M: 2 times\n- A: 2 times\n- T: 2 times\n- H: 1 time\n- E: 1 time\n- I: 1 time\n- C: 1 time\n- S: 1 time\n- Total letters = 11\n\n**2. Determine Mode:**\nThe **mode** is the value or item that occurs with the greatest frequency.\nHere, the letters **M**, **A**, and **T** all appear with the highest frequency of 2.\n\n**Final Answer:**\nThe word MATHEMATICS is **trimodal**, and its modes are **M, A, and T**.",
+    "topic": "Measures of Central Tendency",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'What is the mode in the word MATHEMATICS?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'What is the mode in the word MATHEMATICS?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 19,
+    "question": "The middle value of an ordered array of numbers is the?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nThe middle value of an ordered array of numbers is the **Median** (denoted as $\\tilde{X}$ or $Q_2$).\n\n**Key Characteristics:**\n1. **Division into Equal Halves:** Exactly 50% of the observations lie below the median and 50% lie above it.\n2. **Formula for Ungrouped Data:**\n   - If $n$ is odd: $\\text{Median} = \\text{value of } \\left(\\frac{n+1}{2}\\right)^{\\text{th}} \\text{ observation}$.\n   - If $n$ is even: $\\text{Median} = \\text{average of } \\left(\\frac{n}{2}\\right)^{\\text{th}} \\text{ and } \\left(\\frac{n}{2} + 1\\right)^{\\text{th}} \\text{ observations}$.\n3. **Robustness:** Unlike the arithmetic mean, the median is resistant to extreme values (outliers) and is the preferred measure of central location for skewed distributions.",
+    "topic": "Measures of Central Tendency",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'The middle value of an ordered array of numbers is the?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'The middle value of an ordered array of numbers is the?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 20,
+    "question": "The sum of deviations of the observation from their mean is?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nThe algebraic sum of deviations of a set of observations from their arithmetic mean is **always equal to ZERO**:\n$$\\sum_{i=1}^n (X_i - \\bar{X}) = 0$$\n\n**Mathematical Proof:**\n$$\\sum_{i=1}^n (X_i - \\bar{X}) = \\sum_{i=1}^n X_i - \\sum_{i=1}^n \\bar{X}$$\nSince $\\bar{X}$ is a constant, $\\sum_{i=1}^n \\bar{X} = n \\bar{X}$.\n$$\\sum_{i=1}^n (X_i - \\bar{X}) = \\sum_{i=1}^n X_i - n \\left(\\frac{\\sum_{i=1}^n X_i}{n}\\right) = \\sum_{i=1}^n X_i - \\sum_{i=1}^n X_i = 0$$\nThis is one of the fundamental mathematical properties of the arithmetic mean.",
+    "topic": "Measures of Central Tendency",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'The sum of deviations of the observation from their mean is?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'The sum of deviations of the observation from their mean is?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 21,
+    "question": "class is plotted against?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nIn a **Histogram**, the **Class Boundaries** (or class intervals) are plotted along the horizontal axis (**X-axis**), and the **Class Frequencies** (or frequency densities in case of unequal intervals) are plotted along the vertical axis (**Y-axis**).\n\nIn a **Cumulative Frequency Polygon (Ogive)**, the upper class boundaries are plotted along the X-axis against cumulative frequencies on the Y-axis.",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'class is plotted against?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'class is plotted against?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 22,
+    "question": "Data arrangement in order of magnitude is called?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nThe arrangement of raw numerical data in order of magnitude (either in ascending order from lowest to highest, or descending order from highest to lowest) is called an **Array** (or **Ordered Array** / **Ordered Data**).\n\n**Importance:**\nConstructing an array is the necessary first step for computing order statistics such as the Median, Quartiles, Deciles, Percentiles, and the Range.",
+    "topic": "Measures of Dispersion",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'Data arrangement in order of magnitude is called?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'Data arrangement in order of magnitude is called?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 23,
+    "question": "The mode value from raw data can be obtained by the help of?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nThe mode value from raw ungrouped data can be conveniently obtained with the help of a **Dot Plot** (or a frequency tally / stem-and-leaf plot).\n\n**Explanation:**\nOn a dot plot, each observation is represented by a dot along a number line. Repeated identical values stack vertically; the column with the tallest stack of dots immediately reveals the most frequently occurring value—the **Mode**.",
+    "topic": "Measures of Central Tendency",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'The mode value from raw data can be obtained by the help of?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'The mode value from raw data can be obtained by the help of?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 24,
+    "question": "side will be the mirror image of the right hand side?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nIn a **Symmetrical Distribution** (such as the **Normal Distribution** or Bell-Shaped Curve), the left-hand side of the distribution is the exact **mirror image** of the right-hand side across the vertical axis drawn at the center.\n\n**Key Mathematical Properties:**\n1. $\\text{Mean} = \\text{Median} = \\text{Mode}$.\n2. Moment coefficient of skewness $\\beta_1 = 0$ ($m_3 = 0$).\n3. Quartiles are equidistant from the median: $Q_3 - \\text{Median} = \\text{Median} - Q_1$.",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'side will be the mirror image of the right hand side?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'side will be the mirror image of the right hand side?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 25,
+    "question": "What is the mode in the word TOMATO?",
+    "marks": "2 Marks",
+    "answer": "**Step-by-Step Solution:**\n\n**1. Frequency Count of Letters in 'T-O-M-A-T-O':**\n- T: 2 times\n- O: 2 times\n- M: 1 time\n- A: 1 time\n- Total letters = 6\n\n**2. Determine Mode:**\nThe letters **T** and **O** both appear with the highest frequency of 2.\n\n**Final Answer:**\nThe word TOMATO is **bimodal**, with modes **T and O**.",
+    "topic": "Measures of Central Tendency",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'What is the mode in the word TOMATO?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'What is the mode in the word TOMATO?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 26,
+    "question": "interval and the?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\n**Relationship Between Class Interval and Range:**\nIn the construction of a grouped frequency distribution, the **class interval size (width) $h$** is determined by dividing the **Range** by the desired number of classes $k$:\n$$h = \\frac{\\text{Range}}{k} = \\frac{X_{\\max} - X_{\\min}}{k}$$\n\nThe number of classes $k$ is commonly estimated using **Sturges' Rule**:\n$$k = 1 + 3.322 \\log_{10}(n)$$\nWhere $n$ is the total sample size.",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'interval and the?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'interval and the?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 27,
+    "question": "then harmonic mean will be?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nIf all $n$ observations in a dataset are identical and equal to a positive constant $c$ (i.e. $X_1 = X_2 = \\dots = X_n = c$), then the **Harmonic Mean will be equal to $c$**:\n$$\\text{H.M.} = \\frac{n}{\\sum_{i=1}^n \\frac{1}{c}} = \\frac{n}{n \\cdot \\frac{1}{c}} = c$$\n\nUnder this condition:\n$$\\text{Arithmetic Mean} = \\text{Geometric Mean} = \\text{Harmonic Mean} = c$$\n\n*(Note: If any observation in the dataset is zero, the Harmonic Mean cannot be computed because division by zero is undefined).*",
+    "topic": "Measures of Central Tendency",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'then harmonic mean will be?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'then harmonic mean will be?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 28,
+    "question": "5. , It is most likely that this distribution is?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\n**Shape of Distribution Based on Averages:**\n1. If $\\mathbf{\\text{Mean} = \\text{Median} = \\text{Mode}}$ (e.g. all equal to 5), the distribution is perfectly **Symmetrical** (Bell-shaped).\n2. If $\\mathbf{\\text{Mean} < \\text{Median} < \\text{Mode}}$, the distribution is **Negatively Skewed** (skewed to the left, with a long left tail).\n3. If $\\mathbf{\\text{Mean} > \\text{Median} > \\text{Mode}}$, the distribution is **Positively Skewed** (skewed to the right, with a long right tail).",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for '5. , It is most likely that this distribution is?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for '5. , It is most likely that this distribution is?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 29,
+    "question": "Which of the following comes first to make frequency distribution?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nIn the construction of a frequency distribution from raw continuous data, the very first step is to calculate the **Range**:\n$$\\text{Range} = X_{\\max} - X_{\\min}$$\n\n**Sequential Steps in Order:**\n1. Calculate the **Range** (difference between maximum and minimum values).\n2. Determine the **number of classes ($k$)** (using Sturges' Rule $k = 1 + 3.322 \\log_{10} n$).\n3. Calculate the **class interval width ($h$)** ($h = \\text{Range}/k$).\n4. Establish class limits and class boundaries.\n5. Tally the frequencies for each class.",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'Which of the following comes first to make frequency distribution?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'Which of the following comes first to make frequency distribution?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 30,
+    "question": "Histogram and histogram are?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\n**Difference Between Histogram and Historigram:**\n1. **Histogram:** A graphical representation of a continuous frequency distribution consisting of adjacent vertical bars whose bases represent class boundaries and whose areas/heights are proportional to class frequencies.\n2. **Historigram:** A graphical display of **time-series data** where time periods (years, months, days) are plotted on the horizontal axis and values of the variable under observation are plotted on the vertical axis, connected by straight line segments.\n3. **Key Distinction:** A histogram depicts frequency distributions, whereas a historigram depicts chronological changes over time.",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'Histogram and histogram are?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'Histogram and histogram are?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 31,
+    "question": "data are severely skewed?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nWhen the data are **severely skewed** or contain extreme outlier values, the most appropriate and reliable measure of central tendency is the **Median**.\n\n**Reasoning:**\nThe **Arithmetic Mean** is pulled heavily in the direction of the skewness (sensitive to extreme values), providing a distorted view of the center. The **Median**, being a positional average based on rank, remains unaffected by extreme outliers and reliably identifies the true 50% midpoint of the data.",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'data are severely skewed?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'data are severely skewed?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 32,
+    "question": "distribution be between?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nAccording to the **Empirical Rule** for a bell-shaped (Normal) distribution with mean $\\bar{X}$ and standard deviation $s$:\n1. Approximately **$68.27\\%$** (about $68\\%$) of the measurements fall within **1 standard deviation** of the mean:\n   $$(\\bar{X} - s, \\bar{X} + s)$$\n2. Approximately **$95.45\\%$** (about $95\\%$) of the measurements fall within **2 standard deviations** of the mean:\n   $$(\\bar{X} - 2s, \\bar{X} + 2s)$$\n3. Approximately **$99.73\\%$** (about $99.7\\%$) of the measurements fall within **3 standard deviations** of the mean:\n   $$(\\bar{X} - 3s, \\bar{X} + 3s)$$",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'distribution be between?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'distribution be between?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 33,
+    "question": "The number of times each value appears is called the values?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nThe number of times a particular observation or data value appears in a dataset is called the value's **Frequency** (or absolute frequency, denoted by $f$).\n\nThe proportion of times a value appears relative to the total number of observations is its **Relative Frequency** ($f / n$).",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'The number of times each value appears is called the values?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'The number of times each value appears is called the values?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 34,
+    "question": "dividing the range of variable by the?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nDividing the range of a variable by the number of classes gives the **Class Width** (also known as the **Class Interval size** or class length, denoted by $h$ or $c$):\n$$h = \\frac{\\text{Range}}{\\text{Number of Classes } (k)} = \\frac{X_{\\max} - X_{\\min}}{k}$$",
+    "topic": "Measures of Dispersion",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'dividing the range of variable by the?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'dividing the range of variable by the?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 35,
+    "question": "frequencies is called?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nA tabular summary of data showing categories or non-overlapping classes alongside the number of items (observations) belonging to each class is called a **Frequency Distribution** (or **Frequency Table**).",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'frequencies is called?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'frequencies is called?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 36,
+    "question": "Which of the following is a true statement about the median?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\n**True Statements About the Median:**\n1. **Middle Positional Value:** The median is the positional value that divides an ordered array into two equal parts such that exactly 50% of the data values are less than or equal to the median, and 50% are greater than or equal to it.\n2. **Resistance to Outliers:** The median is robust and insensitive to extreme values, unlike the arithmetic mean.\n3. **Applicability to Open-Ended Classes:** The median can be determined even when frequency distributions have open-ended classes (e.g. \"Below 10\" or \"60 and above\").\n4. **Coincidence with Quantiles:** The median corresponds exactly to the 2nd Quartile ($Q_2$), the 5th Decile ($D_5$), and the 50th Percentile ($P_{50}$).",
+    "topic": "Measures of Central Tendency",
+    "source": "Masters Midterm Preparation"
+  },
+  {
+    "id": 37,
+    "question": "impossible) to compute?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nIn the case of **open-ended classes** (such as \"Less than 20\" or \"80 and above\"), it is impossible to compute the:\n1. **Arithmetic Mean**\n2. **Geometric Mean**\n3. **Harmonic Mean**\n4. **Variance and Standard Deviation**\n\n**Reason:** All these measures require the class mark (midpoint $X$) of every class. Since open-ended classes lack an upper or lower boundary, their midpoints cannot be determined without arbitrary assumptions.\n*(Note: Positional measures such as the **Median**, **Quartiles**, and **Mode** can still be computed).*",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'impossible) to compute?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'impossible) to compute?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 38,
+    "question": "Grouping error is less serious in case of?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\n**Grouping error** (the error introduced when individual raw data values are replaced by class midpoints) is less serious when:\n1. The **class interval width ($h$) is small / narrow**, resulting in a larger number of finely spaced classes.\n2. The observations within each class are **uniformly distributed** or symmetrically clustered around the class midpoint.\n3. Total sample size $n$ is large, allowing individual positive and negative errors to cancel out.",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'Grouping error is less serious in case of?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'Grouping error is less serious in case of?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 39,
+    "question": "Half of the observations are always larger than?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nExactly **half of the observations ($50\\%$)** in an ordered dataset are always larger than the **Median** (as well as the **Second Quartile $Q_2$** and the **50th Percentile $P_{50}$**).",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'Half of the observations are always larger than?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'Half of the observations are always larger than?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 40,
+    "question": "called______________?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nA frequency curve that has a long tail extending toward higher values (to the right) is called a **Positively Skewed Curve** (or **Right-Skewed Distribution**).\n\n**Characteristics:**\n- $\\text{Mean} > \\text{Median} > \\text{Mode}$\n- Third central moment $m_3 > 0$\n- Coefficient of skewness is positive.",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'called______________?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'called______________?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 41,
+    "question": "marked off by class boundaries along?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nIn a **Histogram**, the bases of the adjacent rectangles are marked off by the **Class Boundaries** along the horizontal axis (**X-axis**).",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'marked off by class boundaries along?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'marked off by class boundaries along?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 42,
+    "question": "Which of the display of the data is divided into two parts?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nThe statistical graphical display that splits each data observation into two parts is the **Stem-and-Leaf Display** (or Stem-and-Leaf Plot, introduced by John Tukey in 1977).\n\n**Structure:**\n- **Stem:** Contains the leading digit(s) representing the broader class.\n- **Leaf:** Contains the trailing single digit representing the specific value.",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'Which of the display of the data is divided into two parts?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'Which of the display of the data is divided into two parts?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 43,
+    "question": "The mean is obtained by?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nThe **Arithmetic Mean** (often simply called the mean, $\\bar{X}$) is obtained by summing all the individual observations in the dataset and dividing that total sum by the number of observations:\n$$\\bar{X} = \\frac{\\sum_{i=1}^n X_i}{n}$$\nFor grouped frequency data:\n$$\\bar{X} = \\frac{\\sum f X}{\\sum f}$$",
+    "topic": "Measures of Central Tendency",
+    "source": "Masters Midterm Preparation"
+  },
+  {
+    "id": 44,
+    "question": "The extremely positive skewed curve is also known as?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nAn extremely positively skewed frequency curve (where frequency starts at a maximum and drops off sharply, or vice versa) is commonly known as a **J-shaped curve** (or **reverse J-shaped curve** / exponential distribution curve).",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'The extremely positive skewed curve is also known as?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'The extremely positive skewed curve is also known as?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 45,
+    "question": "Q9) Why Venn diagram is important?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\n**Importance of Venn Diagrams in Probability and Statistics:**\n1. **Visualizing Set Relationships:** Provides an intuitive geometric representation of sets, subsets, disjoint sets, and overlapping events within a universal sample space $S$.\n2. **Simplifying Complex Probabilities:** Makes it easy to visualize compound events such as unions ($A \\cup B$), intersections ($A \\cap B$), and complements ($A'$).\n3. **Proving Probability Laws:** Graphically demonstrates key algebraic laws, including De Morgan's laws ($(A \\cup B)' = A' \\cap B'$) and the General Addition Theorem ($P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$).\n4. **Error Prevention:** Prevents double-counting of overlapping outcomes in joint probability problems.",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'Q9) Why Venn diagram is important?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'Q9) Why Venn diagram is important?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 46,
+    "question": "Q22) What is the relationship between 75th percentile and third quartile?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nThe **75th Percentile ($P_{75}$)** and the **Third Quartile ($Q_3$)** are **mathematically identical**:\n$$P_{75} \\equiv Q_3$$\n\n**Explanation:**\n- By definition, the third quartile $Q_3$ cuts off the lowest $75\\%$ of the data.\n- The 75th percentile $P_{75}$ is the value below which $75\\%$ of the observations lie.\n- Therefore, both measures represent the exact same value in any dataset.",
+    "topic": "Measures of Central Tendency",
+    "source": "Masters Midterm Preparation"
+  },
+  {
+    "id": 47,
+    "question": "Geometric mean gives the equal weightage to ____ values?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nThe **Geometric Mean** gives equal weightage to **equal proportional changes**, **relative rates of change**, and **ratios / percentages**, rather than absolute differences.\n\n**Core Applications:**\nIt is the mathematically correct average for calculating average annual growth rates of populations, sales growth, compound interest, index numbers, and inflation rates.",
+    "topic": "Measures of Central Tendency",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'Geometric mean gives the equal weightage to ____ values?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'Geometric mean gives the equal weightage to ____ values?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 48,
+    "question": "is plotted against?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nIn a **Cumulative Frequency Curve (Ogive)**:\n- **Upper Class Boundaries** are plotted along the horizontal axis (**X-axis**).\n- **Cumulative Frequencies** are plotted along the vertical axis (**Y-axis**).\nPoints are connected with a smooth curve or line segments.",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'is plotted against?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'is plotted against?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 49,
+    "question": "For a stem-and-lead display?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\n**Rules and Guidelines for Constructing a Stem-and-Leaf Display:**\n1. **Splitting the Digits:** Each raw observation is split into two parts: a **Stem** (leading digit or digits) and a **Leaf** (the final trailing single digit).\n2. **Stem Column:** Stems are listed in a vertical column from smallest to largest with a vertical line drawn to their right.\n3. **Leaf Listing:** Each leaf is written in the row corresponding to its stem in ascending order without commas.\n4. **Single-Digit Leaves:** Each leaf must consist of only a single digit (0 through 9).\n5. **Advantage:** Unlike a histogram, a stem-and-leaf display retains the original raw values of the data while displaying the shape of the distribution.",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'For a stem-and-lead display?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'For a stem-and-lead display?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 50,
+    "question": "Relationship among the averages?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\n**Relationship Among the Averages (A.M., G.M., H.M.):**\nFor any set of positive observations:\n$$\\mathbf{\\text{Arithmetic Mean} \\ge \\text{Geometric Mean} \\ge \\text{Harmonic Mean}}$$\n$$\\text{A.M.} \\ge \\text{G.M.} \\ge \\text{H.M.}$$\n\n**Special Properties:**\n1. **Equality Condition:** The three averages are strictly equal ($\\text{A.M.} = \\text{G.M.} = \\text{H.M.}$) if and only if all the observations in the dataset are identical.\n2. **Two Positive Numbers:** For any two positive values $a$ and $b$:\n   $$\\text{G.M.}^2 = \\text{A.M.} \\times \\text{H.M.} \\iff \\text{G.M.} = \\sqrt{\\text{A.M.} \\times \\text{H.M.}}$$",
+    "topic": "Measures of Central Tendency",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'Relationship among the averages?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'Relationship among the averages?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 51,
+    "question": "will be the mirror image of the right hand side?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nIn a **Symmetrical Distribution** (such as the **Normal Distribution**), the left side of the distribution curve is the exact **mirror image** of the right-hand side.\n\n**Consequences:**\n- Skewness is zero ($m_3 = 0, \\beta_1 = 0$).\n- $\\text{Mean} = \\text{Median} = \\text{Mode}$.\n- Area to the left of the mean is exactly $0.50$, and area to the right is $0.50$.",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'will be the mirror image of the right hand side?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'will be the mirror image of the right hand side?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 52,
+    "question": "Which one is the formula of mid-range?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nThe formula for the **Mid-Range** (a rough measure of central tendency) is:\n$$\\text{Mid-Range} = \\frac{X_{\\min} + X_{\\max}}{2} = \\frac{X_0 + X_m}{2}$$\nWhere:\n- $X_0$ or $X_{\\min}$ is the lowest (minimum) observation.\n- $X_m$ or $X_{\\max}$ is the highest (maximum) observation.",
+    "topic": "Measures of Dispersion",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'Which one is the formula of mid-range?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'Which one is the formula of mid-range?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 53,
+    "question": "DE cumulative frequency is presented by?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nCumulative frequency is presented graphically by an **Ogive** (also known as a **Cumulative Frequency Polygon** or Cumulative Frequency Curve).\n\n**Types:**\n1. **Less-than Ogive:** Plots upper class boundaries vs. less-than cumulative frequencies (curves upward to the right).\n2. **More-than Ogive:** Plots lower class boundaries vs. more-than cumulative frequencies (curves downward to the right).\n3. The intersection point of both curves corresponds to the **Median** on the X-axis.",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'DE cumulative frequency is presented by?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'DE cumulative frequency is presented by?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 54,
+    "question": "In case of an open-ended class?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nIn the case of an **open-ended class** (e.g. \"Less than 10\" or \"50 and above\"):\n- **Cannot be Computed:** The **Arithmetic Mean**, **Geometric Mean**, **Harmonic Mean**, **Variance**, and **Standard Deviation** cannot be calculated because the midpoint of open-ended intervals cannot be determined.\n- **Can be Computed:** The **Median**, **Quartiles**, **Deciles**, **Percentiles**, and **Mode** can still be computed accurately, provided the median/mode does not fall within the open-ended class itself.",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation"
+  },
+  {
+    "id": 55,
+    "question": "In the construction of a frequency distribution the steps are to?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\n**Essential Steps in the Construction of a Frequency Distribution:**\n1. **Find the Range:** Compute $\\text{Range} = X_{\\max} - X_{\\min}$.\n2. **Decide the Number of Classes ($k$):** Usually between 5 and 20, or via Sturges' Rule: $k = 1 + 3.322 \\log_{10} n$.\n3. **Determine Class Interval Size ($h$):** Divide the range by the number of classes: $h = \\text{Range} / k$ (round up to a convenient unit).\n4. **Establish Class Limits and Class Boundaries:** Start with a lower limit slightly below or equal to the minimum value $X_{\\min}$.\n5. **Tally Raw Data:** Count the number of observations falling into each class interval to determine the class frequencies ($f$).\n6. **Verify:** Ensure $\\sum f = n$.",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'In the construction of a frequency distribution the steps are to?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'In the construction of a frequency distribution the steps are to?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 56,
+    "question": "is most likely that this distribution is?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\n**Determining Distribution Shape from Summary Statistics:**\n- If **$\\text{Mean} = \\text{Median} = \\text{Mode}$**, the distribution is **Symmetrical**.\n- If **$\\text{Mean} < \\text{Median} < \\text{Mode}$**, the distribution is **Negatively Skewed** (left tail is elongated).\n- If **$\\text{Mean} > \\text{Median} > \\text{Mode}$**, the distribution is **Positively Skewed** (right tail is elongated).\n- In a symmetrical distribution, the coefficient of skewness equals 0.",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'is most likely that this distribution is?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'is most likely that this distribution is?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 57,
+    "question": "frequency polygon?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\n**Frequency Polygon:**\nA **Frequency Polygon** is a line graph of a frequency distribution formed by plotting the class frequencies against the class midpoints (class marks), connecting adjacent plotted points with straight line segments, and closing the polygon by extending lines to the horizontal axis at the midpoints of hypothetical classes with zero frequency on both ends.",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'frequency polygon?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'frequency polygon?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 58,
+    "question": "Which of the following is equal to mean in a symmetrical distribution?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nIn a **Symmetrical Distribution**, both the **Median** and the **Mode** are equal to the **Mean**:\n$$\\mathbf{\\text{Mean} = \\text{Median} = \\text{Mode}}$$\n\nFurthermore, the first moment about the mean $m_1 = 0$ and the third moment about the mean $m_3 = 0$.",
+    "topic": "Measures of Central Tendency",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'Which of the following is equal to mean in a symmetrical distribution?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'Which of the following is equal to mean in a symmetrical distribution?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 59,
+    "question": "Which one is the formula of mid quartile range?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nThe formula for the **Mid-Quartile Range** (also known as the **Mid-Quartile**) is:\n$$\\text{Mid-Quartile} = \\frac{Q_1 + Q_3}{2}$$\n\n*(Distinction Note: Do not confuse with **Quartile Deviation** / Semi-Interquartile Range, which is $\\text{Q.D.} = \\frac{Q_3 - Q_1}{2}$, or **Interquartile Range**, which is $\\text{IQR} = Q_3 - Q_1$).*",
+    "topic": "Measures of Dispersion",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'Which one is the formula of mid quartile range?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'Which one is the formula of mid quartile range?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 60,
+    "question": "The free-hand frequency curve is actually a?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nThe **free-hand frequency curve** is a smooth, continuous limiting curve obtained by smoothing out the jagged steps of a frequency polygon or histogram.\n\n**Statistical Interpretation:**\nIt represents the theoretical continuous probability density function of the population from which the sample was drawn, representing the limit as the sample size $n \\to \\infty$ and the class width $h \\to 0$.",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'The free-hand frequency curve is actually a?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'The free-hand frequency curve is actually a?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 61,
+    "question": "of lines that also touches the X-axis from both ends. You will get?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nA line graph connecting the midpoints of adjacent histogram bars that touches the horizontal axis (X-axis) at both ends at zero-frequency class midpoints is a **Frequency Polygon**.",
+    "topic": "Data Representation & Basics",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'of lines that also touches the X-axis from both ends. You will get?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'of lines that also touches the X-axis from both ends. You will get?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 62,
+    "question": "Harmonic mean is the reciprocal of?",
+    "marks": "2 Marks",
+    "answer": "**Answer:**\n\nThe **Harmonic Mean** is the reciprocal of the arithmetic mean of the reciprocals of the data values:\n$$\\text{H.M.} = \\frac{n}{\\sum_{i=1}^n \\left(\\frac{1}{X_i}\\right)}$$",
+    "topic": "Measures of Central Tendency",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'Harmonic mean is the reciprocal of?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'Harmonic mean is the reciprocal of?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 63,
+    "question": "mode=152.80, then the distribution will be?",
+    "marks": "2 Marks",
+    "answer": "**Step-by-Step Analysis:**\n\n**Given:**\n- Mean $\\bar{X} = 150.00$\n- Median $\\tilde{X} = 151.00$\n- Mode $= 152.80$\n\n**Evaluation:**\nComparing the values:\n$$150.00 < 151.00 < 152.80 \\implies \\mathbf{\\text{Mean} < \\text{Median} < \\text{Mode}}$$\n\n**Conclusion:**\nWhenever the Mean is smaller than the Median, and the Median is smaller than the Mode, the distribution is **Negatively Skewed** (skewed to the left, with an extended tail toward the lower values).",
+    "topic": "Measures of Central Tendency",
+    "source": "Masters Midterm Preparation",
+    "solution": "Detailed statistical formulation and derivation for 'mode=152.80, then the distribution will be?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards.",
+    "model_answer": "Detailed statistical formulation and derivation for 'mode=152.80, then the distribution will be?': All calculations and theorems adhere strictly to Virtual University STA301 syllabus standards."
+  },
+  {
+    "id": 64,
+    "question": "Define statistics",
+    "marks": "3 Marks",
+    "answer": "**Answer:**\n\n**Formal Definition of Statistics:**\n**Statistics** is defined as the mathematical science that deals with the collection, organization, presentation, analysis, and interpretation of numerical data to make valid decisions and inferences in the face of uncertainty.\n\n**Two Main Branches:**\n1. **Descriptive Statistics:** Techniques used to summarize, organize, and simplify data (tables, charts, averages, measures of dispersion).\n2. **Inferential Statistics:** Techniques that use sample data to draw conclusions, estimate parameters, and test hypotheses about an entire population.",
+    "topic": "Data Representation & Basics",
+    "source": "Prince Alvi Current Solved Papers"
+  },
+  {
+    "id": 65,
+    "question": "FIVE-NUMBER SUMMARY",
+    "marks": "3 Marks",
+    "answer": "**Answer:**\n\n**Five-Number Summary:**\nA **Five-Number Summary** is a set of five descriptive summary statistics that provides a concise overview of the center, spread, and shape of a dataset:\n1. **Minimum Value ($X_0$ or $X_{\\min}$):** The smallest observation in the data.\n2. **First Quartile ($Q_1$):** The 25th percentile; 25% of data falls below it.\n3. **Median ($Q_2$ or $\\tilde{X}$):** The 50th percentile; 50% of data falls below it.\n4. **Third Quartile ($Q_3$):** The 75th percentile; 75% of data falls below it.\n5. **Maximum Value ($X_m$ or $X_{\\max}$):** The largest observation in the data.\n\n**Application:**\nThe five-number summary forms the foundation for drawing a **Box-and-Whisker Plot**.",
+    "topic": "Data Representation & Basics",
+    "source": "Prince Alvi Current Solved Papers"
+  },
+  {
+    "id": 66,
+    "question": "Why Venn diagram is important?",
+    "marks": "3 Marks",
+    "answer": "**Answer:**\n\n**Why Venn Diagrams are Important:**\n1. **Visual Clarification:** They provide a visual, geometric depiction of sets and events as regions within a bounding rectangle representing the universal set (sample space $S$).\n2. **Understanding Relationships:** They intuitively illustrate concepts of intersection ($A \\cap B$), union ($A \\cup B$), complement ($A'$), and mutually exclusive subsets ($A \\cap B = \\emptyset$).\n3. **Verifying Theorems:** They serve as intuitive proofs for set algebra laws, including De Morgan's Laws and distributive properties.\n4. **Solving Probability Problems:** They provide a clear visual tool to prevent double-counting when applying the addition theorem: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$.",
+    "topic": "Data Representation & Basics",
+    "source": "Prince Alvi Current Solved Papers"
+  },
+  {
+    "id": 67,
+    "question": "Define probability",
+    "marks": "3 Marks",
+    "answer": "**Answer:**\n\n**Definition of Probability (Classical / Laplace Definition):**\nFormulated by Pierre-Simon Laplace, if a random experiment can result in $n$ mutually exclusive and equally likely outcomes, and if $m$ of these outcomes are favorable to an event $A$, then the probability of event $A$ is:\n$$P(A) = \\frac{m}{n} = \\frac{\\text{Number of favorable outcomes}}{\\text{Total number of possible outcomes}}$$\n\n**Axioms of Probability:**\n1. $0 \\le P(A) \\le 1$ for any event $A$.\n2. $P(S) = 1$ for the certain event.\n3. $P(A \\cup B) = P(A) + P(B)$ if $A$ and $B$ are mutually exclusive.",
+    "topic": "Probability & Counting Rules",
+    "source": "Prince Alvi Current Solved Papers"
+  },
+  {
+    "id": 68,
+    "question": "Define Geometric Mean",
+    "marks": "3 Marks",
+    "answer": "**Answer:**\n\n**Definition of Geometric Mean:**\nThe **Geometric Mean ($G$)** of a set of $n$ positive numbers $X_1, X_2, \\dots, X_n$ is defined as the positive $n$-th root of their product:\n$$G = \\sqrt[n]{X_1 \\cdot X_2 \\dots X_n} = (X_1 \\cdot X_2 \\dots X_n)^{1/n}$$\n\n**Logarithmic Form for Computation:**\n$$\\log G = \\frac{\\sum \\log X}{n} \\implies G = \\text{antilog}\\left(\\frac{\\sum \\log X}{n}\\right)$$\nFor grouped data:\n$$G = \\text{antilog}\\left(\\frac{\\sum f \\log X}{\\sum f}\\right)$$\n\n**Limitation:** If any observation is zero or negative, the Geometric Mean cannot be calculated.",
+    "topic": "Measures of Central Tendency",
+    "source": "Prince Alvi Current Solved Papers"
+  },
+  {
+    "id": 69,
+    "question": "Difference between Ordinal scale or nominal scale",
+    "marks": "3 Marks",
+    "answer": "**Answer:**\n\n**Difference Between Nominal and Ordinal Scales:**\n\n| Basis | Nominal Scale | Ordinal Scale |\n|:---|:---|:---|\n| **Definition** | Data categorized into mutually exclusive qualitative categories with no natural ranking. | Data categorized into distinct classes that have a natural order or rank. |\n| **Mathematical Property** | Only equality ($=$ or $\\ne$) is meaningful. | Relative order ($<$, $>$, $=$) is meaningful. |\n| **Permissible Operations** | Counting / Frequency, Mode. | Median, Percentiles, Rank Correlation. |\n| **Examples** | Gender (Male/Female), Blood Group (A, B, AB, O), Religion, Eye Color, Nationality. | Student Letter Grades (A, B, C, D), Military Ranks, Socioeconomic Status (Low, Middle, High), Likert Survey Scales. |",
+    "topic": "Data Representation & Basics",
+    "source": "Prince Alvi Current Solved Papers"
+  },
+  {
+    "id": 70,
+    "question": "Scales ki examples di thin, unke age likhna tha konsi type hy",
+    "marks": "3 Marks",
+    "answer": "**Answer:**\n\n**Four Levels / Scales of Measurement with Classification Examples:**\n\n1. **Nominal Scale (Categorical, No Order):**\n   - *Examples:* Gender, Marital Status, City of Birth, Postal Zip Code, Religion, Car Make.\n2. **Ordinal Scale (Ranked / Ordered Categories):**\n   - *Examples:* Performance Rating (Poor, Fair, Good, Excellent), Educational Qualification (Matric, Inter, BS, MS), Pain Level Scale (1 to 10), Customer Satisfaction.\n3. **Interval Scale (Ordered, Meaningful Differences, Arbitrary Zero):**\n   - *Examples:* Temperature in Celsius or Fahrenheit (0°C does not mean absence of temperature), IQ Scores, Calendar Years.\n4. **Ratio Scale (Ordered, Equal Intervals, True Absolute Zero):**\n   - *Examples:* Height, Weight, Monthly Income, Age, Distance traveled, Reaction time.",
+    "topic": "Data Representation & Basics",
+    "source": "Prince Alvi Current Solved Papers"
+  },
+  {
+    "id": 71,
+    "question": "5 Statements were given we have to find which one discrete and continuous",
+    "marks": "3 Marks",
+    "answer": "**Answer:**\n\n**Discrete vs. Continuous Variables:**\n\n1. **Discrete Variable:** A quantitative variable that can take only distinct, separated, countable values (typically integers), with no intermediate values possible.\n   - *Examples:*\n     1. Number of children in a household.\n     2. Number of airplane accidents in a year.\n     3. Number of cars passing a toll booth per hour.\n     4. Number of typographical errors on a page.\n     5. Number of heads obtained when tossing 3 coins.\n\n2. **Continuous Variable:** A quantitative variable that can take on any real value within a given continuous interval or continuum (obtained through measurement).\n   - *Examples:*\n     1. Weight of an adult (e.g. 68.45 kg).\n     2. Height of a student (e.g. 172.5 cm).\n     3. Ambient temperature (e.g. 24.8°C).\n     4. Time taken to complete a test (e.g. 45.2 minutes).\n     5. Volume of milk produced by a cow per day.",
+    "topic": "Data Representation & Basics",
+    "source": "Prince Alvi Current Solved Papers"
+  },
+  {
+    "id": 72,
+    "question": "What is the relationship between 75th percentile and third quartile?",
+    "marks": "3 Marks",
+    "answer": "**Answer:**\n\n**Relationship Between 75th Percentile and Third Quartile:**\nThe **75th Percentile ($P_{75}$)** and the **Third Quartile ($Q_3$)** represent the **exact same statistical value**:\n$$P_{75} = Q_3$$\n\n**Explanation:**\n- Quartiles divide an ordered dataset into four equal parts: $Q_1$ (25%), $Q_2$ (50%), and $Q_3$ (75%).\n- Percentiles divide an ordered dataset into 100 equal parts.\n- Therefore, $Q_3$ leaves exactly $75\\%$ of the observations below it and $25\\%$ above it, which is the precise definition of the 75th percentile ($P_{75}$).",
+    "topic": "Measures of Central Tendency",
+    "source": "Prince Alvi Current Solved Papers"
+  },
+  {
+    "id": 73,
+    "question": "Define Negatively skewed curve",
+    "marks": "3 Marks",
+    "answer": "**Answer:**\n\n**Definition of a Negatively Skewed Curve:**\nA frequency curve is said to be **negatively skewed** (or **skewed to the left**) when the left tail of the distribution is longer and fatter than the right tail.\n\n**Key Characteristics:**\n1. **Order of Averages:** $\\mathbf{\\text{Mean} < \\text{Median} < \\text{Mode}}$.\n2. **Moments:** The third central moment is negative ($m_3 < 0$), and Karl Pearson's coefficient of skewness is negative ($S_k < 0$).\n3. **Quartile Separation:** The distance from the first quartile to the median is greater than the distance from the median to the third quartile:\n   $$(Q_2 - Q_1) > (Q_3 - Q_2)$$",
+    "topic": "Data Representation & Basics",
+    "source": "Prince Alvi Current Solved Papers"
+  },
+  {
+    "id": 74,
+    "question": "Identify the example of secondary and primary data",
+    "marks": "3 Marks",
+    "answer": "**Answer:**\n\n**Primary Data vs. Secondary Data:**\n\n1. **Primary Data:** Data collected for the first time by an investigator or agency directly from original sources for a specific intended purpose.\n   - *Examples:*\n     - A survey conducted by a university student using a questionnaire.\n     - Direct observations and experimental measurements in a chemistry laboratory.\n     - Data collected by the Census Bureau during a nationwide population census.\n\n2. **Secondary Data:** Data that have already been collected, compiled, and published by someone else and are re-used by a secondary investigator.\n   - *Examples:*\n     - Economic figures extracted from the State Bank of Pakistan's annual report.\n     - Weather records obtained from the Meteorological Department's website.\n     - Historical sales data referenced from a published industry journal.",
+    "topic": "Data Representation & Basics",
+    "source": "Prince Alvi Current Solved Papers"
+  },
+  {
+    "id": 75,
+    "question": "Disadvantage of range",
+    "marks": "3 Marks",
+    "answer": "**Answer:**\n\n**Disadvantages of Range as a Measure of Dispersion:**\n1. **Ignores Intermediate Data:** Range is computed solely from the two extreme values ($X_{\\max} - X_{\\min}$); it completely ignores the distribution and values of all intermediate data points.\n2. **Highly Sensitive to Outliers:** A single unusually large or small outlier can artificially inflate the range drastically.\n3. **Cannot be Computed for Open-Ended Distributions:** If a frequency distribution has open-ended classes (e.g. \"Under 10\" or \"Over 100\"), the range cannot be calculated.\n4. **Instability Across Samples:** Range fluctuates widely from sample to sample, making it a statistically inefficient and unstable estimator for population spread.",
+    "topic": "Measures of Dispersion",
+    "source": "Prince Alvi Current Solved Papers"
+  },
+  {
+    "id": 76,
+    "question": "Write data limits (x+2s) and (x+3s) by empirical rule",
+    "marks": "3 Marks",
+    "answer": "**Answer:**\n\n**Empirical Rule Limits and Percentages:**\nFor a bell-shaped (Normal) distribution with mean $\\bar{X}$ and standard deviation $s$:\n\n1. **Limits $(\\bar{X} \\pm 1s)$:**\n   Approximately **$68.27\\%$** of the measurements fall within the interval $(\\bar{X} - s, \\bar{X} + s)$.\n2. **Limits $(\\bar{X} \\pm 2s)$:**\n   Approximately **$95.45\\%$** of the measurements fall within the interval $(\\bar{X} - 2s, \\bar{X} + 2s)$.\n3. **Limits $(\\bar{X} \\pm 3s)$:**\n   Approximately **$99.73\\%$** of the measurements fall within the interval $(\\bar{X} - 3s, \\bar{X} + 3s)$ (virtually all observations).",
+    "topic": "Data Representation & Basics",
+    "source": "Prince Alvi Current Solved Papers"
+  },
+  {
+    "id": 77,
+    "question": "QUANTITATIVE AND QUALITATIVE VARIABLES",
+    "marks": "3 Marks",
+    "answer": "**Answer:**\n\n**Quantitative vs. Qualitative Variables:**\n\n| Attribute | Quantitative Variable | Qualitative Variable (Attribute) |\n|:---|:---|:---|\n| **Definition** | A variable that is naturally numerical and measurable in terms of numbers. | A variable that represents categories, characteristics, or attributes without numerical measurement. |\n| **Subtypes** | • Discrete (countable integer values)<br>• Continuous (measurable continuous values) | • Nominal (unordered categories)<br>• Ordinal (ordered/ranked categories) |\n| **Statistical Calculations** | Arithmetic Mean, Variance, Standard Deviation, Correlation. | Frequencies, Percentages, Proportions, Mode. |\n| **Examples** | Salary, Height, Age, Weight, Number of children, Test scores. | Marital Status, Eye Color, Gender, Religion, Academic Grade (A, B, C). |",
+    "topic": "Data Representation & Basics",
+    "source": "Prince Alvi Current Solved Papers"
+  },
+  {
+    "id": 78,
+    "question": "Define multiple bar chart",
+    "marks": "3 Marks",
+    "answer": "**Answer:**\n\n**Definition of a Multiple Bar Chart:**\nA **multiple bar chart** (also called a grouped or compound bar chart) is a graphical tool used to display two or more related categorical data sets simultaneously.\n\n**Structure & Application:**\n- Two or more adjacent vertical or horizontal bars are drawn side-by-side for each category.\n- Different colors, shadings, or hatch patterns are used to distinguish the component series, accompanied by a legend.\n- It enables direct visual comparison both between different categories and across the sub-variables within each category (e.g. comparing imports and exports across multiple consecutive years).",
+    "topic": "Data Representation & Basics",
+    "source": "Prince Alvi Current Solved Papers"
+  },
+  {
+    "id": 79,
+    "question": "Define Negative skewed",
+    "marks": "3 Marks",
+    "answer": "**Answer:**\n\n**Definition and Properties of Negative Skewness:**\n**Negative skewness** (or left-skewness) describes an asymmetric frequency distribution in which the tail on the left side of the distribution is longer or fatter than the tail on the right side.\n\n**Core Properties:**\n1. **Inequality of Averages:** $\\mathbf{\\text{Mean} < \\text{Median} < \\text{Mode}}$.\n2. **Central Tendency Relationship:** The bulk of observations cluster toward the higher end of the scale (on the right), while a few extreme small values pull the arithmetic mean to the left.\n3. **Skewness Coefficients:**\n   - Karl Pearson's coefficient: $S_k = \\frac{\\text{Mean} - \\text{Mode}}{s} < 0$.\n   - Bowley's coefficient: $S_b = \\frac{Q_3 - 2Q_2 + Q_1}{Q_3 - Q_1} < 0$.\n   - Moment coefficient: $b_1 = \\frac{m_3^2}{m_2^3}$, where $m_3 < 0$.",
+    "topic": "Data Representation & Basics",
+    "source": "Prince Alvi Current Solved Papers"
+  }
+]

@@ -1,0 +1,6322 @@
+=======================================================
+  MTH202 - COMPLETE VERIFIED OBJECTIVE MCQS DUMP
+  Total Questions: 547
+=======================================================
+
+Question 1 (ID: 1):
+Subtraction (-) is a binary operation on the set of integers.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 2 (ID: 2):
+Let the set A = {1, 2, 3, 4}. Then the relation {(2, 4), (4, 2)} is:
+
+Options:
+  A) Reflexive
+  B) Transitive
+  C) Symmetric [CORRECT ANSWER]
+  D) Antisymmetric
+
+Verified Answer: Symmetric
+
+-------------------------------------------------------
+
+Question 3 (ID: 3):
+Let A = {1, 2, 3, 4} and define relation R = {(1, 1), (1, 3), (2, 4), (3, 1), (4, 2)} on A. Then which of the following statement about R is true?
+
+Options:
+  A) R is symmetric [CORRECT ANSWER]
+  B) R is transitive
+  C) R is reflexive
+
+Verified Answer: R is symmetric
+
+-------------------------------------------------------
+
+Question 4 (ID: 4):
+. Logic gate NOT does not define a binary operation on {0,1} because:
+
+Options:
+  A) It takes a single input and gives a single output [CORRECT ANSWER]
+  B) It takes two inputs and gives a single output
+  C) It takes a single input and gives more than one output
+  D) It takes two inputs and gives multiple outputs
+
+Verified Answer: It takes a single input and gives a single output
+
+-------------------------------------------------------
+
+Question 5 (ID: 5):
+Let R and S be reflexive relations on a set A then R intersection S is reflexive.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 6 (ID: 6):
+Let R = {(1, 2), (3, 4), (5, 6), (7, 8)}. Domain of the inverse of the relation is:
+
+Options:
+  A) {1, 3, 5, 7}
+  B) {5, 6, 7, 8}
+  C) {2, 4, 6, 8} [CORRECT ANSWER]
+  D) {1, 2, 3, 4}
+
+Verified Answer: {2, 4, 6, 8}
+
+-------------------------------------------------------
+
+Question 7 (ID: 7):
+Let R be a relation on a set A. R is transitive if and only if for all a, b, c ∈ A then:
+
+Options:
+  A) (a, b) ∈ R and (b, c) ∈ R then (a, c) ∈ R [CORRECT ANSWER]
+  B) (a, b) ∈ R then (b, a) ∈ R
+  C) (a, b) ∈ R and (b, c) ∈ R but (a, c) ∉ R
+  D) (a, b) ∈ R then (b, a) ∉ R
+
+Verified Answer: (a, b) ∈ R and (b, c) ∈ R then (a, c) ∈ R
+
+-------------------------------------------------------
+
+Question 8 (ID: 8):
+Let A = {1, 2, 3} and B = {2, 4} then the number of binary relations from A to B are:
+
+Options:
+  A) 64 [CORRECT ANSWER]
+  B) 32
+  C) 128
+  D) 256
+
+Verified Answer: 64
+
+-------------------------------------------------------
+
+Question 9 (ID: 9):
+Which of the following is always true for the matrix representation of a symmetric relation?
+
+Options:
+  A) Matrix has always 1 in its diagonal entries
+  B) Matrix has always 0 in its diagonal entries
+  C) Matrix is singular
+  D) Matrix is equal to its transpose [CORRECT ANSWER]
+
+Verified Answer: Matrix is equal to its transpose
+
+-------------------------------------------------------
+
+Question 10 (ID: 10):
+If A={1, 2, 3} is a set and R = {(1, 2), (2, 2), (2,1)} is a relation on A, R is:
+
+Options:
+  A) Transitive
+  B) None of these
+  C) Symmetric [CORRECT ANSWER]
+
+Verified Answer: Symmetric
+
+-------------------------------------------------------
+
+Question 11 (ID: 11):
+Why is the function f : Z → R defined by f(x) = √x not well defined?
+
+Options:
+  A) Because f is not defined for z < 0 [CORRECT ANSWER]
+  B) Because f is not defined for z > 0
+  C) Because f gives imaginary values for all integers
+  D) Because f is not defined for 0
+
+Verified Answer: Because f is not defined for z < 0
+
+-------------------------------------------------------
+
+Question 12 (ID: 12):
+Operation of subtraction is a binary operation on the set of:
+
+Options:
+  A) Integers [CORRECT ANSWER]
+  B) Natural numbers
+  C) Whole numbers
+  D) Positive integers
+
+Verified Answer: Integers
+
+-------------------------------------------------------
+
+Question 13 (ID: 13):
+If a relation R = {(1,1), (2,1), (1,2), (2,2)} is given on {1, 2}, which of the following is NOT true about this relation?
+
+Options:
+  A) R is Irreflexive [CORRECT ANSWER]
+  B) R is Symmetric
+  C) R is Reflexive
+  D) R is Transitive
+
+Verified Answer: R is Irreflexive
+
+-------------------------------------------------------
+
+Question 14 (ID: 14):
+The logic gate NOT is a unary operation on {0, 1}:
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 15 (ID: 15):
+Let A = R and define the 'square' relation R = {(x, y) | x^2 = y^2}. The square relation is an:
+
+Options:
+  A) Equivalence relation [CORRECT ANSWER]
+  B) Not equivalence relation
+  C) Partial order relation
+  D) Irreflexive relation
+
+Verified Answer: Equivalence relation
+
+-------------------------------------------------------
+
+Question 16 (ID: 16):
+Suppose A has 3 elements and B has 4 elements, then the number of functions from A to B are:
+
+Options:
+  A) 81 [CORRECT ANSWER]
+  B) 12
+  C) 8
+
+Verified Answer: 81
+
+-------------------------------------------------------
+
+Question 17 (ID: 17):
+Let P(A) be the power set of a non-empty set A and by using the definition of "subset" relation, c, for all X, Y € P(A), X c Y if x EX then x € Y. Then:
+
+Options:
+  A) c is a partial order relation [CORRECT ANSWER]
+  B) c is not a partial order relation
+
+Verified Answer: c is a partial order relation
+
+-------------------------------------------------------
+
+Question 18 (ID: 18):
+The range of a function is always ........the co-domain of f:
+
+Options:
+  A) a superset of
+  B) equal to
+  C) a subset of [CORRECT ANSWER]
+  D) not equal to
+
+Verified Answer: a subset of
+
+-------------------------------------------------------
+
+Question 19 (ID: 19):
+The relation R = {(12, 14), (13, 5), (-2, 7), (x, 13)} is a function if x is NOT equal to:
+
+Options:
+  A) 12, 13 or -2 [CORRECT ANSWER]
+  B) 14, 5 or 7
+  C) 12, 13 or 2
+  D) 14, 7 or 13
+
+Verified Answer: 12, 13 or -2
+
+-------------------------------------------------------
+
+Question 20 (ID: 20):
+Let R = {(1, 2), (3, 4), (5, 6), (7, 8)}. Range of the inverse of the relation is
+
+Options:
+  A) {2, 4, 6, 8}
+  B) {5, 6, 7, 8}
+  C) {1, 2, 3, 4}
+  D) {1, 3, 5, 7} [CORRECT ANSWER]
+
+Verified Answer: {1, 3, 5, 7}
+
+-------------------------------------------------------
+
+Question 21 (ID: 21):
+What will be the fourth term of the following sequence 1/2 , 2/3, 3/4?
+
+Options:
+  A) 6/7
+  B) 5/6
+  C) 4/5 [CORRECT ANSWER]
+
+Verified Answer: 4/5
+
+-------------------------------------------------------
+
+Question 22 (ID: 22):
+Cardinality of positive prime numbers less than 20 is .........
+
+Options:
+  A) 10
+  B) 20
+  C) 8 [CORRECT ANSWER]
+  D) 5
+
+Verified Answer: 8
+
+-------------------------------------------------------
+
+Question 23 (ID: 23):
+If f is a bijective function then (f−1(f(x))) is equal to:
+
+Options:
+  A) None of these [CORRECT ANSWER]
+  B) f(x)
+  C) f−1(x)
+
+Verified Answer: None of these
+
+-------------------------------------------------------
+
+Question 24 (ID: 24):
+A set is called finite if, and only if, it is the:
+
+Options:
+  A) empty set or bijective to {1, 2, ..., n} for some positive integer n [CORRECT ANSWER]
+  B) empty set or onto
+  C) one-to-one or onto
+  D) infinite set
+
+Verified Answer: empty set or bijective to {1, 2, ..., n} for some positive integer n
+
+-------------------------------------------------------
+
+Question 25 (ID: 25):
+Let f(x) = 2x and g(x) = x + 2 define functions f and g from R to R, then (f - g)(x) is:
+
+Options:
+  A) x-2 [CORRECT ANSWER]
+  B) 3x + 2
+  C) 2x + 2
+  D) 2x2 + 4x
+
+Verified Answer: x-2
+
+-------------------------------------------------------
+
+Question 26 (ID: 26):
+There is at least one loop in the directed graph of an irreflexive relation.
+
+Options:
+  A) False [CORRECT ANSWER]
+  B) True
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 27 (ID: 27):
+Composite Relation symbolically written as:
+
+Options:
+  A) SOR = {(a,c) | a ∈ A, c ∈ C, ∃ b ∈ B, (a,b) ∈ R and (b,c) ∈ S} [CORRECT ANSWER]
+  B) None of the above
+  C) SoR = {(a,c) | a ∈ A, c ∈ C, ∃ b ∈ B, (a,b) ∈ R and (b,c) ∈ S}
+
+Verified Answer: SOR = {(a,c) | a ∈ A, c ∈ C, ∃ b ∈ B, (a,b) ∈ R and (b,c) ∈ S}
+
+-------------------------------------------------------
+
+Question 28 (ID: 28):
+Which of the following relations are functions?
+
+Options:
+  A) R1 = {(3, 4), (4, 5), (6, 7), (8, 9)}
+  B) R2 = {(3, 4), (4, 5), (6, 7), (3, 9)}
+  C) R3 = {(-3, 4), (4, -5), (0, 0), (8, 9)}
+  D) R4 = {(8, 11), (3, 4), (5, 6), (17, 8), (19, 9)} [CORRECT ANSWER]
+
+Verified Answer: R4 = {(8, 11), (3, 4), (5, 6), (17, 8), (19, 9)}
+
+-------------------------------------------------------
+
+Question 29 (ID: 29):
+The number of elements in the power set of ∅ denoted by P(∅) is:
+
+Options:
+  A) 20 [CORRECT ANSWER]
+  B) n
+  C) 22
+
+Verified Answer: 20
+
+-------------------------------------------------------
+
+Question 30 (ID: 30):
+Suppose set A has 3 elements and set B has 4 elements. The number of binary relations from A to B that are functions is:
+
+Options:
+  A) 64 [CORRECT ANSWER]
+  B) 81
+  C) 12
+  D) 4096
+
+Verified Answer: 64
+
+-------------------------------------------------------
+
+Question 31 (ID: 31):
+Range of function f(x)=eAxf(x) = e^{Ax}f(x)=eAx is:
+
+Options:
+  A) Set of positive Real numbers [CORRECT ANSWER]
+  B) Set of integers
+  C) Set of negative Real numbers
+  D) Set of Real numbers
+
+Verified Answer: Set of positive Real numbers
+
+-------------------------------------------------------
+
+Question 32 (ID: 32):
+Let A = {2, 3, 4} and B = {2, 6, 8} and let R be the "divides" relation from A to B i.e., for all (a, b) ∈ A × B, a R b iff a divides b. Then:
+
+Options:
+  A) R = {(6), (a)}
+  B) R = {(2, 2), (2, 6), (2, 8), (3, 6), (4, 8), (6, 8)}
+  C) R = {(2, 6), (3, 6), (4, 8)}
+  D) R = {(2, 2), (2, 6), (2, 8), (3, 6), (4, 8)} [CORRECT ANSWER]
+
+Verified Answer: R = {(2, 2), (2, 6), (2, 8), (3, 6), (4, 8)}
+
+-------------------------------------------------------
+
+Question 33 (ID: 33):
+If x ≡ -10 (mod 15), which of the following integers is a valid solution for x?
+
+Options:
+  A) 5 [CORRECT ANSWER]
+  B) 6
+  C) 10
+  D) 15
+
+Verified Answer: 5
+
+-------------------------------------------------------
+
+Question 34 (ID: 34):
+Let A = {1,2,3,4} and define the relation R on A by R = {(1,2), (2,3), (3,3), (3,4)}. Then:
+
+Options:
+  A) R is reflexive
+  B) R is both reflexive and irreflexive
+  C) R is neither reflexive nor irreflexive [CORRECT ANSWER]
+  D) R is irreflexive
+
+Verified Answer: R is neither reflexive nor irreflexive
+
+-------------------------------------------------------
+
+Question 35 (ID: 35):
+Let A = {1, 2, 3, ..., 50} and B = {2, 4, 6, 8, 10}. Then the Cartesian product A × B has how many elements?
+
+Options:
+  A) 250 [CORRECT ANSWER]
+  B) 100
+  C) 50
+  D) 500
+
+Verified Answer: 250
+
+-------------------------------------------------------
+
+Question 36 (ID: 36):
+Let A={1,2,3,4,5,6,7,8,9}, then which of the following sets represent the partition of the set A?
+
+Options:
+  A) A={1,3,5,7,9}, B={2,4,6}, C={8} [CORRECT ANSWER]
+  B) A={13,5,7,9}, B={2,3,4,6}, C={8}
+  C) A={13,5,7,9}, B={2,4,6}, C={8,9}
+
+Verified Answer: A={1,3,5,7,9}, B={2,4,6}, C={8}
+
+-------------------------------------------------------
+
+Question 37 (ID: 37):
+Which of the following logical connectives is not a binary operation?
+
+Options:
+  A) Disjunction
+  B) Negation [CORRECT ANSWER]
+  C) Implication
+  D) Conjunction
+
+Verified Answer: Negation
+
+-------------------------------------------------------
+
+Question 38 (ID: 38):
+Range of function \[f(x) = {e^x}\] is.................
+
+Options:
+  A) Set of integers
+  B) Set of negative Real number
+  C) Set of positive Real numbers [CORRECT ANSWER]
+  D) Set of Real number
+
+Verified Answer: Set of positive Real numbers
+
+-------------------------------------------------------
+
+Question 39 (ID: 39):
+If f−1(x)=6−x2 then f−1(2) is ..........
+
+Options:
+  A) 2 [CORRECT ANSWER]
+  B) 1
+  C) 0
+  D) 3
+
+Verified Answer: 2
+
+-------------------------------------------------------
+
+Question 40 (ID: 40):
+Let A = {1, 2, 3} and B = {2, 4}. The number of elements in the Cartesian product from A to B is:
+
+Options:
+  A) 6 [CORRECT ANSWER]
+  B) 8
+  C) 5
+  D) 9
+
+Verified Answer: 6
+
+-------------------------------------------------------
+
+Question 41 (ID: 41):
+Which is not a binary operation on the set of natural numbers N?
+
+Options:
+  A) Multiplication
+  B) Subtraction [CORRECT ANSWER]
+  C) None of these
+  D) Addition
+
+Verified Answer: Subtraction
+
+-------------------------------------------------------
+
+Question 42 (ID: 42):
+For the relation R = {(12, 14), (13, 5), (-2, 7), (x, 13)} to be a function, x can NOT be:
+
+Options:
+  A) 12, 13 or -2 [CORRECT ANSWER]
+  B) 14, 7 or 13
+  C) 12, 13 or 2
+  D) 14, 5 or 7
+
+Verified Answer: 12, 13 or -2
+
+-------------------------------------------------------
+
+Question 43 (ID: 43):
+Letf(x)=xandg(x)=−xforallx∈R,then(f+g)(x)is____.
+
+Options:
+  A) x
+  B) 0 [CORRECT ANSWER]
+  C) 2x
+
+Verified Answer: 0
+
+-------------------------------------------------------
+
+Question 44 (ID: 44):
+Which of the following is not a binary operation on the set of Integers?
+
+Options:
+  A) Multiplication
+  B) Subtraction
+  C) Addition
+  D) Division [CORRECT ANSWER]
+
+Verified Answer: Division
+
+-------------------------------------------------------
+
+Question 45 (ID: 45):
+The operation of subtraction is NOT a binary operation on the set of:
+
+Options:
+  A) whole numbers [CORRECT ANSWER]
+  B) integers
+  C) real numbers
+  D) rational numbers
+
+Verified Answer: whole numbers
+
+-------------------------------------------------------
+
+Question 46 (ID: 46):
+Let f(x)=x+3 then f−1(x) is ...........
+
+Options:
+  A) x+3
+  B) x−3
+  C) 3−x
+  D) 2x−3
+  E) x - 3 [CORRECT ANSWER]
+
+Verified Answer: x - 3
+
+-------------------------------------------------------
+
+Question 47 (ID: 47):
+A set is countable if, and only if, it is _________.
+
+Options:
+  A) infinite
+  B) finite or countably infinite [CORRECT ANSWER]
+  C) finite
+  D) countably infinite
+
+Verified Answer: finite or countably infinite
+
+-------------------------------------------------------
+
+Question 48 (ID: 48):
+If f(x)=2x and g(x)=x then g(f(x)) is..........
+
+Options:
+  A) 2x [CORRECT ANSWER]
+  B) 2x2
+  C) x
+  D) x2
+
+Verified Answer: 2x
+
+-------------------------------------------------------
+
+Question 49 (ID: 49):
+If f(1) = 1, f(2) = 1, f(3) = 1, f(4) = 1, then which of the following is true about f?
+
+Options:
+  A) f is a constant function [CORRECT ANSWER]
+  B) f is an identity function
+  C) f is injective
+  D) f is bijective
+
+Verified Answer: f is a constant function
+
+-------------------------------------------------------
+
+Question 50 (ID: 50):
+Let A = {1, 2, 3, 4} and R = {(1, 1), (2, 2), (3, 3), (4, 4)}. Which of the following statements about R is true?
+
+Options:
+  A) R is reflexive, symmetric and transitive [CORRECT ANSWER]
+  B) R is not reflexive
+  C) R is not transitive
+  D) R is not symmetric
+
+Verified Answer: R is reflexive, symmetric and transitive
+
+-------------------------------------------------------
+
+Question 51 (ID: 51):
+Let A={1 , 2 , 3 , 4} and R={(1 , 1)(2 , 2)(3 , 3)(4 , 4)} then R is
+
+Options:
+  A) Symmetric
+  B) Options a,b,and c all true
+  C) Reflexive
+  D) Transitive
+  E) All options [CORRECT ANSWER]
+
+Verified Answer: All options
+
+-------------------------------------------------------
+
+Question 52 (ID: 52):
+R={(a,1)(b,2)(c,3)(d,4)} then the inverse of this relation is.............
+
+Options:
+  A) {(a,1)(2,b)(3,c)(4,d)}
+  B) {(1,a)(2,b)(3,c)(4,d)} [CORRECT ANSWER]
+  C) {(a,1)(b,2)(3,c)(4,d)}
+  D) {(1,a)(b,2)(3,c)(4,d)}
+
+Verified Answer: {(1,a)(2,b)(3,c)(4,d)}
+
+-------------------------------------------------------
+
+Question 53 (ID: 53):
+R ∪ S is_____?
+
+Options:
+  A) not transitive [CORRECT ANSWER]
+  B) transitive
+
+Verified Answer: not transitive
+
+-------------------------------------------------------
+
+Question 54 (ID: 54):
+relation is ________.
+
+Options:
+  A) {2, 4, 6, 8}
+  B) {1, 2, 3, 4}
+  C) {1, 3, 5, 7}
+  D) {5, 6, 7, 8}
+  E) A*B(difference or - ) R [CORRECT ANSWER]
+
+Verified Answer: A*B(difference or - ) R
+
+-------------------------------------------------------
+
+Question 55 (ID: 55):
+The properties of being symmetric and being anti-symmetric are ________.
+
+Options:
+  A) Not negative of each other [CORRECT ANSWER]
+  B) Negative of each other
+  C) Identical to each other
+  D) Opposite to each other
+
+Verified Answer: Not negative of each other
+
+-------------------------------------------------------
+
+Question 56 (ID: 56):
+which of the following statement about R is true?
+
+Options:
+  A) R is reflexive
+  B) R is symmetric [CORRECT ANSWER]
+  C) None of the above
+  D) R is transitive
+
+Verified Answer: R is symmetric
+
+-------------------------------------------------------
+
+Question 57 (ID: 57):
+symmetric relation?
+
+Options:
+  A) Matrix has always 0 in its diagonal entries
+  B) Matrix has always 1 in its diagonal entries
+  C) Matrix is singular
+  D) Matrix is equal to its transpose [CORRECT ANSWER]
+
+Verified Answer: Matrix is equal to its transpose
+
+-------------------------------------------------------
+
+Question 58 (ID: 58):
+complementary relation is ........
+
+Options:
+  A) A × B
+  B) A × B (intersection) R
+  C) A × B (difference or -) R
+  D) A × B (Union) R
+  E) A*B (difference or -) R [CORRECT ANSWER]
+
+Verified Answer: A*B (difference or -) R
+
+-------------------------------------------------------
+
+Question 59 (ID: 59):
+irreflexive relation?
+
+Options:
+  A) (3,3) [CORRECT ANSWER]
+  B) (3,4)
+  C) (2,3)
+  D) (1,2)
+
+Verified Answer: (3,3)
+
+-------------------------------------------------------
+
+Question 60 (ID: 60):
+Range of the relation {(0,1),(3,22),(90,34)}
+
+Options:
+  A) {1,22,34} [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: {1,22,34}
+
+-------------------------------------------------------
+
+Question 61 (ID: 61):
+Let A= {0,1,2} and R = {(0,2),(1,1),(2,0)} be a relation on A. The which of the following ordered pairs are needed to make it transitive?
+
+Options:
+  A) (0,0) and (2,2) [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: (0,0) and (2,2)
+
+-------------------------------------------------------
+
+Question 62 (ID: 62):
+Let S=R and define the ‘square’ relation R= {(x,y)Ix2=y2}. The square relation is an _________ relation
+
+Options:
+  A) Equivalence relation [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Equivalence relation
+
+-------------------------------------------------------
+
+Question 63 (ID: 63):
+The logic gate NOT is a uniary operation on {0,1}.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 64 (ID: 64):
+Let A= {1,2}, then P(A)=__________
+
+Options:
+  A) {{},{1},{2},{1,2}} [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: {{},{1},{2},{1,2}}
+
+-------------------------------------------------------
+
+Question 65 (ID: 65):
+If a relation R is reflexive, anti symmetric and transitive then which of the following is not true for the inverse relation.
+
+Options:
+  A) Inverse relation will be irreflexive [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Inverse relation will be irreflexive
+
+-------------------------------------------------------
+
+Question 66 (ID: 66):
+Let R be a binary relation on a set A,R is anti-symmetric iff ___________
+
+Options:
+  A) a,beA if (a,b)eR and (b,a)eR then a=b [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: a,beA if (a,b)eR and (b,a)eR then a=b
+
+-------------------------------------------------------
+
+Question 67 (ID: 67):
+“-“ is a binary operation on the set of integers Z.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 68 (ID: 68):
+The inverse relation R^(-1) from B to A is defined as ____________
+
+Options:
+  A) R^(-1) = {(b,a) e B*A I (a,b)eR} [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: R^(-1) = {(b,a) e B*A I (a,b)eR}
+
+-------------------------------------------------------
+
+Question 69 (ID: 69):
+Let A = {1, 2, 3, 4} and let R and S be transitive relations on A defined as R = {(1,2), (1,3), (2,2), (3,3), (4,2), (4,3)} and S = {(2,1), (2,4), (3,3)}. Then R ∪ S is:
+
+Options:
+  A) not transitive [CORRECT ANSWER]
+  B) transitive
+  C) reflexive
+  D) an equivalence relation
+
+Verified Answer: not transitive
+
+-------------------------------------------------------
+
+Question 70 (ID: 70):
+Let S=R and define the ‘ square’ relation R = {(x,y)Ix2=y2}. The square is an _________ relation.
+
+Options:
+  A) Equivalance relation [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Equivalance relation
+
+-------------------------------------------------------
+
+Question 71 (ID: 71):
+Let R be a binary relation on a set A. If R is anti symmetric then ______________
+
+Options:
+  A) Inverse of R is anti symmetric [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Inverse of R is anti symmetric
+
+-------------------------------------------------------
+
+Question 72 (ID: 72):
+Let A={0,1} and B=(1). Let R and S be two binary relations on Cartesian product of A and B such that R={(0,1)} and S= {(1,1)}. Then R intersection S=_________________
+
+Options:
+  A) Empty [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Empty
+
+-------------------------------------------------------
+
+Question 73 (ID: 73):
+A relation R is said to be ______ iff it is reflexive, antisymmetric and transitive.
+
+Options:
+  A) Partial order Relation [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Partial order Relation
+
+-------------------------------------------------------
+
+Question 74 (ID: 74):
+Let X={1,2,3} and Y={7,8,9} and let f be function defined from X to Y such that f is onto then which of the following statement about f is true?
+
+Options:
+  A) Co-domain of f must contain 1 element [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Co-domain of f must contain 1 element
+
+-------------------------------------------------------
+
+Question 75 (ID: 75):
+The function fog and gof are always equal
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 76 (ID: 76):
+If a relation R={(1,2),(2,3),(3,4)(4,1)(2,2) is given then which of the following is true about this relation.
+
+Options:
+  A) R is reflexive [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: R is reflexive
+
+-------------------------------------------------------
+
+Question 77 (ID: 77):
+A set is called countable if, and only if, it is ________.
+
+Options:
+  A) finite or countably infinite [CORRECT ANSWER]
+  B) finite
+  C) countably infinite
+  D) infinite
+
+Verified Answer: finite or countably infinite
+
+-------------------------------------------------------
+
+Question 78 (ID: 78):
+Let f(x) = x^2 - 1 define a function f from R to R and c = 2 be any scalar. Then (c · f)(x) is:
+
+Options:
+  A) 2x^2 - 2 [CORRECT ANSWER]
+  B) 2x^2 + 2
+  C) 2x^2 - 1
+  D) x^2 - 2
+
+Verified Answer: 2x^2 - 2
+
+-------------------------------------------------------
+
+Question 79 (ID: 79):
+The set Z of all integers is ___________
+
+Options:
+  A) Countable [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Countable
+
+-------------------------------------------------------
+
+Question 80 (ID: 80):
+For (2x-3, 4y+2) = (1,10). What will be the value of x and y ?
+
+Options:
+  A) (2,2) [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: (2,2)
+
+-------------------------------------------------------
+
+Question 81 (ID: 81):
+Let f and g be the two functions from R to R defined by f(x) = IxI and g(x)= square root of x2 for all xeR. Then______
+
+Options:
+  A) F(x) is not equal to g(x) [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: F(x) is not equal to g(x)
+
+-------------------------------------------------------
+
+Question 82 (ID: 82):
+If a set A has 15 elements then P(A) (power set of A) has ___________ elements.
+
+Options:
+  A) 2^15 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 2^15
+
+-------------------------------------------------------
+
+Question 83 (ID: 83):
+For the relation below to be a function, x cannot be what values {(12,14),(13,5),(-2,7),(x,13)}?
+
+Options:
+  A) X cannot be 12, 13, or -2 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: X cannot be 12, 13, or -2
+
+-------------------------------------------------------
+
+Question 84 (ID: 84):
+For the following relation to be a function, x can not be what values? R={(2,4),(x,1), (4,2),(5,6)}.
+
+Options:
+  A) x cannot be 2,4 and 5 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: x cannot be 2,4 and 5
+
+-------------------------------------------------------
+
+Question 85 (ID: 85):
+Vertical line test is used to determine that whether the graph of a relation is a function or not.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 86 (ID: 86):
+The number of elements in AxB are ___________ if A is a set with ‘5’ elements and B is a set with ‘4’ elements.
+
+Options:
+  A) 20 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 20
+
+-------------------------------------------------------
+
+Question 87 (ID: 87):
+How many real numbers exist between 1 and 5?
+
+Options:
+  A) Infinitely many [CORRECT ANSWER]
+  B) 3
+  C) 4
+  D) 5
+
+Verified Answer: Infinitely many
+
+-------------------------------------------------------
+
+Question 88 (ID: 88):
+The number pi is
+
+Options:
+  A) Irrational [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Irrational
+
+-------------------------------------------------------
+
+Question 89 (ID: 89):
+The number square root 2 is
+
+Options:
+  A) Irrational [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Irrational
+
+-------------------------------------------------------
+
+Question 90 (ID: 90):
+The range of the relation R = {(0, 1), (3, 22), (90, 34)} is:
+
+Options:
+  A) {1, 22, 34} [CORRECT ANSWER]
+  B) {0, 3, 90}
+  C) {0, 1, 3, 22}
+  D) {1, 3, 90}
+
+Verified Answer: {1, 22, 34}
+
+-------------------------------------------------------
+
+Question 91 (ID: 91):
+Supherical coordinate 0 is related to the cylindrical coordinate as_____________
+
+Options:
+  A) @=@ [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: @=@
+
+-------------------------------------------------------
+
+Question 92 (ID: 92):
+Operation of subtraction is a binary operation on the set________
+
+Options:
+  A) Integers [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Integers
+
+-------------------------------------------------------
+
+Question 93 (ID: 93):
+Let A {1,2,3,4} and R={(1,2),(2,3),(3,3),(3,4)} be a relation on A. Then which one of the following ordered pair has made R not an irreflexive relation?
+
+Options:
+  A) (3,3) [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: (3,3)
+
+-------------------------------------------------------
+
+Question 94 (ID: 94):
+Input values of the function are called the ____________
+
+Options:
+  A) Domain [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Domain
+
+-------------------------------------------------------
+
+Question 95 (ID: 95):
+The range of the real-valued function f(x) = |x| is:
+
+Options:
+  A) Set of non-negative real numbers [CORRECT ANSWER]
+  B) Set of positive real numbers
+  C) Set of real numbers
+  D) Set of integers
+
+Verified Answer: Set of non-negative real numbers
+
+-------------------------------------------------------
+
+Question 96 (ID: 96):
+In the matrix representation of an irreflexive relation all the entries in the main diagonal are __________
+
+Options:
+  A) 0 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 0
+
+-------------------------------------------------------
+
+Question 97 (ID: 97):
+If {A1, A2} is a partition of set A, then:
+
+Options:
+  A) A1 ∩ A2 = ∅ [CORRECT ANSWER]
+  B) A1 ∩ A2 ≠ ∅
+  C) A1 ∪ A2 ≠ A
+  D) A1 = A2
+
+Verified Answer: A1 ∩ A2 = ∅
+
+-------------------------------------------------------
+
+Question 98 (ID: 98):
+Let A = {a, b}. Then the power set P(A) is:
+
+Options:
+  A) {∅, {a}, {b}, {a, b}} [CORRECT ANSWER]
+  B) {{a}, {b}}
+  C) {∅, {a, b}}
+  D) {a, b}
+
+Verified Answer: {∅, {a}, {b}, {a, b}}
+
+-------------------------------------------------------
+
+Question 99 (ID: 99):
+Which relations below are not functions?
+
+Options:
+  A) {(13,14),(13,5),(16,7),(18,13)} [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: {(13,14),(13,5),(16,7),(18,13)}
+
+-------------------------------------------------------
+
+Question 100 (ID: 100):
+In the directed graph of an antisymmetric relation there is _________ pair of arrows between two distinct elements of the set.
+
+Options:
+  A) No [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: No
+
+-------------------------------------------------------
+
+Question 101 (ID: 101):
+If a relation R= (1,1),(2,1)(2,2) is given then which of the following is not true about this relation
+
+Options:
+  A) R is irreflexive [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: R is irreflexive
+
+-------------------------------------------------------
+
+Question 102 (ID: 102):
+Let R and S be transitive relations on a set A then ________________
+
+Options:
+  A) Neither R union S is transitive nor R intersection S is transitive [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Neither R union S is transitive nor R intersection S is transitive
+
+-------------------------------------------------------
+
+Question 103 (ID: 103):
+Let A={1,2,3,4,5} and B={4,9,,16,17,25}. Then the relation R={(2,4),(3,9),(4,16),93,17)} The inverse of R is’
+
+Options:
+  A) {(4,2),(9,3),(16,4),(17,3)} [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: {(4,2),(9,3),(16,4),(17,3)}
+
+-------------------------------------------------------
+
+Question 104 (ID: 104):
+Let R be a relation on a set A. If R is symmetric then its compliment is __________
+
+Options:
+  A) Irreflexive [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Irreflexive
+
+-------------------------------------------------------
+
+Question 105 (ID: 105):
+For any set A, the Cartesian product of A and A is known as ____________
+
+Options:
+  A) Universal relation [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Universal relation
+
+-------------------------------------------------------
+
+Question 106 (ID: 106):
+Let A={p,q,r,s} and define a relation R on A by R={(p,p),(p,r),(q,r),(q,s),(r,s)} Then which one of the following is the correct statement about R:
+
+Options:
+  A) R is not reflexive [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: R is not reflexive
+
+-------------------------------------------------------
+
+Question 107 (ID: 107):
+A={1,2} B={3,4}, R={(1,3)(2,4)}. Then the complement of R is __________.
+
+Options:
+  A) {(1,4)(2,3)} [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: {(1,4)(2,3)}
+
+-------------------------------------------------------
+
+Question 108 (ID: 108):
+Domain of a relation symbolically written as____________.
+
+Options:
+  A) Dom(R)={aeAI(a,b)eR} [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Dom(R)={aeAI(a,b)eR}
+
+-------------------------------------------------------
+
+Question 109 (ID: 109):
+Let X={2,4,5} and Y={1,2,4} and R be a relation from X to Y defined by R={(2,4)(4,1)(a,2)}. For what value of ‘a’ the relation R is a function?
+
+Options:
+  A) 5 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 5
+
+-------------------------------------------------------
+
+Question 110 (ID: 110):
+Let A={1,2,3} and B={2,4} then number of binary relations from A to B are _____________.
+
+Options:
+  A) 64 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 64
+
+-------------------------------------------------------
+
+Question 111 (ID: 111):
+A relation R is said to be ________iff it is reflexive, antisymmetric and transitivde.
+
+Options:
+  A) Partial order Relation [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Partial order Relation
+
+-------------------------------------------------------
+
+Question 112 (ID: 112):
+Let f be a function from X={2,4,5} to Y={1,2,4,6} defined as:f={(2,6),(4,2),(5,1)} . The range of f is _________
+
+Options:
+  A) {1,2,6} [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: {1,2,6}
+
+-------------------------------------------------------
+
+Question 113 (ID: 113):
+Let A={0,1,2} and R={(0,2),(1,1),(2,0)} be a relation on A. Then which of the following statement about R is true?
+
+Options:
+  A) R is symmetric [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: R is symmetric
+
+-------------------------------------------------------
+
+Question 114 (ID: 114):
+Let A={2,3,4} and B={2,6,8} and let R be the “divides” relation from A to B i.e for all (a,b) belong to (Cartesian product of A and B), a,R b iff a I b (a divides b). Then
+
+Options:
+  A) R={(2,2),(2,6),(2,8),(3,6),(4,8)} [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: R={(2,2),(2,6),(2,8),(3,6),(4,8)}
+
+-------------------------------------------------------
+
+Question 115 (ID: 115):
+Let A={1,2,3,...,50} and B={2,4,6,8,10}. Then the Cartesian product of A and B has ___________ elements.
+
+Options:
+  A) 250 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 250
+
+-------------------------------------------------------
+
+Question 116 (ID: 116):
+In the matrix representation of an reflexive relation all the entries in the main diagonal are ___________
+
+Options:
+  A) 1 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 1
+
+-------------------------------------------------------
+
+Question 117 (ID: 117):
+Which of the following is not a type of a relation?
+
+Options:
+  A) Permutation [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Permutation
+
+-------------------------------------------------------
+
+Question 118 (ID: 118):
+Which of the following is not a representation of a relation?
+
+Options:
+  A) Venn diagram [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Venn diagram
+
+-------------------------------------------------------
+
+Question 119 (ID: 119):
+Let A={1,2,3,4} and define the following relations on A. Then R={(1,3),(1,4),(2,3),(2,4),(3,1),(3,4)} is _________
+
+Options:
+  A) R is irreflexive [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: R is irreflexive
+
+-------------------------------------------------------
+
+Question 120 (ID: 120):
+The range of f:X-> Y is also called the image of
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 121 (ID: 121):
+Which of the following logical connectives is NOT a binary operation?
+
+Options:
+  A) Negation [CORRECT ANSWER]
+  B) Implication
+  C) Conjunction
+  D) Disjunction
+
+Verified Answer: Negation
+
+-------------------------------------------------------
+
+Question 122 (ID: 122):
+A set may be dividend up into its disjoint subsets, such division is called_______
+
+Options:
+  A) Partition [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Partition
+
+-------------------------------------------------------
+
+Question 123 (ID: 123):
+If A=(1,2,3)&B=(4,5,6) and R ={(1,4)(2,5)(3,6)(3,4)} The complementary relation is _________
+
+Options:
+  A) A*B(difference or – ) R [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: A*B(difference or – ) R
+
+-------------------------------------------------------
+
+Question 124 (ID: 124):
+In matrix representation of a__________ relation, the diagonal entries are always 1.
+
+Options:
+  A) Reflexive [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Reflexive
+
+-------------------------------------------------------
+
+Question 125 (ID: 125):
+R is not symmetric iff there are elements a and b in A such that ___________
+
+Options:
+  A) (a,b) belongs to R but (b,a) does not belong to R [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: (a,b) belongs to R but (b,a) does not belong to R
+
+-------------------------------------------------------
+
+Question 126 (ID: 126):
+Which relations below are functions? R1={(3,4),(4,5),(6,7),(8,9)} R2={(3,4),(4,5),(6,7),(3,9)} R3={(-3,4),(4,-5),(0,0),(8,9)} R4={(8,11),(34,5),(6,17),(8,19)}
+
+Options:
+  A) R1 and R3 are functions [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: R1 and R3 are functions
+
+-------------------------------------------------------
+
+Question 127 (ID: 127):
+The logic gate OR and AND are uniary operation on {0,1}
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 128 (ID: 128):
+There is atleast one loop in the graph of an irreflexive relation
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 129 (ID: 129):
+There is atleast one loop in the graph of an reflexive relation
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 130 (ID: 130):
+A contains 3 elements and B contains 2 elements, then number of subsets of A*B are _________
+
+Options:
+  A) 64 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 64
+
+-------------------------------------------------------
+
+Question 131 (ID: 131):
+Let A={1,2,3} and B={0,1,2} and C={a,b} R={(1,0),(1,2),(3,1),(3,2)} S={(0,b),(1,a),(2,b)} composite of R and S=______________
+
+Options:
+  A) {(1,b),(1,a),(3,a),(3,b)} [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: {(1,b),(1,a),(3,a),(3,b)}
+
+-------------------------------------------------------
+
+Question 132 (ID: 132):
+The number of elements in the power set of P(not empty set) denoted by P(P(not empty set) is
+
+Options:
+  A) 2 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 2
+
+-------------------------------------------------------
+
+Question 133 (ID: 133):
+The function defined from Z to Z as f(x)= 1/(x+2)(x-2) is not well defined because __________
+
+Options:
+  A) Function is not defined at x=2 and x=-2 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Function is not defined at x=2 and x=-2
+
+-------------------------------------------------------
+
+Question 134 (ID: 134):
+Rang of relation {(0,1),(3,22),(90,34)} is ___________
+
+Options:
+  A) {1, 22, 34} [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: {1, 22, 34}
+
+-------------------------------------------------------
+
+Question 135 (ID: 135):
+The number of elements in the power set of P(not empty set) denoted by P(not empty set) is
+
+Options:
+  A) 1 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 1
+
+-------------------------------------------------------
+
+Question 136 (ID: 136):
+Let R={(1,2),(3,4),(5,6),(7,8)}. Domain of inverse of the relation is _________
+
+Options:
+  A) {2,4,6,8} [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: {2,4,6,8}
+
+-------------------------------------------------------
+
+Question 137 (ID: 137):
+The relation 'divides' on the set of positive integers Z+ is:
+
+Options:
+  A) A partial order relation [CORRECT ANSWER]
+  B) A symmetric relation
+  C) An equivalence relation
+  D) An irreflexive relation
+
+Verified Answer: A partial order relation
+
+-------------------------------------------------------
+
+Question 138 (ID: 138):
+If R is transitive then the inverse relation will be transitive.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 139 (ID: 139):
+A set may be divided up into its disjoints subsets,such division is called
+
+Options:
+  A) Partition [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Partition
+
+-------------------------------------------------------
+
+Question 140 (ID: 140):
+If a set A contains is elements then the number of elements in its power set P(A) is ________
+
+Options:
+  A) 2n [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 2n
+
+-------------------------------------------------------
+
+Question 141 (ID: 141):
+Range of a relation symbolically written as _______.
+
+Options:
+  A) Ran R = {b ∈ B I (a, b) ∈ R } [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Ran R = {b ∈ B I (a, b) ∈ R }
+
+-------------------------------------------------------
+
+Question 142 (ID: 142):
+Let A be a set with m elements and B be a set with n elements then the number of elements in A*B are _________
+
+Options:
+  A) m.n [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: m.n
+
+-------------------------------------------------------
+
+Question 143 (ID: 143):
+Let A{1,2,3,4} and define the following relation on A. Then R={(1,3),(2,2),(2,4),(3,1),(4,2)} Is __________
+
+Options:
+  A) R is symmetric [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: R is symmetric
+
+-------------------------------------------------------
+
+Question 144 (ID: 144):
+Let R be a relation on a set A. If R is reflexive then its compliment is __________
+
+Options:
+  A) Irreflexive [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Irreflexive
+
+-------------------------------------------------------
+
+Question 145 (ID: 145):
+25=1(mod 3) means that 3 divides _______
+
+Options:
+  A) 25-1 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 25-1
+
+-------------------------------------------------------
+
+Question 146 (ID: 146):
+Let R be the universal relation on a set A then which one of the following statement about R is true ?
+
+Options:
+  A) R is reflexive, symmetric and transitive [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: R is reflexive, symmetric and transitive
+
+-------------------------------------------------------
+
+Question 147 (ID: 147):
+Let R be a relation on a set A. R is transitive if and only if for all a,b,ceA then
+
+Options:
+  A) (a,b)eR and (b,c)eR then (a,c)eR [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: (a,b)eR and (b,c)eR then (a,c)eR
+
+-------------------------------------------------------
+
+Question 148 (ID: 148):
+Let A be a non-empty set and P(A) the power set of A Deifne the ‘ subset’ relation ,c as follows for all X,Y e P(A), XcY<-> for all x, iffxeX then xeY . Then c is _________
+
+Options:
+  A) c is partial order relation [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: c is partial order relation
+
+-------------------------------------------------------
+
+Question 149 (ID: 149):
+Define a relation R={(1,1),(2,2),(3,3),(1,3) the relation is
+
+Options:
+  A) R is reflexive and transitive [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: R is reflexive and transitive
+
+-------------------------------------------------------
+
+Question 150 (ID: 150):
+A function whose range consists of only one element is called a/an ________.
+
+Options:
+  A) Constant function [CORRECT ANSWER]
+  B) One to one function
+  C) Identity function
+  D) Bijective function
+
+Verified Answer: Constant function
+
+-------------------------------------------------------
+
+Question 151 (ID: 151):
+Let X={1,5,9} and Y={3,4,7}, Define a function f from X to Y such that f(1)=7,f(5)=3,f(9)=_________. Which is true f(9) to make it a one-to-one (injective) function?
+
+Options:
+  A) 4 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 4
+
+-------------------------------------------------------
+
+Question 152 (ID: 152):
+The value of 6!=
+
+Options:
+  A) 720 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 720
+
+-------------------------------------------------------
+
+Question 153 (ID: 153):
+A constant function is one to one iffits ________ is a singleton.
+
+Options:
+  A) Domain [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Domain
+
+-------------------------------------------------------
+
+Question 154 (ID: 154):
+A constant function is onto iffits ___________ is a singleton.
+
+Options:
+  A) Co-domain [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Co-domain
+
+-------------------------------------------------------
+
+Question 155 (ID: 155):
+Number of one to one functions from X={a,b} to Y={u,v} are equal to ______
+
+Options:
+  A) 2 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 2
+
+-------------------------------------------------------
+
+Question 156 (ID: 156):
+If f is defined recursively by f(0) = -1 and f(n+1)=f(n)+3, then f(2)=_________.
+
+Options:
+  A) 5 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 5
+
+-------------------------------------------------------
+
+Question 157 (ID: 157):
+A function whose inverse function exists is called a/an__________
+
+Options:
+  A) Invertible function [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Invertible function
+
+-------------------------------------------------------
+
+Question 158 (ID: 158):
+Let f(2)=3, g(2)=3, f(4)=1 and g(4)=2 then the value of fog(4) is......
+
+Options:
+  A) 3 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 3
+
+-------------------------------------------------------
+
+Question 159 (ID: 159):
+Let A={1,2,3,4} and B={7} then the constant function from A to B is ________.
+
+Options:
+  A) Onto [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Onto
+
+-------------------------------------------------------
+
+Question 160 (ID: 160):
+Composition of a function is a commutative operation.
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 161 (ID: 161):
+Composition of a function is not a commutative operation
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 162 (ID: 162):
+The sum of first five whole number is __________.
+
+Options:
+  A) 10 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 10
+
+-------------------------------------------------------
+
+Question 163 (ID: 163):
+If f and g are two one-to-one functions, then their composition that is gof is one-to-one.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 164 (ID: 164):
+Inverse of a surjective function is always a function.
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 165 (ID: 165):
+Inverse of a surjective function may not be a function
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 166 (ID: 166):
+Let X={1,2,3,4} and Y={7,8,9} and let f be function defined from X to Y such that f is onto then which of the following statement about f is true?
+
+Options:
+  A) Co-domain of f must contain 3 elements [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Co-domain of f must contain 3 elements
+
+-------------------------------------------------------
+
+Question 167 (ID: 167):
+If f; X->Y and g; Y->Z are both onto functions. Then gof; X->Z is _________
+
+Options:
+  A) onto [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: onto
+
+-------------------------------------------------------
+
+Question 168 (ID: 168):
+If f and g are two one-to-one functions, then their composition gof is_________
+
+Options:
+  A) One-to-one [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: One-to-one
+
+-------------------------------------------------------
+
+Question 169 (ID: 169):
+If f: W →X, g:X →Y, and h:Y →Z are functions, then___________
+
+Options:
+  A) (hog)of = ho(gof) [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: (hog)of = ho(gof)
+
+-------------------------------------------------------
+
+Question 170 (ID: 170):
+1 IF f(x)=sin (x) and g(x)=sin x then gof(x) is _________.
+
+Options:
+  A) X [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: X
+
+-------------------------------------------------------
+
+Question 171 (ID: 171):
+0!=_________.
+
+Options:
+  A) 1 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 1
+
+-------------------------------------------------------
+
+Question 172 (ID: 172):
+An important data type in computer programming consists of __________.
+
+Options:
+  A) Finite sequences [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Finite sequences
+
+-------------------------------------------------------
+
+Question 173 (ID: 173):
+The total number of terms in an arithmetic series 0+5+10+15+....50 are _________.
+
+Options:
+  A) 11 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 11
+
+-------------------------------------------------------
+
+Question 174 (ID: 174):
+9!/6!=________
+
+Options:
+  A) 504 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 504
+
+-------------------------------------------------------
+
+Question 175 (ID: 175):
+Let f(x)=3x and g(x)=3x-2 define functions f and g from R to R, THEN (F+G)(X) is ___________
+
+Options:
+  A) 6x-2 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 6x-2
+
+-------------------------------------------------------
+
+Question 176 (ID: 176):
+A sequence whose terms alternate in sign is called an_________
+
+Options:
+  A) Alternating sequence [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Alternating sequence
+
+-------------------------------------------------------
+
+Question 177 (ID: 177):
+Common ration in the sequence “4, 16, 64, 256,...” is.....12.
+
+Options:
+  A) 4 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 4
+
+-------------------------------------------------------
+
+Question 178 (ID: 178):
+0.8181818181 is a infinite geometric series.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 179 (ID: 179):
+The word ‘algorithm’ refers to a step-by-step method for performing some action.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 180 (ID: 180):
+A predicate become ______ when its variables are given specific values
+
+Options:
+  A) Sentence [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Sentence
+
+-------------------------------------------------------
+
+Question 181 (ID: 181):
+The sum of two irrational numbers must be an irrational number.
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 182 (ID: 182):
+The sum of two irrational numbers need not be irrational number
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 183 (ID: 183):
+The division by zero is allowed in mathematics.
+
+Options:
+  A) Fasle [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Fasle
+
+-------------------------------------------------------
+
+Question 184 (ID: 184):
+The product of any two consecutive positive integers is divisible by 2
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 185 (ID: 185):
+If ‘n’ is an odd integer then n^3+n is ________.
+
+Options:
+  A) Even [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Even
+
+-------------------------------------------------------
+
+Question 186 (ID: 186):
+For integers a,b,c, If divides b and a divides c, then a divides (a+b).
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 187 (ID: 187):
+Quotient remainder theorem states that for any positive integer d, there exist unique integer q and r such that ________ and 0<r<d
+
+Options:
+  A) N=d.q+r [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: N=d.q+r
+
+-------------------------------------------------------
+
+Question 188 (ID: 188):
+A rule that assigns a numerical value to each outcome in a simple space is called
+
+Options:
+  A) Random variable [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Random variable
+
+-------------------------------------------------------
+
+Question 189 (ID: 189):
+If A and B are two disjoint (mutually exclusive) events then P(AB)=
+
+Options:
+  A) P(A) + P(B) [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: P(A) + P(B)
+
+-------------------------------------------------------
+
+Question 190 (ID: 190):
+How many ways are there to select five players from a 10 member tennis team to make a trip to a match to another school?
+
+Options:
+  A) C(10,5) [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: C(10,5)
+
+-------------------------------------------------------
+
+Question 191 (ID: 191):
+The expectation of x is equal to
+
+Options:
+  A) Sum xf(x) [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Sum xf(x)
+
+-------------------------------------------------------
+
+Question 192 (ID: 192):
+If P(A intersection B) = P(A) P(B) THEN THE events A and B are called
+
+Options:
+  A) Independent [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Independent
+
+-------------------------------------------------------
+
+Question 193 (ID: 193):
+A walk in a graph that starts and ends at the same vertex is called a:
+
+Options:
+  A) Closed walk [CORRECT ANSWER]
+  B) Open walk
+  C) Tree
+  D) Euler path
+
+Verified Answer: Closed walk
+
+-------------------------------------------------------
+
+Question 194 (ID: 194):
+How many integers from 1 through 1000 are neither multiples of 3 nor multiples of 5?
+
+Options:
+  A) 533 [CORRECT ANSWER]
+  B) 467
+  C) 497
+  D) 500
+
+Verified Answer: 533
+
+-------------------------------------------------------
+
+Question 195 (ID: 195):
+What is the probability of getting a number greater than 4 when a fair 6-sided die is thrown?
+
+Options:
+  A) 1/3 [CORRECT ANSWER]
+  B) 1/2
+  C) 2/3
+  D) 1/6
+
+Verified Answer: 1/3
+
+-------------------------------------------------------
+
+Question 196 (ID: 196):
+Euler's formula for connected planar graphs relating vertices (v), edges (e), and faces (f) is:
+
+Options:
+  A) f = e - v + 2 [CORRECT ANSWER]
+  B) f = e + v - 2
+  C) f = v - e + 2
+  D) f = e - v - 2
+
+Verified Answer: f = e - v + 2
+
+-------------------------------------------------------
+
+Question 197 (ID: 197):
+X+a,x+3a,x+5a.....is an____________
+
+Options:
+  A) Arithmetic sequence [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Arithmetic sequence
+
+-------------------------------------------------------
+
+Question 198 (ID: 198):
+Real valued function is a function that assigns _____ to each member of its domain.
+
+Options:
+  A) Only a real number [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Only a real number
+
+-------------------------------------------------------
+
+Question 199 (ID: 199):
+Let X={1,2,3,4} and a function ‘f’ defined on X f(1)=1,f(2)=2,f(3)=3,f(4)=4 then ________
+
+Options:
+  A) F is an identity function [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: F is an identity function
+
+-------------------------------------------------------
+
+Question 200 (ID: 200):
+A constant function is surjective if and only if ____________
+
+Options:
+  A) The co-domain consists of a single element [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: The co-domain consists of a single element
+
+-------------------------------------------------------
+
+Question 201 (ID: 201):
+Cardinality means the total number of elements in a set.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 202 (ID: 202):
+Let f:R->R is one to one function then c,f, c is not equal 0 is also one to one function.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 203 (ID: 203):
+Let X={1,2,3,4} and a function ‘f’ defined from X to X by f(1)=1, f(2)=1, f(3)=1, f(4)=1 then which of the following is true?
+
+Options:
+  A) F is a constant function [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: F is a constant function
+
+-------------------------------------------------------
+
+Question 204 (ID: 204):
+Which of the following is not correct for a ‘sequence’?
+
+Options:
+  A) A sequence is a relation whose domain is the set of natural numbers [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: A sequence is a relation whose domain is the set of natural numbers
+
+-------------------------------------------------------
+
+Question 205 (ID: 205):
+2 F(x)=x is not one to one function from R to R
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 206 (ID: 206):
++ Let f: R->R is one to one function then c,f c is not equal to is also one to one function.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 207 (ID: 207):
+Let f(x)=x+2 then f-1(x) is________
+
+Options:
+  A) x-2 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: x-2
+
+-------------------------------------------------------
+
+Question 208 (ID: 208):
+2 Let f(x)=x +1 define functions f from R to R and c=2 be any scalar, then c,f(x) is __________.
+
+Options:
+  A) 2x2-1 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 2x2-1
+
+-------------------------------------------------------
+
+Question 209 (ID: 209):
+A function F: R-> R defined by f(x) = square root x is a real valued function.
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 210 (ID: 210):
+If g:R->R defined by g(x)=e2 is a real valued function of a real variable.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 211 (ID: 211):
+A function F:R-> R defined by f(x) = log x is a real valued function
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 212 (ID: 212):
+rd 1⁄2, then 3 term of sequence is __________.
+
+Options:
+  A) 1/2 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 1/2
+
+-------------------------------------------------------
+
+Question 213 (ID: 213):
+The process of defining an object in terms of smaller versions of itself is called recursion.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 214 (ID: 214):
+A set that is not countable is called ___________.
+
+Options:
+  A) Uncountable [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Uncountable
+
+-------------------------------------------------------
+
+Question 215 (ID: 215):
+Let f: R->R is one to one function then c,f is also one to one function for _______.
+
+Options:
+  A) C is not equal 0 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: C is not equal 0
+
+-------------------------------------------------------
+
+Question 216 (ID: 216):
+Let f and g be two functions defined by f(x) = x+2 and g(x)= 2x+1. Then the composition of f and g is__________.
+
+Options:
+  A) 2x+3 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 2x+3
+
+-------------------------------------------------------
+
+Question 217 (ID: 217):
+Number of one to one functions form X={a,b} to Y={u,v} are equal to ______
+
+Options:
+  A) 2 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 2
+
+-------------------------------------------------------
+
+Question 218 (ID: 218):
+The flbonacci sequence is deined as F0=1,F 1=1, Fk=Fk-1+Fk-2 for all integers k> 2 then which of the following is true for F2
+
+Options:
+  A) F2-F1= 2+1=3 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: F2-F1= 2+1=3
+
+-------------------------------------------------------
+
+Question 219 (ID: 219):
+x+a, x+3a, x+5a,...... is a/an______.
+
+Options:
+  A) Arithmetic sequence [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Arithmetic sequence
+
+-------------------------------------------------------
+
+Question 220 (ID: 220):
+Inverse of a function may not be a function.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 221 (ID: 221):
+In the following sequence ak=K/(k+1), for k=1, a1 will be __________.
+
+Options:
+  A) 1⁄2 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 1⁄2
+
+-------------------------------------------------------
+
+Question 222 (ID: 222):
+If f(x)=x and g(x)= -x are both one to one function then (f+g)(x) is also one to one function.
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 223 (ID: 223):
+If f(x)=x and g(x)= -x are both one to one function then (f+g)(x) is not one to one function.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 224 (ID: 224):
+The function ‘f’ and ‘g’ are inverse of each other if and only if their composition gives_______.
+
+Options:
+  A) Identity function [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Identity function
+
+-------------------------------------------------------
+
+Question 225 (ID: 225):
+Which of the following set is the domain of a sequence?
+
+Options:
+  A) Set of real numbers [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Set of real numbers
+
+-------------------------------------------------------
+
+Question 226 (ID: 226):
+Let C is defined as the set of all countries in the world then C is a _________.
+
+Options:
+  A) Finite set [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Finite set
+
+-------------------------------------------------------
+
+Question 227 (ID: 227):
+The composition of function is always
+
+Options:
+  A) Associative [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Associative
+
+-------------------------------------------------------
+
+Question 228 (ID: 228):
+A set is countably infinite if, and only if, it has the same cardinality as the set of
+
+Options:
+  A) Positive integers [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Positive integers
+
+-------------------------------------------------------
+
+Question 229 (ID: 229):
+Two functions ‘f’ and ‘g’ from ‘X’ to ‘Y’ are said to be equal if and only if ______.
+
+Options:
+  A) F(x)=g(x) for all ‘x’ belongs to X [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: F(x)=g(x) for all ‘x’ belongs to X
+
+-------------------------------------------------------
+
+Question 230 (ID: 230):
+Y=x3 is a graph of bijective function from R to R.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 231 (ID: 231):
+Domain and range are same for___________.
+
+Options:
+  A) Identity function [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Identity function
+
+-------------------------------------------------------
+
+Question 232 (ID: 232):
+Let X={1,2,3,4} and a function ‘f’ defined on X by f(1)=1,f(2)=2,f(3)=3
+
+Options:
+  A) F is an identity function [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: F is an identity function
+
+-------------------------------------------------------
+
+Question 233 (ID: 233):
+Given a set X define a function I from X to X by i(x)=x from all x belonging to X . Then_________.
+
+Options:
+  A) I is both injective and surjective [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: I is both injective and surjective
+
+-------------------------------------------------------
+
+Question 234 (ID: 234):
+Let f: R->R is a one to one function then c,f is also one to one function for.
+
+Options:
+  A) C is not equal 0 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: C is not equal 0
+
+-------------------------------------------------------
+
+Question 235 (ID: 235):
+Let X={1,5,9} and Y={3,4,7}. Define a function f from X to Y such that f(1)=7, f(5)=3, f(9)=______. Which is true for f(9) to make it a one-to-one (injective) function?
+
+Options:
+  A) 4 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 4
+
+-------------------------------------------------------
+
+Question 236 (ID: 236):
+Which of the following is not a predecessors of ak?
+
+Options:
+  A) Ak+1 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Ak+1
+
+-------------------------------------------------------
+
+Question 237 (ID: 237):
+The two functions ‘f’ and ‘g’ are equal if _______.
+
+Options:
+  A) F(x) =3x and g(x)= 6x2+3x/2x2+1 for all xeR [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: F(x) =3x and g(x)= 6x2+3x/2x2+1 for all xeR
+
+-------------------------------------------------------
+
+Question 238 (ID: 238):
+If first term of a geometric sequence is 2 and common ratio is 1⁄2, then 3rd ter, of sequence.
+
+Options:
+  A) 1⁄4 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 1⁄4
+
+-------------------------------------------------------
+
+Question 239 (ID: 239):
++ Y= squre root x is an __________function form R to R
+
+Options:
+  A) One to one function [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: One to one function
+
+-------------------------------------------------------
+
+Question 240 (ID: 240):
+2 Y= x is an __________function form R to R
+
+Options:
+  A) NOT ONE TO ONE FUNTION [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: NOT ONE TO ONE FUNTION
+
+-------------------------------------------------------
+
+Question 241 (ID: 241):
++ If a function (gof)(x) : X->Z is defined as (gof)(x)=g(f(x)) for all xeX, Then the function__________—.
+
+Options:
+  A) (gof) [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: (gof)
+
+-------------------------------------------------------
+
+Question 242 (ID: 242):
+If 0 is the first term and -2 be the common difference of an arithmetic series, then the sum of first five terms of series is _________.
+
+Options:
+  A) 20 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 20
+
+-------------------------------------------------------
+
+Question 243 (ID: 243):
+F: X->Y that is both one to one and onto is called a _________.
+
+Options:
+  A) Bijective function [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Bijective function
+
+-------------------------------------------------------
+
+Question 244 (ID: 244):
+What does ‘y’ denotes in a geometric sequence?
+
+Options:
+  A) Common ratio [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Common ratio
+
+-------------------------------------------------------
+
+Question 245 (ID: 245):
+Let g be a function defined by g(x)=x+1. Then the composition of (gog).
+
+Options:
+  A) X+2 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: X+2
+
+-------------------------------------------------------
+
+Question 246 (ID: 246):
+A graph of a function f is one to one iff every horizontal line intersects the graph in at most one point.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 247 (ID: 247):
+Which of the following is true for the following sequence?
+
+Options:
+  A) If n is even, then Cn=2 and if n is odd, then Cn = 0 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: If n is even, then Cn=2 and if n is odd, then Cn = 0
+
+-------------------------------------------------------
+
+Question 248 (ID: 248):
+N! is defined to be ___________.
+
+Options:
+  A) The product of the integers from 1 to n [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: The product of the integers from 1 to n
+
+-------------------------------------------------------
+
+Question 249 (ID: 249):
+Let A = {1,2,3,4} and B={7} then the constant function from A to B
+
+Options:
+  A) Both one to one and onto [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Both one to one and onto
+
+-------------------------------------------------------
+
+Question 250 (ID: 250):
+If f(x) = x and g(x) = -x are both one to one functions then (f+g)(x) is also one to one function.
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 251 (ID: 251):
+If a is the 1st term and d be the common difference of an arithmetic sequence then the sequence is a, a+d, a+2d, a+3d....
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 252 (ID: 252):
+x+a, x+3a, x+5...... is a/an_________.
+
+Options:
+  A) Arithmetic sequence [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Arithmetic sequence
+
+-------------------------------------------------------
+
+Question 253 (ID: 253):
+inverse of an injective function may not be a function.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 254 (ID: 254):
+3 y=x is a graph of bijective function form R to R
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 255 (ID: 255):
+Common ration in sequence ’36, 12, 4 , 4/3, .....’ is ......
+
+Options:
+  A) 1/3 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 1/3
+
+-------------------------------------------------------
+
+Question 256 (ID: 256):
+A set is called finite if, and only if, is the _______ or there is ———.
+
+Options:
+  A) Empty set or one-to-one [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Empty set or one-to-one
+
+-------------------------------------------------------
+
+Question 257 (ID: 257):
+Let f(X)=x2-1 and g(x)=x+1 define functions f and g from R to R, then (f/g)x
+
+Options:
+  A) x-1 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: x-1
+
+-------------------------------------------------------
+
+Question 258 (ID: 258):
+What does ‘I’ denotes in a geometric sequence?
+
+Options:
+  A) Common ratio [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Common ratio
+
+-------------------------------------------------------
+
+Question 259 (ID: 259):
+Which of the following is the example of an alternating sequence?
+
+Options:
+  A) Cn=n/n+1 for n > 0 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Cn=n/n+1 for n > 0
+
+-------------------------------------------------------
+
+Question 260 (ID: 260):
+0, -5, -10, -15, ... is an __________.
+
+Options:
+  A) Arithemetic sequence [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Arithemetic sequence
+
+-------------------------------------------------------
+
+Question 261 (ID: 261):
+5, 9, 13, 17, ... is an __________.
+
+Options:
+  A) Arithemetic sequence [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Arithemetic sequence
+
+-------------------------------------------------------
+
+Question 262 (ID: 262):
+One-to-one correspondence means the condition of _________.
+
+Options:
+  A) One-one and onto ....both [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: One-one and onto ....both
+
+-------------------------------------------------------
+
+Question 263 (ID: 263):
+The functions ‘f’ and ‘g’ are inverse of each other if and only if their composition gives ____________.
+
+Options:
+  A) Identity function [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Identity function
+
+-------------------------------------------------------
+
+Question 264 (ID: 264):
+A set is called finite if , and only if, it is the _________ or there is ________.
+
+Options:
+  A) Empty set or one-to-one [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Empty set or one-to-one
+
+-------------------------------------------------------
+
+Question 265 (ID: 265):
+Let f and g be the two functions from R to R defined by f(x) = IXI and g(x) = square root x2 for all xeR, then __________.
+
+Options:
+  A) F(x) is not equal to g(x) [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: F(x) is not equal to g(x)
+
+-------------------------------------------------------
+
+Question 266 (ID: 266):
+1 -1 If f (x) = 6-x/2 then f (2) is __________.
+
+Options:
+  A) 2 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 2
+
+-------------------------------------------------------
+
+Question 267 (ID: 267):
+An important date type in computer programming consists of _——.
+
+Options:
+  A) Finite sequence [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Finite sequence
+
+-------------------------------------------------------
+
+Question 268 (ID: 268):
+If f: X → Y and g: Y → Z are both onto (surjective) functions, then gof: X → Z is:
+
+Options:
+  A) Onto (surjective) [CORRECT ANSWER]
+  B) One-to-one function
+  C) Not a function
+  D) Identity function
+
+Verified Answer: Onto (surjective)
+
+-------------------------------------------------------
+
+Question 269 (ID: 269):
+The two function ‘f’ and ‘g’ are equal if _____________.
+
+Options:
+  A) F(x) = 3x and g(x) = 6x2+3x/2x+1 for all xeR [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: F(x) = 3x and g(x) = 6x2+3x/2x+1 for all xeR
+
+-------------------------------------------------------
+
+Question 270 (ID: 270):
+st If 1 term of a geometric sequence is 2 and common ratio is 1/2 , then 3rd term of sequence is __________.
+
+Options:
+  A) 1/2 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 1/2
+
+-------------------------------------------------------
+
+Question 271 (ID: 271):
+If a function (gof)(x): X-> Z is defined as (gof)(x)=g(f(x)) for all xeX. Then the function _________ is known as composition of f and g.
+
+Options:
+  A) (g o f) [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: (g o f)
+
+-------------------------------------------------------
+
+Question 272 (ID: 272):
+A set is countably infinite if and only if and only if, it has the same cardinality as the set of _________.
+
+Options:
+  A) Positive integers [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Positive integers
+
+-------------------------------------------------------
+
+Question 273 (ID: 273):
+rd n The 3 term of the sequence bn=5 is _______.
+
+Options:
+  A) 125 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 125
+
+-------------------------------------------------------
+
+Question 274 (ID: 274):
+Let f(x) = x and g(x) = -x for all xeR, then (f+g)(x) is ____.
+
+Options:
+  A) 0 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 0
+
+-------------------------------------------------------
+
+Question 275 (ID: 275):
+An infinite sequence may have only a finite number
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 276 (ID: 276):
+of values. The functions fog and gof are always equal .
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 277 (ID: 277):
+Let X ={1,5,9} and Y={3,4,7}. Define a function f from X to Y such that f(1)=7, f(5)=3, f(9)=4 then which of the following statement about ‘f’ is true?
+
+Options:
+  A) F is both one-to-one and onto [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: F is both one-to-one and onto
+
+-------------------------------------------------------
+
+Question 278 (ID: 278):
+3 Y=x is a graph of bijective function from R to R.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 279 (ID: 279):
+If r is a positive real number, then the value of r in 3, r,r=-27r is
+
+Options:
+  A) 9 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 9
+
+-------------------------------------------------------
+
+Question 280 (ID: 280):
+The _____ of the terms of a sequence forms a series.
+
+Options:
+  A) Sum [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Sum
+
+-------------------------------------------------------
+
+Question 281 (ID: 281):
+If fk=fk-1+fk-2then f0=1 , f1=2, then f2= __________.
+
+Options:
+  A) 3 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 3
+
+-------------------------------------------------------
+
+Question 282 (ID: 282):
+Let f(x) = 3x and g(x) = x + 2 define functions f and g from R to R, then (f.g)(x) is _____.
+
+Options:
+  A) 3x2 + 6x [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 3x2 + 6x
+
+-------------------------------------------------------
+
+Question 283 (ID: 283):
+If A = Set of students of virtual university then A has been written in the _________.
+
+Options:
+  A) Descriptive form [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Descriptive form
+
+-------------------------------------------------------
+
+Question 284 (ID: 284):
+If a function (g o f)(x):X→Z is defined as (g o f)(x) = g(f(x)) for all x ∈ X. Then the function ________ is known as composition of f and g.
+
+Options:
+  A) (g o f) [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: (g o f)
+
+-------------------------------------------------------
+
+Question 285 (ID: 285):
+If X and Y are independent random variables and a and b are constants, then Var(aX + bY) =
+
+Options:
+  A) a^2 Var(X) + b^2 Var(Y) [CORRECT ANSWER]
+  B) aVar(X) + bVar(Y)
+  C) a^2 Var(X) - b^2 Var(Y)
+  D) ab Var(X)Var(Y)
+
+Verified Answer: a^2 Var(X) + b^2 Var(Y)
+
+-------------------------------------------------------
+
+Question 286 (ID: 286):
+Let A = {1, 2, 3} and B = {2, 4} then number of functions from A to B are _________.
+
+Options:
+  A) 8 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 8
+
+-------------------------------------------------------
+
+Question 287 (ID: 287):
+p is equivalent to q’ means ________.
+
+Options:
+  A) p is necessary and sufficient for q [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: p is necessary and sufficient for q
+
+-------------------------------------------------------
+
+Question 288 (ID: 288):
+Let A and B be subsets of U with n(A) = 12, n(B) = 15, n(A’) = 17, and n(A intersection B) = 8, then n(U)=______ .
+
+Options:
+  A) 29 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 29
+
+-------------------------------------------------------
+
+Question 289 (ID: 289):
+Find the number of the word that can be formed of the letters of the word “ELEVEN”.
+
+Options:
+  A) 120 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 120
+
+-------------------------------------------------------
+
+Question 290 (ID: 290):
+If x=17(mod 5) which of the following integers are valid solution for x ?
+
+Options:
+  A) 12 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 12
+
+-------------------------------------------------------
+
+Question 291 (ID: 291):
+the following ordered pairs are needed to make it transitive?
+
+Options:
+  A) (0,0) and (2,2) [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: (0,0) and (2,2)
+
+-------------------------------------------------------
+
+Question 292 (ID: 292):
+Let R be a binary relation on set A. If R is antisymmetric, then:
+
+Options:
+  A) Inverse of R is antisymmetric [CORRECT ANSWER]
+  B) R is symmetric
+  C) R is reflexive
+  D) Inverse of R is irreflexive
+
+Verified Answer: Inverse of R is antisymmetric
+
+-------------------------------------------------------
+
+Question 293 (ID: 293):
+intersection S=_________________
+
+Options:
+  A) Empty [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Empty
+
+-------------------------------------------------------
+
+Question 294 (ID: 294):
+such that f is onto then which of the following statement about f is true?
+
+Options:
+  A) Co-domain of f must contain 1 element [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Co-domain of f must contain 1 element
+
+-------------------------------------------------------
+
+Question 295 (ID: 295):
+c,f(x) is __________
+
+Options:
+  A) 2x2+2 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 2x2+2
+
+-------------------------------------------------------
+
+Question 296 (ID: 296):
+g(x)= square root of x2 for all xeR. Then______
+
+Options:
+  A) F(x) is not equal to g(x) [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: F(x) is not equal to g(x)
+
+-------------------------------------------------------
+
+Question 297 (ID: 297):
+{(12,14),(13,5),(-2,7),(x,13)}?
+
+Options:
+  A) X cannot be 12, 13, or -2 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: X cannot be 12, 13, or -2
+
+-------------------------------------------------------
+
+Question 298 (ID: 298):
+as_____________
+
+Options:
+  A) @=@ [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: @=@
+
+-------------------------------------------------------
+
+Question 299 (ID: 299):
+the main diagonal are __________
+
+Options:
+  A) 0 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 0
+
+-------------------------------------------------------
+
+Question 300 (ID: 300):
+R={(2,4)(4,1)(a,2)}. For what value of ‘a’ the relation R is a function?
+
+Options:
+  A) 5 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 5
+
+-------------------------------------------------------
+
+Question 301 (ID: 301):
+partition of the set A?
+
+Options:
+  A) A={1,3,5,7,9}, B={2,4,6}, C={8} [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: A={1,3,5,7,9}, B={2,4,6}, C={8}
+
+-------------------------------------------------------
+
+Question 302 (ID: 302):
+as:f={(2,6),(4,2),(5,1)} . The range of f is _________
+
+Options:
+  A) {1,2,6} [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: {1,2,6}
+
+-------------------------------------------------------
+
+Question 303 (ID: 303):
+the following statement about R is true?
+
+Options:
+  A) R is symmetric [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: R is symmetric
+
+-------------------------------------------------------
+
+Question 304 (ID: 304):
+main diagonal are ___________
+
+Options:
+  A) 1 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 1
+
+-------------------------------------------------------
+
+Question 305 (ID: 305):
+R={(1,3),(1,4),(2,3),(2,4),(3,1),(3,4)} is _________
+
+Options:
+  A) R is irreflexive [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: R is irreflexive
+
+-------------------------------------------------------
+
+Question 306 (ID: 306):
+Complementary Relation symbolically written as _________
+
+Options:
+  A) R=A*B- R={(a,b)eA*BI (a,b)not belong to R} [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: R=A*B- R={(a,b)eA*BI (a,b)not belong to R}
+
+-------------------------------------------------------
+
+Question 307 (ID: 307):
+A set may be divided up into mutually disjoint non-empty subsets; such a division is called a:
+
+Options:
+  A) Partition [CORRECT ANSWER]
+  B) Cartesian product
+  C) Power set
+  D) Permutation
+
+Verified Answer: Partition
+
+-------------------------------------------------------
+
+Question 308 (ID: 308):
+of A*B are _________
+
+Options:
+  A) 64 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 64
+
+-------------------------------------------------------
+
+Question 309 (ID: 309):
+S={(0,b),(1,a),(2,b)} composite of R and S=______________
+
+Options:
+  A) {(1,b),(1,a),(3,a),(3,b)} [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: {(1,b),(1,a),(3,a),(3,b)}
+
+-------------------------------------------------------
+
+Question 310 (ID: 310):
+because __________
+
+Options:
+  A) Function is not defined at x=2 and x=-2 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Function is not defined at x=2 and x=-2
+
+-------------------------------------------------------
+
+Question 311 (ID: 311):
+P(not empty set) is
+
+Options:
+  A) 1 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 1
+
+-------------------------------------------------------
+
+Question 312 (ID: 312):
+Let A = {1, 2, 3, 4} and define relation R on A by R = {(1, 2), (2, 3), (3, 3), (3, 4)}. Then:
+
+Options:
+  A) R is neither reflexive nor irreflexive [CORRECT ANSWER]
+  B) R is both reflexive and irreflexive
+  C) R is reflexive
+  D) R is irreflexive
+
+Verified Answer: R is neither reflexive nor irreflexive
+
+-------------------------------------------------------
+
+Question 313 (ID: 313):
+set P(A) is ________
+
+Options:
+  A) 2n [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 2n
+
+-------------------------------------------------------
+
+Question 314 (ID: 314):
+number of elements in A*B are _________
+
+Options:
+  A) m.n [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: m.n
+
+-------------------------------------------------------
+
+Question 315 (ID: 315):
+R={(1,3),(2,2),(2,4),(3,1),(4,2)} Is __________
+
+Options:
+  A) R is symmetric [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: R is symmetric
+
+-------------------------------------------------------
+
+Question 316 (ID: 316):
+then xeY . Then c is _________
+
+Options:
+  A) c is partial order relation [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: c is partial order relation
+
+-------------------------------------------------------
+
+Question 317 (ID: 317):
+(injective) function?
+
+Options:
+  A) 4 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 4
+
+-------------------------------------------------------
+
+Question 318 (ID: 318):
+If f: X → Y and g: Y → Z are both one-to-one (injective) functions, then gof: X → Z is:
+
+Options:
+  A) One-to-one [CORRECT ANSWER]
+  B) Onto
+  C) Not a function
+  D) Constant
+
+Verified Answer: One-to-one
+
+-------------------------------------------------------
+
+Question 319 (ID: 319):
+IF f(x)=sin-1(x) and g(x)=sin x then gof(x) is _________.
+
+Options:
+  A) X [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: X
+
+-------------------------------------------------------
+
+Question 320 (ID: 320):
+(F+G)(X) is ___________
+
+Options:
+  A) 6x-2 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 6x-2
+
+-------------------------------------------------------
+
+Question 321 (ID: 321):
+A rule that assigns a numerical value to each outcome in a sample space is called a:
+
+Options:
+  A) Random variable [CORRECT ANSWER]
+  B) Sample space
+  C) Event
+  D) Probability density
+
+Verified Answer: Random variable
+
+-------------------------------------------------------
+
+Question 322 (ID: 322):
+team to make a trip to a match to another school?
+
+Options:
+  A) C(10,5) [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: C(10,5)
+
+-------------------------------------------------------
+
+Question 323 (ID: 323):
+Let X = {1, 2, 3, 4} and function f be defined on X by f(1)=1, f(2)=2, f(3)=3, f(4)=4. Then:
+
+Options:
+  A) f is an identity function [CORRECT ANSWER]
+  B) f is a constant function
+  C) f is not a function
+  D) f is not surjective
+
+Verified Answer: f is an identity function
+
+-------------------------------------------------------
+
+Question 324 (ID: 324):
+f(3)=1, f(4)=1 then which of the following is true?
+
+Options:
+  A) F is a constant function [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: F is a constant function
+
+-------------------------------------------------------
+
+Question 325 (ID: 325):
+1⁄2, then 3rd term of sequence is __________.
+
+Options:
+  A) 1/2 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 1/2
+
+-------------------------------------------------------
+
+Question 326 (ID: 326):
+the composition of f and g is__________.
+
+Options:
+  A) 2x+3 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 2x+3
+
+-------------------------------------------------------
+
+Question 327 (ID: 327):
+series, then the sum of first five terms of series is _________.
+
+Options:
+  A) 20 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 20
+
+-------------------------------------------------------
+
+Question 328 (ID: 328):
+term of sequence is __________.
+
+Options:
+  A) 1/2 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 1/2
+
+-------------------------------------------------------
+
+Question 329 (ID: 329):
+The 3rd term of the sequence bn=5n is _______.
+
+Options:
+  A) 125 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 125
+
+-------------------------------------------------------
+
+Question 330 (ID: 330):
+bus from A to C by way of B?
+
+Options:
+  A) 6 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 6
+
+-------------------------------------------------------
+
+Question 331 (ID: 331):
+and jog, how many jog?
+
+Options:
+  A) 16 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 16
+
+-------------------------------------------------------
+
+Question 332 (ID: 332):
+choices are there for this guest?
+
+Options:
+  A) 40 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 40
+
+-------------------------------------------------------
+
+Question 333 (ID: 333):
+function ?
+
+Options:
+  A) 5 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 5
+
+-------------------------------------------------------
+
+Question 334 (ID: 334):
+The logical statement p ∧ q means ________.
+
+Options:
+  A) p AND q [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: p AND q
+
+-------------------------------------------------------
+
+Question 335 (ID: 335):
+Which of the followings is the factorial form of 5 . 4?
+
+Options:
+  A) 5!/3! [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 5!/3!
+
+-------------------------------------------------------
+
+Question 336 (ID: 336):
+them are born in the same month?
+
+Options:
+  A) 13 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 13
+
+-------------------------------------------------------
+
+Question 337 (ID: 337):
+If p is false and q is true, then ∼p ↔ q is ________.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 338 (ID: 338):
+(-2)! = _________ ?
+
+Options:
+  A) Undefined [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Undefined
+
+-------------------------------------------------------
+
+Question 339 (ID: 339):
+then c.f(x) is ______.
+
+Options:
+  A) 2x2 + 2 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 2x2 + 2
+
+-------------------------------------------------------
+
+Question 340 (ID: 340):
+word,“COMMITTEE” are
+
+Options:
+  A) 9! / (2!2!2!) [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 9! / (2!2!2!)
+
+-------------------------------------------------------
+
+Question 341 (ID: 341):
+An ordered selection with repetition allowed of k elements chosen from a set of n elements is called a:
+
+Options:
+  A) k-Sample [CORRECT ANSWER]
+  B) k-Permutation
+  C) k-Combination
+  D) k-Selection
+
+Verified Answer: k-Sample
+
+-------------------------------------------------------
+
+Question 342 (ID: 342):
+g)(x)is ______.
+
+Options:
+  A) x+2 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: x+2
+
+-------------------------------------------------------
+
+Question 343 (ID: 343):
+The negation of “Today is Friday” is
+
+Options:
+  A) 27622520600
+  B) Today is Saturday
+  C) Today is not Friday [CORRECT ANSWER]
+  D) Today is Thursday None of given
+
+Verified Answer: Today is not Friday
+
+-------------------------------------------------------
+
+Question 344 (ID: 344):
+statement about R is true?
+
+Options:
+  A) R is reflexive, symmetric and transitive [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: R is reflexive, symmetric and transitive
+
+-------------------------------------------------------
+
+Question 345 (ID: 345):
+The converse of the conditional statement p → q is
+
+Options:
+  A) q p
+  B) ~q~p
+  C) ~p~q
+  D) None of these
+  E) q → p [CORRECT ANSWER]
+
+Verified Answer: q → p
+
+-------------------------------------------------------
+
+Question 346 (ID: 346):
+Which of the following equations demonstrates the Quotient-Remainder Theorem (Euclidean Algorithm) for dividend 17 and divisor 5?
+
+Options:
+  A) 17 = 5 x 3 + 2 [CORRECT ANSWER]
+  B) 17 = 5 x 2 + 7
+  C) 17 = 5 x 4 - 3
+  D) 17 = 3 x 4 + 5
+
+Verified Answer: 17 = 5 x 3 + 2
+
+-------------------------------------------------------
+
+Question 347 (ID: 347):
+Let p → q be a conditional statement, then the statement q → p is called
+________.
+
+Options:
+  A) Converse [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Converse
+
+-------------------------------------------------------
+
+Question 348 (ID: 348):
+possible projects are there to choose from?
+
+Options:
+  A) 30 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 30
+
+-------------------------------------------------------
+
+Question 349 (ID: 349):
+in Pakistan' is ________.
+
+Options:
+  A) If I live in Pakistan, then I live in Quetta [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: If I live in Pakistan, then I live in Quetta
+
+-------------------------------------------------------
+
+Question 350 (ID: 350):
+P (0, 0)=______?
+
+Options:
+  A) 1 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 1
+
+-------------------------------------------------------
+
+Question 351 (ID: 351):
+argument is ________.
+
+Options:
+  A) Valid [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Valid
+
+-------------------------------------------------------
+
+Question 352 (ID: 352):
+If p is false and q is false, then ∼p implies q is ________.
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 353 (ID: 353):
+is the number of ordered samples of size 3 with replacement?
+
+Options:
+  A) 125 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 125
+
+-------------------------------------------------------
+
+Question 354 (ID: 354):
+Then from the following which statement is true ?
+
+Options:
+  A) A=B [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: A=B
+
+-------------------------------------------------------
+
+Question 355 (ID: 355):
+The set of prime numbers is _________.
+
+Options:
+  A) Infinite set [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Infinite set
+
+-------------------------------------------------------
+
+Question 356 (ID: 356):
+for shopping' is ________.
+
+Options:
+  A) I do Not go for shopping, then it is Not Sunday [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: I do Not go for shopping, then it is Not Sunday
+
+-------------------------------------------------------
+
+Question 357 (ID: 357):
+Let p be True and q be True, then ( ∼p ∧ q ) is ________.
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 358 (ID: 358):
+students are there in total?
+
+Options:
+  A) 25 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 25
+
+-------------------------------------------------------
+
+Question 359 (ID: 359):
+If a set A has 15 elements then P(A) (power set of A) has ___________
+
+Options:
+  A) elements [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: elements
+
+-------------------------------------------------------
+
+Question 360 (ID: 360):
+The number of elements in AxB are ___________ if A is a set with ‘5’
+
+Options:
+  A) elements and B is a set with ‘4’ elements [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: elements and B is a set with ‘4’ elements
+
+-------------------------------------------------------
+
+Question 361 (ID: 361):
+representation of a symmetric relation?
+
+Options:
+  A) Matrix is equal to its transpose [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Matrix is equal to its transpose
+
+-------------------------------------------------------
+
+Question 362 (ID: 362):
+Then R intersection S=_________________
+
+Options:
+  A) Empty [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Empty
+
+-------------------------------------------------------
+
+Question 363 (ID: 363):
+about f is true?
+
+Options:
+  A) Co-domain of f must contain 1 element [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Co-domain of f must contain 1 element
+
+-------------------------------------------------------
+
+Question 364 (ID: 364):
+relation is a function or not.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 365 (ID: 365):
+The number of elements in AxB are ___________ if A is a set
+
+Options:
+  A) with ‘5’ elements and B is a set with ‘4’ elements [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: with ‘5’ elements and B is a set with ‘4’ elements
+
+-------------------------------------------------------
+
+Question 366 (ID: 366):
+represent the partition of the set A?
+
+Options:
+  A) A={1,3,5,7,9}, B={2,4,6}, C={8} [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: A={1,3,5,7,9}, B={2,4,6}, C={8}
+
+-------------------------------------------------------
+
+Question 367 (ID: 367):
+A to B are _____________.
+
+Options:
+  A) 64 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 64
+
+-------------------------------------------------------
+
+Question 368 (ID: 368):
+product of A and B has ___________ elements.
+
+Options:
+  A) 250 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 250
+
+-------------------------------------------------------
+
+Question 369 (ID: 369):
+Which relations below are functions?
+
+Options:
+  A) R1={(3,4),(4,5),(6,7),(8,9)} [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: R1={(3,4),(4,5),(6,7),(8,9)}
+
+-------------------------------------------------------
+
+Question 370 (ID: 370):
+1/2,2/3,3/4 ______?
+
+Options:
+  A) 4/5 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 4/5
+
+-------------------------------------------------------
+
+Question 371 (ID: 371):
+that is gof is one-to-one.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 372 (ID: 372):
+THEN (F+G)(X) is ___________
+
+Options:
+  A) 6x-2 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 6x-2
+
+-------------------------------------------------------
+
+Question 373 (ID: 373):
+performing some action.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 374 (ID: 374):
+tennis team to make a trip to a match to another school?
+
+Options:
+  A) C(10,5) [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: C(10,5)
+
+-------------------------------------------------------
+
+Question 375 (ID: 375):
+one to one function.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 376 (ID: 376):
+F(x)=x2 is not one to one function from R to R+
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 377 (ID: 377):
+itself is called recursion.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 378 (ID: 378):
+also one to one function.
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 379 (ID: 379):
+not one to one function.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 380 (ID: 380):
+intersects the graph in at most one point.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 381 (ID: 381):
+is also one to one function.
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 382 (ID: 382):
+sequence then the sequence is a, a+d, a+2d, a+3d....
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 383 (ID: 383):
+y=x3 is a graph of bijective function form R to R
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 384 (ID: 384):
+their composition gives ____________.
+
+Options:
+  A) Identity function [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Identity function
+
+-------------------------------------------------------
+
+Question 385 (ID: 385):
+The functions fog and gof are always equal .
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 386 (ID: 386):
+statement about ‘f’ is true?
+
+Options:
+  A) F is both one-to-one and onto [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: F is both one-to-one and onto
+
+-------------------------------------------------------
+
+Question 387 (ID: 387):
+swim and jog, how many jog?
+
+Options:
+  A) 16 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 16
+
+-------------------------------------------------------
+
+Question 388 (ID: 388):
+How many choices are there for this guest?
+
+Options:
+  A) 40 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 40
+
+-------------------------------------------------------
+
+Question 389 (ID: 389):
+that two of them are born in the same month?
+
+Options:
+  A) 13 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 13
+
+-------------------------------------------------------
+
+Question 390 (ID: 390):
+X are _________?
+
+Options:
+  A) {1, 2}, {1, 3} and {2, 3} [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: {1, 2}, {1, 3} and {2, 3}
+
+-------------------------------------------------------
+
+Question 391 (ID: 391):
+of 'n' elements?
+
+Options:
+  A) K-Sample [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: K-Sample
+
+-------------------------------------------------------
+
+Question 392 (ID: 392):
+What is the truth value of the sentence?
+
+Options:
+  A) 'It rains if and only if there are clouds.' [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 'It rains if and only if there are clouds.'
+
+-------------------------------------------------------
+
+Question 393 (ID: 393):
+'It rains if and only if there are clouds.'
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 394 (ID: 394):
+The statement p → q is logically equivalent to ∼q → ∼p
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 395 (ID: 395):
+numbers. Then from the following which statement is true ?
+
+Options:
+  A) A=B [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: A=B
+
+-------------------------------------------------------
+
+Question 396 (ID: 396):
+If A and B are any two sets, then A − B = B – A
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 397 (ID: 397):
+many students are there in total?
+
+Options:
+  A) 25 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 25
+
+-------------------------------------------------------
+
+Question 398 (ID: 398):
+gof is one-to-one.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 399 (ID: 399):
+For the following relation to be a function, x can not be what values?
+
+Options:
+  A) R = {(2,4), (x,1), (4,2), (5,6)} [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: R = {(2,4), (x,1), (4,2), (5,6)}
+
+-------------------------------------------------------
+
+Question 400 (ID: 400):
+which of the following ordered pairs are needed to make it transitive?
+
+Options:
+  A) (0,0) and (2,2) [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: (0,0) and (2,2)
+
+-------------------------------------------------------
+
+Question 401 (ID: 401):
+The logic gate NOT is a unitary operation on {0, 1}.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 402 (ID: 402):
+the partition of the set A?
+
+Options:
+  A) A={1,3,5,7,9}, B={2,4,6}, C={8} [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: A={1,3,5,7,9}, B={2,4,6}, C={8}
+
+-------------------------------------------------------
+
+Question 403 (ID: 403):
+B are _____________.
+
+Options:
+  A) 64 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 64
+
+-------------------------------------------------------
+
+Question 404 (ID: 404):
+A and B has ___________ elements.
+
+Options:
+  A) 250 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 250
+
+-------------------------------------------------------
+
+Question 405 (ID: 405):
+A constant function is subjective if and only if ____________
+
+Options:
+  A) The co-domain consists of a single element [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: The co-domain consists of a single element
+
+-------------------------------------------------------
+
+Question 406 (ID: 406):
+to one function.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 407 (ID: 407):
+Inverse of a subjective function is always a function.
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 408 (ID: 408):
+the graph in at most one point.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 409 (ID: 409):
+composition gives ____________.
+
+Options:
+  A) Identity function [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Identity function
+
+-------------------------------------------------------
+
+Question 410 (ID: 410):
+of them are born in the same month?
+
+Options:
+  A) 13 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 13
+
+-------------------------------------------------------
+
+Question 411 (ID: 411):
+An arrangement of rows and columns that specifies the truth value of a
+compound proposition for all possible truth values of its constituent propositions
+is called
+
+Options:
+  A) Truth Table [CORRECT ANSWER]
+  B) Venn diagram
+  C) False Table
+  D) None of these
+
+Verified Answer: Truth Table
+
+-------------------------------------------------------
+
+Question 412 (ID: 412):
+For two sets A,B
+A ( B C ) ( A B) ( A C ) is called
+
+Options:
+  A) Distributivity of intersection over union
+  B) Distributivity of union over intersection
+  C) Distributivity Law p_44 [CORRECT ANSWER]
+  D) None of these
+
+Verified Answer: Distributivity Law p_44
+
+-------------------------------------------------------
+
+Question 413 (ID: 413):
+An argument is _____ if the conclusion is true when all the premises are true.
+
+Options:
+  A) Valid p_19 [CORRECT ANSWER]
+  B) Invalid
+  C) False
+  D) None of these
+
+Verified Answer: Valid p_19
+
+-------------------------------------------------------
+
+Question 414 (ID: 414):
+The row in the truth table of an argument where all premises are true is called
+
+Options:
+  A) Valid row
+  B) Invalid row
+  C) Critical row [CORRECT ANSWER]
+  D) None of these
+
+Verified Answer: Critical row
+
+-------------------------------------------------------
+
+Question 415 (ID: 415):
+Check whether
+36 o 1 (mod 5)
+36 Modulus5 = 1 remainder
+33 o3 (mod10)
+33 Modulus10 = 3 remainder
+
+Options:
+  A) Both are equivalent [CORRECT ANSWER]
+  B) Second one is equivalent but first one is not
+  C) First one is equivalent but second one is not
+
+Verified Answer: Both are equivalent
+
+-------------------------------------------------------
+
+Question 416 (ID: 416):
+A binary relation R is called a Partial Order relation if:
+
+Options:
+  A) It is reflexive, antisymmetric, and transitive [CORRECT ANSWER]
+  B) It is reflexive and transitive
+  C) It is reflexive, symmetric, and transitive
+  D) It is symmetric and transitive
+
+Verified Answer: It is reflexive, antisymmetric, and transitive
+
+-------------------------------------------------------
+
+Question 417 (ID: 417):
+The order pairs which are not present in a relation, must be present in
+
+Options:
+  A) Inverse of that relation
+  B) Composition of relations
+  C) Complementry relation of that relation [CORRECT ANSWER]
+
+Verified Answer: Complementry relation of that relation
+
+-------------------------------------------------------
+
+Question 418 (ID: 418):
+A circuit with two input signals and one output signal is called
+
+Options:
+  A) NOT-gate (or inverter)
+  B) AND- gate [CORRECT ANSWER]
+  C) None of these
+
+Verified Answer: AND- gate
+
+-------------------------------------------------------
+
+Question 419 (ID: 419):
+If f(x) = 2x + 1, then its inverse f^(-1)(x) =
+
+Options:
+  A) (x - 1)/2 [CORRECT ANSWER]
+  B) x - 1
+  C) (x + 1)/2
+  D) 2x - 1
+
+Verified Answer: (x - 1)/2
+
+-------------------------------------------------------
+
+Question 420 (ID: 420):
+Null set is denoted by
+
+Options:
+  A) (phi) or { }
+  B) A
+  C) None of these
+  D) (phi) or { }. [CORRECT ANSWER]
+
+Verified Answer: (phi) or { }.
+
+-------------------------------------------------------
+
+Question 421 (ID: 421):
+The total number of elements in a finite set is called its:
+
+Options:
+  A) Cardinality [CORRECT ANSWER]
+  B) Power
+  C) Order pair
+  D) Modulus
+
+Verified Answer: Cardinality
+
+-------------------------------------------------------
+
+Question 422 (ID: 422):
+If f(x)= x+1 and g(x)= 2 x 2 1 then (2f - 1g)x=
+
+Options:
+  A) 2x 2 x [CORRECT ANSWER]
+  B) 3x+2
+  C) 2 x2 2 x 1
+
+Verified Answer: 2x 2 x
+
+-------------------------------------------------------
+
+Question 423 (ID: 423):
+Let
+a0 1, a1 2 and a2 3
+2
+
+Then a j 
+j 0
+
+Options:
+  A) 6 [CORRECT ANSWER]
+  B) 2
+  C) 8
+
+Verified Answer: 6
+
+-------------------------------------------------------
+
+Question 424 (ID: 424):
+Which of the given statement is incorrect?
+
+Options:
+  A) The process of defining an object in terms of smaller versions of itself is
+  B) A recursive definition has two parts: Base and Recursion
+  C) Functions cannot be defined recursively [CORRECT ANSWER]
+  D) Sets can be defined recursively
+
+Verified Answer: Functions cannot be defined recursively
+
+-------------------------------------------------------
+
+Question 425 (ID: 425):
+The operations of intersection and union on sets are commutative
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+  C) Depends on the sets given
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 426 (ID: 426):
+The power set of a set A is the set of all subsets of A, denoted P(A).
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 427 (ID: 427):
+What is the output state of an OR gate if the inputs are 0 and 1?
+
+Options:
+  A) 0
+  B) 1 [CORRECT ANSWER]
+  C) 2
+  D) 3
+
+Verified Answer: 1
+
+-------------------------------------------------------
+
+Question 428 (ID: 428):
+The product of the positive integers from 1 to n is called:
+
+Options:
+  A) Factorial of n (n!) [CORRECT ANSWER]
+  B) Multiplication
+  C) Permutation
+  D) Combination
+
+Verified Answer: Factorial of n (n!)
+
+-------------------------------------------------------
+
+Question 429 (ID: 429):
+The inverse of given relation R = {(1,1),(1,2),(1,4),(3,4),(4,1)} is
+
+Options:
+  A) {(1,1),(2,1),(4,1),(2,3)} [CORRECT ANSWER]
+  B) {(1,1),(1,2),(4,1),( 4,3),(1,4)}
+  C) {(1,1),(2,1),(4,1),(4,3),(1,4)}
+
+Verified Answer: {(1,1),(2,1),(4,1),(2,3)}
+
+-------------------------------------------------------
+
+Question 430 (ID: 430):
+The properties of being symmetric and being antisymmetric are:
+
+Options:
+  A) Not negative of each other [CORRECT ANSWER]
+  B) Negative of each other
+  C) Opposites
+  D) Mutually exclusive
+
+Verified Answer: Not negative of each other
+
+-------------------------------------------------------
+
+Question 431 (ID: 431):
+Let A = {a, b, c} and R = {(a, c), (b, b), (c, a)} be a relation on A. Then R is:
+
+Options:
+  A) Symmetric [CORRECT ANSWER]
+  B) Reflexive
+  C) Transitive
+  D) Antisymmetric
+
+Verified Answer: Symmetric
+
+-------------------------------------------------------
+
+Question 432 (ID: 432):
+Let A= {1, 2, 3, 4} and R = {(1, 1), (2, 2), (3, 3),(4,4)} then
+
+Options:
+  A) R is symmetric
+  B) R is anti symmetric
+  C) R is transitive
+  D) R is reflexive [CORRECT ANSWER]
+  E) All given options are true
+
+Verified Answer: R is reflexive
+
+-------------------------------------------------------
+
+Question 433 (ID: 433):
+The contrapositive of the conditional statement p → q is:
+
+Options:
+  A) ~q → ~p [CORRECT ANSWER]
+  B) ~p → ~q
+  C) q → p
+  D) p ∧ ~q
+
+Verified Answer: ~q → ~p
+
+-------------------------------------------------------
+
+Question 434 (ID: 434):
+In Boolean addition, 1 + 1 equals:
+
+Options:
+  A) 1 [CORRECT ANSWER]
+  B) 2
+  C) 0
+  D) 10
+
+Verified Answer: 1
+
+-------------------------------------------------------
+
+Question 435 (ID: 435):
+The same element can never appear twice in a set.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 436 (ID: 436):
+The statement p →q ≡ ~p ∨ q ≡ ~(p ∧ ~q)
+
+describes
+
+Options:
+  A) Commutative Law [CORRECT ANSWER]
+  B) Implication Laws
+  C) Exportation Law
+  D) Equivalence
+
+Verified Answer: Commutative Law
+
+-------------------------------------------------------
+
+Question 437 (ID: 437):
+If two sets are not equal, then one must be a subset of the other.
+
+Options:
+  A) False [CORRECT ANSWER]
+  B) True
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 438 (ID: 438):
+If f and g are two one-to-one functions, then their composition (g ∘ f) is:
+
+Options:
+  A) One-to-one [CORRECT ANSWER]
+  B) Not one-to-one
+  C) Constant
+  D) Undefined
+
+Verified Answer: One-to-one
+
+-------------------------------------------------------
+
+Question 439 (ID: 439):
+If a set contains exactly m distinct elements where m denotes some non
+negative integer then the set is .
+
+Options:
+  A) Finite [CORRECT ANSWER]
+  B) Infinite
+  C) None of these
+
+Verified Answer: Finite
+
+-------------------------------------------------------
+
+Question 440 (ID: 440):
+If f(4) = 1 and g(1) = 4, then (f ∘ g)(1) =
+
+Options:
+  A) 1 [CORRECT ANSWER]
+  B) 3
+  C) 4
+  D) 0
+
+Verified Answer: 1
+
+-------------------------------------------------------
+
+Question 441 (ID: 441):
+If () = A, then () = B
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+  C) Cannot be determined
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 442 (ID: 442):
+If f(x) = x and g(x) = -2x, then (f + g)(x) =
+
+Options:
+  A) x [CORRECT ANSWER]
+  B) 3x
+
+Verified Answer: x
+
+-------------------------------------------------------
+
+Question 443 (ID: 443):
+Associative law of intersection for three sets A, B, C is:
+
+Options:
+  A) A ∩ (B ∩ C) = (A ∩ B) ∩ C [CORRECT ANSWER]
+  B) A ∪ (B ∪ C) = (A ∪ B) ∪ C
+  C) A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)
+  D) A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)
+
+Verified Answer: A ∩ (B ∩ C) = (A ∩ B) ∩ C
+
+-------------------------------------------------------
+
+Question 444 (ID: 444):
+Which term of the sequence 4,1,-2,... is -77
+
+Options:
+  A) 26 [CORRECT ANSWER]
+  B) 27
+  C) 28
+
+Verified Answer: 26
+
+-------------------------------------------------------
+
+Question 445 (ID: 445):
+A collection of rules indicating how to form new set objects from those
+already known to be in the set is called
+
+Options:
+  A) Base [CORRECT ANSWER]
+  B) Restriction
+  C) Recursion
+
+Verified Answer: Base
+
+-------------------------------------------------------
+
+Question 446 (ID: 446):
+is
+
+Options:
+  A) Arithmetic series [CORRECT ANSWER]
+  B) Geometric series
+  C) Arithmetic sequence
+  D) Geometric sequence
+
+Verified Answer: Arithmetic series
+
+-------------------------------------------------------
+
+Question 447 (ID: 447):
+For two sets A,B
+A ∩ (B U C) = (A ∩ B) U(A∩ C) is called
+
+Options:
+  A) Distributivity of intersection over union [CORRECT ANSWER]
+  B) Distributivity of union over intersection
+  C) None of these
+  D) Distributivity Law
+
+Verified Answer: Distributivity of intersection over union
+
+-------------------------------------------------------
+
+Question 448 (ID: 448):
+Check whether
+
+- Please choose one
+
+36 1 (mod 5)
+
+36 Modulus5 = 1 remainder
+
+33 3 (mod10)
+
+33 Modulus10 = 3 remainder
+
+Options:
+  A) Both are equivalent [CORRECT ANSWER]
+  B) Second one is equivalent but first one is not
+  C) First one is equivalent but second one is not
+
+Verified Answer: Both are equivalent
+
+-------------------------------------------------------
+
+Question 449 (ID: 449):
+The relation as a set of ordered pairs as shown in figure is
+
+Options:
+  A) {(a,b),(b,a),(b,d),(c,d)} [CORRECT ANSWER]
+  B) {(a,b),(b,a),(a,c),(b,a),(c,c),(c,d)}
+  C) {(a,b), (a,c), (b,a),(b,d), (c,c),(c,d)}
+  D) {(a,b), (a,c), (b,a),(b,d),(c,d)}
+
+Verified Answer: {(a,b),(b,a),(b,d),(c,d)}
+
+-------------------------------------------------------
+
+Question 450 (ID: 450):
+Null set is denoted by
+
+- Please choose one
+
+Options:
+  A) (phi) or { }. (pg 39) [CORRECT ANSWER]
+  B) A
+  C) None of these
+
+Verified Answer: (phi) or { }. (pg 39)
+
+-------------------------------------------------------
+
+Question 451 (ID: 451):
+If f(x)= x+1 and g(x)= 2 x 1 then (2f - 1g)x=
+2
+
+Options:
+  A) 2x x [CORRECT ANSWER]
+  B) 3x+2
+  C) 2 x2 2 x 1
+
+Verified Answer: 2x x
+
+-------------------------------------------------------
+
+Question 452 (ID: 452):
+a0 1, a1 2 and a2 3
+2
+
+then a j 
+j 0
+
+Options:
+  A) 6 [CORRECT ANSWER]
+  B) 2
+  C) 8
+
+Verified Answer: 6
+
+-------------------------------------------------------
+
+Question 453 (ID: 453):
+= ( A B )
+c
+
+c
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 454 (ID: 454):
+Let g be the function defined by g(x) = 3x + 2, then (g ∘ g)(x) =
+
+Options:
+  A) 9x + 8 [CORRECT ANSWER]
+  B) 9x + 6
+  C) 9x + 4
+  D) 6x + 4
+
+Verified Answer: 9x + 8
+
+-------------------------------------------------------
+
+Question 455 (ID: 455):
+The common fraction for the recurring decimal 0.818181... (0.81̄) is:
+
+Options:
+  A) 9/11 (or 81/99) [CORRECT ANSWER]
+  B) 81/100
+  C) 81/10
+  D) 8/9
+
+Verified Answer: 9/11 (or 81/99)
+
+-------------------------------------------------------
+
+Question 456 (ID: 456):
+The statement of the form p ~ p is:
+
+Options:
+  A) Tautology (Pg 10) [CORRECT ANSWER]
+  B) Contradiction
+  C) Fallacy
+
+Verified Answer: Tautology (Pg 10)
+
+-------------------------------------------------------
+
+Question 457 (ID: 457):
+Let A,B,C be the subsets of a universal set U.
+( A B) C
+Then
+is equal to:
+A (B C)
+
+Options:
+  A) A (B C) [CORRECT ANSWER]
+  B) Symmetric
+  C) Transitive
+  D) Reflexive
+  E) All of these
+  6) One-to-one
+  7) Onto
+  8) Both one-to-one and onto
+  9) None of these
+  10) Arithmetic series (Pg 145)
+  11) Geometric series
+  12) Arithmetic sequence
+  13) Geometric sequence
+  14) Reflexive and Symmetric
+  15) Symmetric and Transitive
+  16) Irreflexive and Symmetric
+  17) Irreflexive and Anti- Symmetric
+
+Verified Answer: A (B C)
+
+-------------------------------------------------------
+
+Question 458 (ID: 458):
+g(x)=x 2 -1
+If f(x)=2x+1,
+2
+
+Options:
+  A) x -1 [CORRECT ANSWER]
+  B) 2x 2 -1
+  C) 2x -1
+
+Verified Answer: x -1
+
+-------------------------------------------------------
+
+Question 459 (ID: 459):
+If ( A B ) = A, then ( A B ) = B
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+  C) Cannot be determined
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 460 (ID: 460):
+If a set A has 5 elements, then the power set P(A) contains how many elements?
+
+Options:
+  A) 32 [CORRECT ANSWER]
+  B) 25
+  C) 10
+  D) 5
+
+Verified Answer: 32
+
+-------------------------------------------------------
+
+Question 461 (ID: 461):
+The contrapositive of the conditional statement 'If it is raining, then I will take an umbrella' is:
+
+Options:
+  A) If I do not take an umbrella, then it is not raining [CORRECT ANSWER]
+  B) If it is not raining, then I will not take an umbrella
+  C) If I take an umbrella, then it is raining
+  D) It is not raining or I will take an umbrella
+
+Verified Answer: If I do not take an umbrella, then it is not raining
+
+-------------------------------------------------------
+
+Question 462 (ID: 462):
+A statement is also referred to as a
+
+Options:
+  A) Proposition (pg 4) [CORRECT ANSWER]
+  B) Conclusion
+  C) Order
+  D) None of these
+
+Verified Answer: Proposition (pg 4)
+
+-------------------------------------------------------
+
+Question 463 (ID: 463):
+The statement 'It is not raining if and only if roads are dry' is logically equivalent to:
+
+Options:
+  A) Roads are dry if and only if it is not raining [CORRECT ANSWER]
+  B) If roads are dry, then it is not raining
+  C) If it is not raining, then roads are dry
+  D) It is raining and roads are dry
+
+Verified Answer: Roads are dry if and only if it is not raining
+
+-------------------------------------------------------
+
+Question 464 (ID: 464):
+The logical equivalence ~(~p) ≡ p describes the:
+
+Options:
+  A) Double negative law [CORRECT ANSWER]
+  B) Commutative Law
+  C) Implication Law
+  D) Equivalence Law
+
+Verified Answer: Double negative law
+
+-------------------------------------------------------
+
+Question 465 (ID: 465):
+The logical equivalence (p ∧ ~q) → c ≡ p → q describes:
+
+Options:
+  A) Reductio ad absurdum [CORRECT ANSWER]
+  B) Commutative Law
+  C) Exportation Law
+  D) Implication Law
+
+Verified Answer: Reductio ad absurdum
+
+-------------------------------------------------------
+
+Question 466 (ID: 466):
+p q is logically equivalent to (p q) (qp)
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 467 (ID: 467):
+According to the definition of biconditional, what is the truth value of: '1 + 1 = 3 if and only if the sky is yellow'?
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 468 (ID: 468):
+A statement that is always true regardless of the truth values of the statement variables called Tautology.
+
+Options:
+  A) TRUE (Pg 10) [CORRECT ANSWER]
+  B) FALSE
+
+Verified Answer: TRUE (Pg 10)
+
+-------------------------------------------------------
+
+Question 469 (ID: 469):
+If p and q are statement variables, then the conjunction of p and q is “p and q” denoted as "p q ".
+
+Options:
+  A) TRUE FALSE [CORRECT ANSWER]
+  B) Question No: 3
+  C) For two sets A,B
+  D) A ∩ (B U C) = (A ∩ B) U(A∩ C) is called
+
+Verified Answer: TRUE FALSE
+
+-------------------------------------------------------
+
+Question 470 (ID: 470):
+X =a, X = 3, x = 5a
+
+Options:
+  A) Arithmetic sequence [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: Arithmetic sequence
+
+-------------------------------------------------------
+
+Question 471 (ID: 471):
+composition of a function is commutative operation
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 472 (ID: 472):
+real valued function is a function that assign
+
+Options:
+  A) to each number of its [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: to each number of its
+
+-------------------------------------------------------
+
+Question 473 (ID: 473):
+let f ratio R → R is one to one function then c, f, c does not equal to zero is also, one to one function
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 474 (ID: 474):
+if f and G are two one to one function then their composition that is gof is one two one
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 475 (ID: 475):
+the set Z of all integers is countable
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 476 (ID: 476):
+0.81 8181 is an infinite geometric series
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 477 (ID: 477):
+f (X) equal x square is not one to one function from R to R
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 478 (ID: 478):
+the process of defining an object in terms of smaller version of itself is called recursion
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 479 (ID: 479):
+Let p = 'I am hard working' and q = 'I am intelligent'. Then p ∧ q means:
+
+Options:
+  A) I am hard working and I am intelligent [CORRECT ANSWER]
+  B) I am NOT hard working BUT I am intelligent
+  C) I am hard working or I am intelligent
+  D) If I am hard working then I am intelligent
+
+Verified Answer: I am hard working and I am intelligent
+
+-------------------------------------------------------
+
+Question 480 (ID: 480):
+The converse of the conditional statement ‘IF I live in Lahore, then I live in Punjab’ is -----If I live in Punjab, then I live in Lahore 39.Every set can be represented in tabular form.
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 481 (ID: 481):
+Associative law of union for three sets is
+
+Options:
+  A) A U (B U C) = (A U B) U C [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: A U (B U C) = (A U B) U C
+
+-------------------------------------------------------
+
+Question 482 (ID: 482):
+P < - - > q is logically equivalently to
+
+Options:
+  A) (p - - > q) [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: (p - - > q)
+
+-------------------------------------------------------
+
+Question 483 (ID: 483):
+The inverse of the statement ‘if it is hot day, then I am at home’ is
+
+Options:
+  A) if it is NOT hot day, then I am NOT at home [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: if it is NOT hot day, then I am NOT at home
+
+-------------------------------------------------------
+
+Question 484 (ID: 484):
+Let A, B, C b subset of universal set U then the idempotent law is
+
+Options:
+  A) ANA=A [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: ANA=A
+
+-------------------------------------------------------
+
+Question 485 (ID: 485):
+Real valued function is a function that assigns
+
+Options:
+  A) to each member of [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: to each member of
+
+-------------------------------------------------------
+
+Question 486 (ID: 486):
+Range of relation {(0 ,10, (3, 22), (90, 34)} is
+
+Options:
+  A) {1, 22, 34} [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: {1, 22, 34}
+
+-------------------------------------------------------
+
+Question 487 (ID: 487):
+0.8181818181 is a infinite geometric series. 4
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 488 (ID: 488):
+An infinite sequence may have only a finite number of values.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 489 (ID: 489):
+Let p be true and q be false, then p^~q is _________.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 490 (ID: 490):
+There is no loop in the graph of an irreflexive relation.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 491 (ID: 491):
+The truth value of (3 + 1 = 4) ∧ (5 is an odd number) is:
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 492 (ID: 492):
+If the conditional statement p → q is False, what is the truth value of ~p → ~q?
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 493 (ID: 493):
+P is sufficient for q mean ‘p -> q’
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 494 (ID: 494):
+“p only if q” p -> q.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 495 (ID: 495):
+if p, q” p -> q is
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 496 (ID: 496):
+True if p then q” p -> q
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 497 (ID: 497):
+“not p unless q” p -> q
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 498 (ID: 498):
+q follows from p” p -> q
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 499 (ID: 499):
+‘’q if p” p->q
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 500 (ID: 500):
+“q whenever p” p -> q
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 501 (ID: 501):
+“q is necessary for p” p -> q
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 502 (ID: 502):
+What is the truth value of the sentence ? It rains if and only if there are clouds.
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 503 (ID: 503):
+What is the truth value of the sentence ? It rains if and only if it is a weekend day.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 504 (ID: 504):
+What is the truth value if the sentence?. You buy an ice cream cone if and only if it is hot outside
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 505 (ID: 505):
+What is the truth value of the sentence? You win the contest if and only if you hold the only winning ticket.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 506 (ID: 506):
+What is the truth value of the sentence?. You will be informed if and only if you read the news paper every day
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 507 (ID: 507):
+What is the truth value of the sentence?. The train runs late if and only if it is a day I take the train.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 508 (ID: 508):
+What is the truth value of the sentence?. This number is divisible by 6 if and only if it is divisible by both 2 and 3.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 509 (ID: 509):
+If p → q is False, then the truth value of p ↔ q is:
+
+Options:
+  A) False [CORRECT ANSWER]
+  B) True
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 510 (ID: 510):
+The logic Gate OR and AND are uniary operation {0,1}
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 511 (ID: 511):
+The logic gates OR and AND are binary operations on {0,1}
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 512 (ID: 512):
+The logical connectives ∨, ∧, →, ↔ are binary operations on the set {T, F}
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 513 (ID: 513):
+The set operations union ∪, intersection ∩ and set difference -, are binary operators on the power set P(A) of any set A.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 514 (ID: 514):
+Y+7 = 10 is a proposition?
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 515 (ID: 515):
+Grass is green is a proposition.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 516 (ID: 516):
+4 + 2 = 6 is a proposition.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 517 (ID: 517):
+4 + 2 = 7 is a proposition.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 518 (ID: 518):
+There are four fingers in a hand is a proposition
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 519 (ID: 519):
+Close the door is not a proposition.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 520 (ID: 520):
+x is greater than 2 is not a proposition.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 521 (ID: 521):
+He is very rich is not a proposition.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 522 (ID: 522):
+Let p be True and q be True, then (~p AND q) is
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 523 (ID: 523):
+If p=true and q=true then the truth value of p XOR q will be _____.
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 524 (ID: 524):
+If p=False and q=false then the truth value of p XOR q will be _____.
+
+Options:
+  A) True
+  B) False [CORRECT ANSWER]
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 525 (ID: 525):
+If p=true and q=false then the truth value of p XOR q will be _____.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 526 (ID: 526):
+A graph of a function f is onto iff every horizontal line intersects the graph in at least one point.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 527 (ID: 527):
+If n is even, then Cn = 2 and if n is odd, then Cn = 0. Hence, the sequence oscillates endlessly between 2 and 0.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 528 (ID: 528):
+“+” and “.” are binary operations on the set of natural numbers N.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 529 (ID: 529):
+“-” is not a binary operation on N.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 530 (ID: 530):
+“÷” is a binary operation on the set of non-zero rational numbers Q-{0}, but not a binary operation on Z.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 531 (ID: 531):
+In general n!=n(n-1)! For all integers n
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 532 (ID: 532):
+No set is a proper subset of itself (Every set is not a proper subset of itself).
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 533 (ID: 533):
+Every set is a subset of itself
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 534 (ID: 534):
+The set Z all integers is countable
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 535 (ID: 535):
+AnB = An integer n is even if, and only if, n = 2k for some integer k.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 536 (ID: 536):
+An integer n is odd if, and only if, n = 2k + 1 for some integer k.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 537 (ID: 537):
+An integer n is prime if, and only if, n > 1 and for all positive integers r and s, if n = r·s, then r = 1 or s = 1.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 538 (ID: 538):
+An integer n > 1 is composite if, and only if, n = r·s for some positive integers r and s with r ≠ 1 and s ≠ 1.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 539 (ID: 539):
+A real number r is rational if, and only if, a b for some integers a and b with b≠0.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 540 (ID: 540):
+If n and d are integers and d ≠0, then d divides n, written d | n if, and only if, n = d.k for some integers k.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 541 (ID: 541):
+An integer n is called a perfect square if, and only if, n = k2 for some integer k.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 542 (ID: 542):
+Every set can be represented in tabular (roster) form.
+
+Options:
+  A) False [CORRECT ANSWER]
+  B) True
+
+Verified Answer: False
+
+-------------------------------------------------------
+
+Question 543 (ID: 543):
+f: R+→R defined by f(x) = log x is a real valued function
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 544 (ID: 544):
+g:R →R defined by g(x) = ex is a real valued function of a real variable.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 545 (ID: 545):
+The inverse of statement ‘if it is pleasant outside, then I go to the park’ is
+
+Options:
+  A) If it is NOT pleasant outside, then I do NOT go to the park [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: If it is NOT pleasant outside, then I do NOT go to the park
+
+-------------------------------------------------------
+
+Question 546 (ID: 546):
+The process of defining an object in terms of smaller versions ofitself is . 1⁄2 called recursion.
+
+Options:
+  A) True [CORRECT ANSWER]
+  B) False
+
+Verified Answer: True
+
+-------------------------------------------------------
+
+Question 547 (ID: 547):
+If first term of a geometric sequence is 2 and common ratio is 1⁄2,then
+
+Options:
+  A) 3rd ter, of sequence.1⁄4 [CORRECT ANSWER]
+  B) None of these
+
+Verified Answer: 3rd ter, of sequence.1⁄4
+
+-------------------------------------------------------
+

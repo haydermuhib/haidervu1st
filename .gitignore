@@ -1,0 +1,13 @@
+# Raw PDF past paper folders (~1GB)
+CS101 - Introduction to Computing/
+ENG101 - English Comprehension/
+ISL202 - Islamic Studies/
+MTH202 - Discrete Mathematics/
+PHY101 - Physics/
+STA301 - Statistics and Probability/
+
+# Environment and cache
+__pycache__/
+*.pyc
+.taste-skill/
+.vercel/

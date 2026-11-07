@@ -1,0 +1,128 @@
+[
+  {
+    "id": "ISL202-SUBJ-001",
+    "question": "How do you explain the concept of Ahadith al-Qudsi (Divine Traditions) and their difference from normal Hadith?",
+    "answer": "1. Definition: Hadith Qudsi (Sacred or Divine Hadith) is a tradition where the Prophet Muhammad (PBUH) relates words or meaning directly revealed by Allah Almighty, expressed in the Prophet's own phrasing (e.g., 'Allah the Almighty says...').\n2. Difference from Holy Quran: The Quran is the literal, verbatim word of Allah (both words and meaning), recited in Salah, inimitable (Mu'jizah), and preserved with absolute Tawatur (mass transmission). Hadith Qudsi's words belong to the Prophet, it cannot be recited in Salah, and does not have the unique miraculous challenge of the Quran.\n3. Difference from Hadith Nabawi: A standard Hadith Nabawi contains both the words and meaning from the Prophet (PBUH) guided by divine revelation, dealing with general life, rulings, and biography, whereas Hadith Qudsi deals predominantly with spiritual, divine attributes, divine mercy, and direct address from Allah to His servants.",
+    "marks": 5,
+    "topic": "Hadith Sciences & Classification"
+  },
+  {
+    "id": "ISL202-SUBJ-002",
+    "question": "How do you explain the concept of Asbab al-Nuzul (Occasions of Revelation) and its importance in Quranic exegesis?",
+    "answer": "1. Definition: Asbab al-Nuzul refers to the historical events, contexts, or direct questions from companions or opponents that occasioned the revelation of specific verses or Surahs of the Holy Quran.\n2. Importance in Tafsir: Understanding the background of revelation prevents misinterpretation, explains the underlying legal wisdom (Hikmah), clarifies whether a ruling is general ('Aamm) or specific (Khaass), and eliminates apparent contradictions between texts.\n3. Classic Authorities: Major classical reference works documenting Asbab al-Nuzul include Imam Al-Wahidi's 'Asbab al-Nuzul' and Imam Al-Suyuti's 'Lubab al-Nuqul fi Asbab al-Nuzul'.",
+    "marks": 5,
+    "topic": "Quranic Studies & Tafseer"
+  },
+  {
+    "id": "ISL202-SUBJ-003",
+    "question": "How do you explain the concept of Fiqh (Islamic Jurisprudence) and its importance in practical Muslim life?",
+    "answer": "1. Literal and Technical Meaning: Literally, Fiqh means 'deep understanding and comprehension'. Technically in Islamic law, it is the science of deriving practical Shari'ah rulings from detailed scriptural evidences (Quran and Sunnah).\n2. Four Primary Sources: (a) The Holy Quran, (b) The Prophetic Sunnah, (c) Ijma (consensus of scholarly jurists), and (d) Qiyas (analogical deduction).\n3. Practical Significance: Fiqh categorizes all human actions into five legal values (Al-Ahkam al-Khamsah): Fard (Obligatory), Mandub/Mustahabb (Recommended), Mubah (Permissible), Makruh (Disliked), and Haram (Forbidden), guiding Muslims to live in total obedience to divine will.",
+    "marks": 5,
+    "topic": "Islamic Jurisprudence (Usul al-Fiqh)"
+  },
+  {
+    "id": "ISL202-SUBJ-004",
+    "question": "How do you explain the concept of Ijtihad (Independent Reasoning) and its significance in modern times?",
+    "answer": "1. Definition: Ijtihad is the utmost intellectual exertion by a qualified Islamic jurist (Mujtahid) to deduce legal rulings on novel or unstated issues from the core principles of the Quran and Sunnah.\n2. Qualifications of a Mujtahid: Profound mastery of the Arabic language, deep comprehension of Quranic exegesis, extensive knowledge of Sunnah and Hadith authentication, mastery of Usul al-Fiqh, and deep awareness of contemporary societal realities (Maqasid al-Shari'ah).\n3. Modern Significance: Ijtihad ensures Islam remains a dynamic, living, and universal code of conduct, addressing modern bioethics, artificial intelligence, Islamic banking and finance, organ transplantation, and digital commerce.",
+    "marks": 5,
+    "topic": "Islamic Jurisprudence (Usul al-Fiqh)"
+  },
+  {
+    "id": "ISL202-SUBJ-005",
+    "question": "How do you explain the concept of Nasikh and Mansukh (Abrogating and Abrogated Verses) in the Holy Quran?",
+    "answer": "1. Definition: Naskh literally means removal, abrogation, or transcription. In Usul al-Tafsir, it refers to the divine lifting or replacement of a preceding legal ruling by a later revealed verse during the era of revelation.\n2. Divine Wisdom: It demonstrates the gradual pedagogic methodology of Islam (e.g., the progressive prohibition of intoxicants in stages, and changing the Qiblah from Jerusalem to the Ka'bah in Makkah), accommodating human psychological readiness.\n3. Categories: (a) Ruling abrogated but text remains (the most common type), (b) Text abrogated but ruling remains, and (c) Both text and ruling abrogated.",
+    "marks": 5,
+    "topic": "Quranic Studies & Tafseer"
+  },
+  {
+    "id": "ISL202-SUBJ-006",
+    "question": "How do you explain the concept of Qiyas (Analogical Reasoning) and its four essential pillars?",
+    "answer": "1. Definition: Qiyas is the process of applying the Shari'ah ruling of an original known case (Asl) to a new case (Far') because both share the same underlying effective legal cause ('Illah).\n2. Four Pillars of Qiyas:\n   - Asl: The original case established by primary text (e.g., wine/khamr mentioned in Quran).\n   - Far': The new subsidiary issue lacking explicit text (e.g., modern chemical narcotics, LSD).\n   - Hukm: The established ruling of the original case (e.g., strict prohibition / Haram).\n   - 'Illah: The common underlying cause or ratio decidendi (e.g., intoxication and impairment of intellect).\n3. Scholarly Acceptance: Accepted as a valid secondary source of law by the four major Sunni schools of jurisprudence.",
+    "marks": 5,
+    "topic": "Islamic Jurisprudence (Usul al-Fiqh)"
+  },
+  {
+    "id": "ISL202-SUBJ-007",
+    "question": "How do you explain the concept of Sanad (Chain of Transmission) and its importance in Hadith criticism?",
+    "answer": "1. Definition: Sanad (or Isnad) is the unbroken chronological chain of transmitters/narrators who conveyed the text (Matn) of a Hadith from one generation to the next back to the Holy Prophet Muhammad (PBUH).\n2. Criteria for Authenticity: For a Sanad to be Sahih (authentic), it requires: (a) Ittisal al-Sanad (unbroken continuity), (b) 'Adalah (probity, integrity, and righteousness of each narrator), (c) Dabt (accurate precision and retention in memory and writing), (d) Absence of Shudhudh (contradiction with stronger narrations), and (e) Absence of 'Illah Qadihah (hidden defects).\n3. Ibn al-Mubarak's Maxim: 'The Isnad is part of the religion; were it not for the Isnad, anyone could say whatever they wished.'",
+    "marks": 5,
+    "topic": "Hadith Sciences & Classification"
+  },
+  {
+    "id": "ISL202-SUBJ-008",
+    "question": "How do you explain the concept of Shurb (Intoxicants/Wine) and its gradual prohibition in Islam?",
+    "answer": "1. Gradual Legislative Approach: Islam addressed deeply ingrained pre-Islamic addictions through progressive pedagogical revelation across four stages:\n   - Stage 1 (Surah An-Nahl 16:67): Mentioning that people extract intoxicants and wholesome food from dates and grapes, hinting at a difference.\n   - Stage 2 (Surah Al-Baqarah 2:219): Clarifying that in wine and gambling there is great sin and some profit, but their sin is far greater than their benefit.\n   - Stage 3 (Surah An-Nisa 4:43): Forbidding Muslims from approaching Salah while in a state of intoxication.\n   - Stage 4 (Surah Al-Ma'idah 5:90-91): Final, categorical prohibition declaring intoxicants (Khamr) an abomination from Satan's handiwork to be completely shunned.",
+    "marks": 5,
+    "topic": "Islamic Ethics & Social Rulings"
+  },
+  {
+    "id": "ISL202-SUBJ-009",
+    "question": "How do you explain the concept of Ihsan, Tazkiyah (Purification of the Soul), and Islamic Ethics?",
+    "answer": "1. Definition of Ihsan: In the Hadith of Jibreel, the Prophet (PBUH) defined Ihsan as: 'To worship Allah as if you see Him, and if you do not see Him, know that He surely sees you.' It represents the pinnacle of spiritual excellence.\n2. Tazkiyah al-Nafs: The Quran declares: 'Indeed, he succeeds who purifies it (the soul), and he fails who corrupts it' (Surah Ash-Shams 91:9-10). It involves cleansing the heart of spiritual diseases such as pride (Kibr), jealousy (Hasad), and hypocrisy (Nifaq).\n3. Ethical Fruit: Manifests externally in forbearance, honesty, mercy, humility, and maintaining justice even with adversaries.",
+    "marks": 5,
+    "topic": "Islamic Ethics & Character (Akhlaq)"
+  },
+  {
+    "id": "ISL202-SUBJ-010",
+    "question": "What are the four major Sunni schools of Fiqh (Madhahib) and their prominent founders?",
+    "answer": "1. Hanafi School: Founded by Imam Abu Hanifah Nu'man bin Thabit (80–150 AH). Emphasizes juristic preference (Istihsan), analogy (Qiyas), and practical legal reasoning; widely followed across South Asia, Turkey, and Central Asia.\n2. Maliki School: Founded by Imam Malik ibn Anas (93–179 AH). Renowned for prioritizing the living practice of the people of Madinah ('Amal Ahl al-Madinah) and public interest (Maslahah Mursalah).\n3. Shafi'i School: Founded by Imam Muhammad bin Idris al-Shafi'i (150–204 AH). Synthesized textualism and rationalism; authored the pioneering treatise on legal methodology 'Al-Risalah'.\n4. Hanbali School: Founded by Imam Ahmad bin Hanbal (164–241 AH). Characterized by strict adherence to textual Athar (direct Hadith narrations and companion precedents).",
+    "marks": 5,
+    "topic": "Islamic Jurisprudence (Usul al-Fiqh)"
+  },
+  {
+    "id": "ISL202-SUBJ-011",
+    "question": "What are the six canonical collections of Hadith (Al-Sihah al-Sittah) and their authors?",
+    "answer": "1. Sahih al-Bukhari: Compiled by Imam Muhammad bin Ismail al-Bukhari (d. 256 AH); universally recognized as the most authentic book after the Holy Quran.\n2. Sahih Muslim: Compiled by Imam Muslim bin al-Hajjaj al-Naysaburi (d. 261 AH); famous for strict thematic arrangement and sanad rigor.\n3. Sunan Abi Dawood: Compiled by Imam Abu Dawood Sulayman bin al-Ash'ath (d. 275 AH); specialized in legal ahadith (Ahadith al-Ahkam).\n4. Jami' at-Tirmidhi: Compiled by Imam Abu Isa Muhammad at-Tirmidhi (d. 279 AH); pioneer in grading hadith status (Hasan, Sahih, Gharib) and citing juristic differences.\n5. Sunan an-Nasa'i (Al-Mujtaba): Compiled by Imam Ahmad bin Shu'ayb an-Nasa'i (d. 303 AH); rigorous scrutiny of chains.\n6. Sunan Ibn Majah: Compiled by Imam Muhammad bin Yazid Ibn Majah (d. 273 AH); renowned for valuable legal chapters and rare narrations.",
+    "marks": 5,
+    "topic": "Hadith Sciences & Classification"
+  },
+  {
+    "id": "ISL202-SUBJ-012",
+    "question": "What are the five primary categories of legal rulings (Al-Ahkam al-Khamsah) in Islamic Law?",
+    "answer": "1. Fard / Wajib (Obligatory): Commanded by Shari'ah decisively. Performing it earns divine reward; omitting it incurs sin and punishment (e.g., 5 daily prayers, Zakah, Ramadan fasting).\n2. Mandub / Mustahabb (Recommended / Sunnah): Commended by Shari'ah without strict compulsion. Performing it brings reward; omitting it incurs no punishment (e.g., Tahajjud prayer, voluntary charity, miswak).\n3. Mubah (Permissible): Neutral acts where the lawgiver grants complete choice. Neither reward nor punishment attaches to the act itself (e.g., eating wholesome foods, lawful recreation).\n4. Makruh (Disliked / Reprehensible): Discouraged by Shari'ah without outright prohibition. Abstaining brings reward; committing it does not incur punishment (e.g., wasteful use of water in Wudu).\n5. Haram (Strictly Forbidden): Decisively prohibited. Committing it brings sin and punishment; abstaining out of obedience brings divine reward (e.g., murder, theft, usury/riba, adultery).",
+    "marks": 5,
+    "topic": "Islamic Jurisprudence (Usul al-Fiqh)"
+  },
+  {
+    "id": "ISL202-SUBJ-013",
+    "question": "What are the two primary methodologies of Quranic interpretation: Tafsir bil-Ma'thur and Tafsir bir-Ra'y?",
+    "answer": "1. Tafsir bil-Ma'thur (Interpretation by Tradition): Exegesis grounded strictly in transmitted evidence: interpreting the Quran by the Quran itself, followed by the authentic Sunnah, sayings of the Companions (Sahaba), and early successors (Tabi'een). Prominent example: 'Tafsir Ibn Kathir' and 'Tafsir al-Tabari'.\n2. Tafsir bir-Ra'y (Interpretation by Reasoned Deduction): Exegesis employing disciplined linguistic, legal, philosophical, and theological deduction while adhering strictly to Arabic grammar and Islamic orthodoxy.\n3. Praiseworthy vs Blameworthy Ra'y: Permissible Ra'y (Mahmood) is grounded in deep Arabic knowledge and orthodox principles; blameworthy Ra'y (Madhmoom) relies purely on arbitrary whim, heretical deviation, or unsupported personal opinion.",
+    "marks": 5,
+    "topic": "Quranic Studies & Tafseer"
+  },
+  {
+    "id": "ISL202-SUBJ-014",
+    "question": "What is the concept of Bid'ah (Religious Innovation) versus secular technological progress in Islam?",
+    "answer": "1. Religious Definition of Bid'ah: An innovation introduced into purely devotional acts ('Ibadat), religious doctrine ('Aqidah), or formal rituals that has no basis or precedent in the Quran, Sunnah, or early community, claiming to bring spiritual merit.\n2. Prophetic Warning: The Prophet (PBUH) stated: 'Whoever introduces into this affair of ours that which does not belong to it, it is rejected' (Sahih al-Bukhari).\n3. Distinction from Secular Inventions (Masalih Mursalah): Secular, scientific, technological, and educational advancements (e.g., printing presses, computers, medicine, modern transportation, internet communication) are not Bid'ah; rather, utilizing them to facilitate human wellbeing and disseminate truth is encouraged under Islamic principles.",
+    "marks": 5,
+    "topic": "Tauheed & Faith (Aqeedah)"
+  },
+  {
+    "id": "ISL202-SUBJ-015",
+    "question": "What is the concept of Matn (Text) and how is it evaluated in Hadith studies?",
+    "answer": "1. Definition: Matn is the actual textual statement, declaration, description, or action of the Holy Prophet (PBUH) that follows the chain of narration (Sanad).\n2. Criteria of Matn Criticism (Dirayat): Even if the Sanad is intact, jurists and traditionists examine the Matn to ensure:\n   - It does not directly contradict the explicit text of the Holy Quran.\n   - It does not contradict well-established, universally accepted Sunnah (Sunnah Mutawatirah).\n   - It does not contradict undeniable historical realities or sound reason.\n   - It does not promise disproportionate gigantic rewards or catastrophic punishments for minor mundane deeds.",
+    "marks": 5,
+    "topic": "Hadith Sciences & Classification"
+  },
+  {
+    "id": "ISL202-SUBJ-016",
+    "question": "What is the concept of Riba (Interest/Usury) and why is it strictly prohibited in Islamic economics?",
+    "answer": "1. Definition: Riba literally means excess or addition. Technically, it is any predetermined, guaranteed excess gain charged on a loan or credit transaction without providing equivalent counter-value or risk-sharing.\n2. Divine Prohibition: Surah Al-Baqarah (2:275-279) severely condemns usury, declaring that those who consume interest 'will not stand except as one stands whom Satan has confounded', and warns that persistence in interest is an open declaration of war against Allah and His Messenger.\n3. Socio-Economic Wisdom: Riba concentrates wealth in the hands of the rich, exploits vulnerable borrowers, discourages real entrepreneurial productive ventures, and leads to societal inequality. In its place, Islam establishes Zakah, trade, and profit-and-loss sharing (Mudarabah & Musharakah).",
+    "marks": 5,
+    "topic": "Islamic Economics & Social System"
+  },
+  {
+    "id": "ISL202-SUBJ-017",
+    "question": "What is the concept of Taqlid (Following a Qualified Jurist) and its role for ordinary Muslims?",
+    "answer": "1. Definition: Taqlid is the acceptance and implementation of legal rulings formulated by an expert Mujtahid without requiring the layperson to investigate the detailed scriptural derivations himself.\n2. Quranic Authority: Grounded in the Quranic command: 'So ask the people of the message (scholars) if you do not know' (Surah An-Nahl 16:43).\n3. Necessity and Role: Specialization is required in all complex disciplines (medicine, law, engineering). Since every lay believer cannot master Arabic philology, Hadith authentication, and Usul al-Fiqh, following an established school of Fiqh prevents chaotic misinterpretation, subjective whims, and ensures orderly communal adherence to Shari'ah.",
+    "marks": 5,
+    "topic": "Islamic Jurisprudence (Usul al-Fiqh)"
+  },
+  {
+    "id": "ISL202-SUBJ-018",
+    "question": "What is the definition of Tafseer and why is it essential for understanding the Holy Quran?",
+    "answer": "1. Linguistic and Technical Definition: Tafseer stems from 'F-S-R', meaning to uncover, clarify, or explain. Technically, it is the scholarly science devoted to elucidating the meanings, context, legal directives, and wisdom of the Quranic text.\n2. Why It Is Essential: The Quran was revealed in Classical Arabic, addressing various historical occasions over 23 years. Without Tafseer, readers may misapply metaphors, overlook abrogated rulings, confuse general injunctions with historical incidents, and miss profound theological nuances.\n3. Prerequisites of a Mufassir: Thorough mastery of Arabic linguistics, rhetoric (Balaghah), Hadith literature, Asbab al-Nuzul, Usul al-Fiqh, and theological orthodoxy.",
+    "marks": 5,
+    "topic": "Quranic Studies & Tafseer"
+  }
+]

@@ -1,0 +1,10 @@
+# Ignore large raw PDFs and build scripts for Vercel deployment
+CS101 - Introduction to Computing/
+ENG101 - English Comprehension/
+ISL202 - Islamic Studies/
+MTH202 - Discrete Mathematics/
+PHY101 - Physics/
+STA301 - Statistics and Probability/
+dumps/
+scripts/
+.taste-skill/

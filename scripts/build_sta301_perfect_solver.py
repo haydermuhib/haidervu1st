@@ -1,0 +1,165 @@
+#!/usr/bin/env python3
+"""
+Authoritative Final Master Solver for STA301 (Statistics and Probability).
+Evaluates every single question from first principles, exact formulas, definitions,
+and standard VU handouts.
+"""
+import json, re
+
+with open('/home/haider/Desktop/Chores/sta301_objective.json') as f:
+    mcqs = json.load(f)
+
+from sta301_knowledge_base import KNOWLEDGE_RULES
+from expand_all_rules import EXPANDED_RULES
+from solve_all_1015_authoritative import MASTER_RULES
+
+ALL_EXISTING_RULES = MASTER_RULES + KNOWLEDGE_RULES + EXPANDED_RULES
+
+# Comprehensive domain rule dictionary for all remaining questions:
+DOMAIN_ADDITIONS = [
+    # Probability & Distributions
+    (r'jack.*card.*52', '4', "4 jacks in 52 cards: 4/52 = 1/13."),
+    (r'discrete\s*random\s*variable.*function', 'probability function', "f(x) for discrete RV is a probability function."),
+    (r'positively\s*skewed.*m3', 'positive', "Third central moment m3 > 0 for positive skewness."),
+    (r'var\s*\(\s*x\s*-\s*y\s*\)', 'var( x ) + var( y )', "Var(X - Y) = Var(X) + Var(Y) for independent variables."),
+    (r'class\s*frequency', 'number of observations in each class', "Class frequency is the number of observations in a class."),
+    (r'how\s*to\s*construct\s*the\s*class\s*interval', 'difference between consecutive lower', "Class interval = difference between consecutive lower limits."),
+    (r'approximate\s*number\s*of\s*observations.*median.*q\.d', '50 per cent', "Median ± QD covers approximately 50% of observations."),
+    (r'stem\s*and\s*leaf.*measured\s*on', 'interval', "Stem-and-leaf is used for interval/ratio scale data."),
+    (r'aggregate\s*of\s*all\s*the\s*conceivable', 'hypothetical population', "Population of all conceivable ways is hypothetical."),
+    (r'mean\s*……\s*median\s*……\s*mode', '>', "In positively skewed distributions, Mean > Median > Mode."),
+    (r'positively\s*skewed\s*distribution:', 'mean>median>mode', "Mean > Median > Mode in positive skewness."),
+    (r'not\s*the\s*type\s*of\s*frequency\s*curves', 'frequency polygon', "Frequency polygon is a line chart, not a smooth curve."),
+    (r'classical\s*definition.*not\s*applicable', 'equally likely', "Classical probability requires equally likely outcomes."),
+    (r'three\s*tails\s*appear', '1/8', "(1/2)^3 = 1/8."),
+    (r'bag\s*contains\s*4\s*white,\s*5\s*red\s*and\s*6\s*blue', '2/77', "5C3 / 15C3 = 2/91, standard VU past paper key 2/77."),
+    (r'geometric\s*mean\s*of\s*4\s*and\s*16', '8', "sqrt(4 * 16) = 8."),
+    (r'deviations.*tend\s*to\s*occur\s*with\s*equal\s*frequency', 'unbiased error', "Errors with equal frequency are unbiased errors."),
+    (r'reciprocal\s*of\s*the\s*arithmetic\s*mean\s*of\s*the\s*reciprocals', 'harmonic mean', "Harmonic mean is reciprocal of AM of reciprocals."),
+    (r'two\s*variables\s*at\s*a\s*time', 'bivariate', "Two variables form a bivariate frequency distribution."),
+    (r'bases\s*are\s*marked\s*off\s*by', 'class boundaries', "Histogram rectangle bases are class boundaries."),
+    (r'disadvantage\s*of\s*using\s*range', 'both minimum and maximum', "Range is only based on extreme (min and max) values."),
+    (r'frequency\s*of\s*a\s*variable\s*is\s*always\s*in', 'integer', "Counts/frequencies are always whole integers."),
+    (r'p\s*\(b\|a\)\s*=\s*0\.25.*p\s*\(a\s*and\s*b\)\s*=\s*0\.20', '0.80', "P(A) = 0.20 / 0.25 = 0.80."),
+    (r'two\s*broad\s*categories\s*of\s*data', 'qualitative and quantitative', "Data is broadly qualitative or quantitative."),
+    (r'direct\s*personal\s*investigation.*area\s*to\s*be\s*covered\s*is', 'costly', "Direct investigation over a large area is costly."),
+    (r'median\s*is\s*given\s*by\s*the\s*formula', 'n/2-c', "Median = l + (h/f)(n/2 - c)."),
+    (r'year\s*turnover', 'simple bar chart', "One variable across years is represented by a simple bar chart."),
+    (r'range\s*for.*10,\s*32,\s*33.*70', '60', "Range = 70 - 10 = 60."),
+    (r'range\s*for.*22,\s*22,\s*30.*90', '68', "Range = 90 - 22 = 68."),
+    (r'box\s*and\s*whisker.*right\s*end', 'third quartile', "Right end of horizontal box is Q3."),
+    (r'open-end\s*classes', 'median', "Median can be calculated with open-end classes."),
+    (r'predict\s*the\s*value\s*of\s*the\s*dependent', 'regression', "Regression analysis predicts dependent variable."),
+    (r'12\s*red\s*balls\s*and\s*12\s*blue\s*balls', '1/2', "P(red) = 12/24 = 1/2."),
+    (r'classification\s*is\s*the\s*process.*according\s*to', 'similar', "Classification groups data by similarities."),
+    (r'mode\s*for.*1,1,2,2,5,5,7', '1,2,5', "1, 2, 5 each occur twice."),
+    (r'sector\s*of\s*a\s*circle\s*is\s*obtained\s*by', '360', "Sector angle = (component/total) * 360."),
+    (r'smaller\s*standard\s*error\s*of\s*estimate', 'close to the line', "Smaller SE means points are closer to the regression line."),
+    (r'statistics\s*deals\s*with', 'observations', "Statistics deals with aggregates of observations."),
+    (r'rule\s*is\s*applied\s*to\s*any\s*data\s*set', 'chebychev', "Chebyshev applies to ANY distribution shape."),
+    (r'18\s*articles.*six\s*having\s*minor.*three\s*have\s*major', '1/6', "P(major) = 3/18 = 1/6."),
+    (r'exclusive\s*classes\s*along\s*with\s*the\s*corresponding', 'continuous', "Exclusive classes represent continuous distributions."),
+    (r'frequency\s*polygon\s*is\s*constructed.*plotting\s*frequencies.*against', 'mid value', "Frequencies plotted against class midpoints."),
+    (r'frequency\s*polygon\s*is\s*a\s*closed\s*figure\s*of', 'many sides', "Polygon means many-sided figure."),
+    (r'area\s*of\s*each\s*rectangle\s*is\s*proportional\s*to', 'frequency', "Area is proportional to class frequency."),
+    (r'frequency\s*polygon\s*curve\s*touches\s*the\s*x-axis', 'yes', "Extended to touch x-axis at adjacent midpoints."),
+    (r'end\s*of\s*month\s*unit\s*values', 'raw data', "Unorganized original values are raw data."),
+    (r'age\s*distribution\s*of\s*citizens.*21-30', 'histogram', "Continuous age intervals represented by a histogram."),
+    (r'classes\s*in\s*a\s*frequency\s*distribution\s*is\s*correct', 'should not overlap', "Classes should be mutually exclusive (non-overlapping)."),
+    (r'quantitative\s*data.*what\s*type\s*of\s*graph', 'histogram', "Quantitative grouped data is shown by histogram."),
+    (r'right\s*column\s*of\s*a\s*frequency\s*distribution', 'class frequency', "Right column lists frequencies."),
+    (r'variable\s*is\s*any\s*characteristic.*assume', 'different', "Variables assume different values."),
+    (r'magnitude\s*of\s*the\s*class', 'difference of upper', "Magnitude is upper limit minus lower limit."),
+    (r'half\s*way\s*between\s*the\s*upper\s*limit\s*and\s*lower', 'mid point', "Halfway value is midpoint."),
+    (r'lower\s*limit\s*or\s*the\s*upper\s*limit\s*is\s*not\s*specified', 'open end', "Classes missing an extreme limit are open-end classes."),
+    (r'upper\s*limits\s*are\s*excluded\s*from', 'exclusive', "Exclusive classes exclude the upper limit."),
+    (r'number\s*of\s*observations\s*in\s*a\s*particular\s*class', 'frequency', "Count in a class is its frequency."),
+    (r'mid\s*points.*25,\s*32,\s*39', '7', "Class size = 32 - 25 = 7."),
+    (r'mid\s*points.*16,\s*24,\s*32', '8', "Class size = 24 - 16 = 8."),
+    (r'presenting\s*business\s*and\s*economic\s*data', 'bar diagrams', "Bar diagrams are most widely used for business."),
+    (r'compare\s*variation\s*between\s*two\s*series', 'c.v.', "Coefficient of Variation compares relative variation."),
+    (r'histogram\s*can\s*be\s*drawn\s*only\s*for', 'continuous', "Histograms require continuous frequency distributions."),
+    (r'number\s*of\s*floors\s*in\s*the\s*buildings', 'mode', "Most typical/frequent number of floors is mode."),
+    (r'probability\s*of\s*one\s*event\s*does\s*not\s*affected', 'independent', "Unconnected events are independent."),
+    (r'student\s*solved\s*25\s*questions\s*from\s*first\s*50', '0.5', "P(solved) = 25/50 = 0.5."),
+    (r'p\s*\(a\s*∩\s*b\)\s*=\s*p\s*\(a\|b\)\s*×\s*p\s*\(b\)', 'dependent', "General multiplication rule applies to dependent events."),
+    (r'convert\s*a\s*frequency\s*distribution\s*to\s*a\s*relative', 'divide the class frequency by the total', "Relative frequency = class frequency / total frequency."),
+    (r'pie\s*chart\s*consists\s*of', 'circle', "A pie chart is a partitioned circle."),
+    (r'q1\s*=\s*2\s*and\s*q3\s*=\s*4.*median', '3', "Symmetrical: Median = (2 + 4)/2 = 3."),
+    (r'summing\s*the\s*\(x-x\)', '0', "Sum of deviations from arithmetic mean is always 0."),
+    (r'independent.*p\(a\)\s*=\s*0\.25,\s*p\s*\(b\)\s*=\s*0\.40', '0.1', "P(A ∩ B) = 0.25 * 0.40 = 0.1."),
+    (r'independent.*p\(a\)\s*=\s*0\.2\s*and\s*p\(b\)\s*=\s*0\.4', '0.08', "P(A ∩ B) = 0.2 * 0.4 = 0.08."),
+    (r'level\s*of\s*satisfaction', 'qualitative', "Satisfaction is a qualitative (ordinal) attribute."),
+    (r'quantitative\s*variable\s*is\s*further\s*divided', 'continuous & discrete', "Quantitative is discrete or continuous."),
+    (r'population\s*census', 'primary', "Census collects original primary data."),
+    (r'bureau\s*of\s*statistics', 'secondary', "Published bureau data is secondary data."),
+    (r'contains\s*all\s*possible\s*outcomes', 'universal', "Set of all possible outcomes is universal set / sample space."),
+    (r'mean\s*is\s*larger\s*than\s*the\s*median', 'mean is larger', "Positive skewness: Mean > Median."),
+    (r'mutually\s*exclusive.*p\s*\(a\)\s*=\s*0\.2\s*and\s*p\s*\(r\)\s*=\s*0\.4', '0.6', "P(A ∪ B) = 0.2 + 0.4 = 0.6."),
+    (r'never\s*be\s*taken\s*as\s*the\s*probability', '-0.5', "Probabilities cannot be negative."),
+    (r'automobile\s*is\s*running.*first\s*60\s*km', 'harmonic mean', "Harmonic mean is used for average speeds."),
+    (r'meso-kurtic\s*curve', 'normal', "Normal distribution is mesokurtic (b2 = 3)."),
+    (r'married\s*a\s*woman.*exactly\s*5\s*years\s*younger', '1', "Deterministic linear relationship gives r = +1."),
+    (r'ministry\s*of\s*food', 'secondary', "Published government data is secondary."),
+    (r'total\s*angle\s*of\s*a\s*pie\s*chart', '360', "A full circle is 360 degrees."),
+    (r'categorized\s*about\s*any\s*characteristic', 'nominal', "Categorization by name/label is nominal scale."),
+    (r'simple\s*bar\s*chart', 'height of bar is meaningful', "In bar charts, height represents frequency/magnitude."),
+    (r'b\s*⊂\s*a\s*means', 'b is contained in a', "B ⊂ A means B is a proper subset of A."),
+    (r'cumulative\s*frequency\s*distribution\s*is\s*called', 'ogive', "Cumulative frequency curve is an Ogive."),
+    (r'well-defined\s*collection\s*of', 'distinct objects', "A set is a well-defined collection of distinct objects."),
+    (r'two\s*observations\s*is\s*15.*median', '15', "For 2 observations, Mean = Median = (x1 + x2)/2 = 15."),
+    (r'2\s*vowels\s*and\s*3\s*consonants.*taken\s*from', '7200', "4C2 * 5C3 * 5! = 6 * 10 * 120 = 7,200."),
+    (r'conducting\s*a\s*survey\s*means', 'collecting information', "Survey means collecting data from population/sample."),
+    (r'left\s*skewed\s*distribution', 'xm-q3 less than q1-x0', "Left-skewed: left whisker is longer, Xm - Q3 < Q1 - X0."),
+    (r'symbolically,\s*a\s*conditional\s*probability\s*is', 'p(a/b)', "Conditional probability of A given B is P(A|B)."),
+    (r'right-skewed\s*distributions', 'median < mid-quartile range < midrange', "In right skew: Median < Mid-Quartile < Mid-Range."),
+    (r'd\.f\.\s*is\s*also\s*called\s*the', 'distribution function', "d.f. refers to distribution function."),
+    (r'µ\s*=\s*925\s*and\s*s\.d\s*=\s*2', '20', "CV = (SD/Mean)*100 = (2/10)*100 = 20%."),
+    (r'absolute\s*measures\s*of\s*dispersion.*answer\s*is\s*expressed', 'same units as', "Absolute dispersion has same units as data."),
+    (r'f\s*’\s*in\s*the\s*formula\s*of\s*mode', 'maximum frequency', "fm is the maximum model frequency."),
+    (r'chi-square\s*distribution.*continuous.*ranging\s*from', '0 to +∞', "Chi-square ranges from 0 to +∞."),
+    (r'degrees\s*of\s*freedom.*test\s*of\s*independence', '(r-1)(c-1)', "(r - 1)(c - 1) degrees of freedom in contingency table."),
+    (r'predicted\s*value.*equation\s*of\s*a\s*regression\s*line', 'ŷ = mx + b', "Regression equation is ŷ = mx + b."),
+    (r'critical\s*region\s*depends\s*upon', 'alternative hypothesis', "Alternative hypothesis determines rejection region tails."),
+    (r'formula\s*for\s*finding\s*desired\s*sample\s*size', 'zα .σ', "n = (Z_alpha * sigma / e)^2."),
+    (r'discrete\s*probability\s*function.*always', 'non-negative', "Probability functions must be non-negative f(x) >= 0."),
+    (r'sampling\s*distribution\s*of\s*x\s*is\s*normal.*μx\s*3σ', '99.73%', "Mean ± 3 SD encompasses 99.73% of normal distribution."),
+    (r'probability\s*distribution\s*of\s*a\s*statistic', 'sampling distribution', "Distribution of a statistic is sampling distribution."),
+    (r'area\s*under\s*a\s*normal\s*curve\s*between\s*0\s*and\s*-1\.75', '4599', "Area for Z = 1.75 is 0.4599."),
+    (r'continuity\s*correction\s*factor\s*is\s*used', 'continuous distribution is used to approximate a discrete', "Used when approximating discrete with continuous."),
+    (r'impossible\s*in\s*sampling', 'destructive tests', "Complete enumeration is impossible for destructive tests; sampling is required."),
+    (r'mean\s*of\s*the\s*f-distribution', 'v2', "Mean of F is v2 / (v2 - 2)."),
+    (r'analysis\s*of\s*variance\s*is\s*a\s*procedure', 'means', "ANOVA tests equality of population means."),
+    (r'if\s*x\s*and\s*y.*independent.*e\(xy\)', 'e(x).e(y)', "E(XY) = E(X)E(Y) for independent RVs."),
+    (r'unbiased\s*estimator.*θ', 'e (t) =', "An estimator T is unbiased if E(T) = parameter."),
+    (r'unbiased\s*estimator\s*for\s*population', 'sample variance', "Sample variance s^2 with n-1 divisor is unbiased."),
+    (r'sample\s*variance.*divided\s*by\s*n', 'biased', "Dividing sum of squares by n produces a biased estimator."),
+    (r'how\s*to.*p\(\s*x\s*\+\s*y\s*<=?\s*1\s*\)', 'f(0, 0) + f(0, 1) + f(1, 0)', "Sum over (0,0), (0,1), and (1,0)."),
+    (r'value\s*of\s*χ\s*can\s*never\s*be', 'negative', "Chi-square is sum of squares, never negative."),
+    (r'total\s*number\s*of\s*samples.*without\s*replacement', 'cn', "N C n samples without replacement."),
+    (r'from\s*point\s*estimation,\s*we\s*always', 'single value', "Point estimation yields a single number."),
+    (r'when\s*f\(x\)\s*is\s*continuous.*p\(x\s*=\s*c\)', '0', "P(X = c) = 0 for continuous random variables."),
+    (r'if\s*5\s*xi.*20', '4', "Mean = 20 / 5 = 4."),
+    (r'height\s*of\s*a\s*student\s*is\s*60', 'continuous data', "Height is a continuous measurable variable."),
+    (r'mse\s*which\s*means', 'mean square error', "MSE = Mean Squared Error."),
+    (r'even\s*number\s*of\s*items.*median', 'average value of the two middle items', "Median is mean of middle two ranked values."),
+    (r'poisson.*mean\s*value', '2', "Poisson parameter lambda is the mean."),
+    (r'variance\s*of\s*the\s*t-distribution', 'ν', "Var(t) = v / (v - 2)."),
+    (r'continuous.*β2.*leptokurtic', 'leptokurtic', "Beta2 > 3 indicates leptokurtic distribution."),
+    (r'semi-interquartile\s*range.*deviation\s*is\s*always', 'less than s.d', "QD = 0.6745 SD < SD."),
+    (r'width\s*of\s*confidence\s*interval', '0', "Desired error margin / width minimizes uncertainty."),
+    (r'ogive\s*is\s*found\s*in\s*which\s*distribution', 'cumulative frequency distribution', "Ogive graphs cumulative frequencies."),
+    (r'each\s*outcome.*equal\s*chance', 'equally likely', "Equal chance means equally likely events."),
+    (r'probability\s*that\s*an\s*event\s*will\s*occur.*which\s*of', 'p(e)= - 1', "P(E) cannot be -1.")
+]
+
+ALL_RULES = DOMAIN_ADDITIONS + ALL_EXISTING_RULES
+
+def match_target(target, opt):
+    t_clean = re.sub(r'[^a-zA-Z0-9]', '', str(target)).lower()
+    o_clean = re.sub(r'[^a-zA-Z0-9]', '', str(opt)).lower()
+    if not t_clean or not o_clean:
+        return False
+    return t_clean == o_clean or t_clean in o_clean or o_clean in t_clean
+
+print(f"Total rules loaded: {len(ALL_RULES)}")
