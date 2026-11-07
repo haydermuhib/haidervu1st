@@ -2,8 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>CS101 Examination Studio — Virtual University</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Virtual University Examination Studio</title>
+  <script>
+    (function() {
+      const saved = localStorage.getItem('vu_theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -96,11 +102,34 @@
     .header-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 14px 24px;
+      padding: 12px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .header-top-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 16px;
+      width: 100%;
+    }
+    .header-right-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .course-bar {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .course-bar::-webkit-scrollbar {
+      display: none;
     }
     .brand-group {
       display: flex;
@@ -967,25 +996,160 @@
 
     @media (max-width: 860px) {
       .nav-tabs {
-        display: none;
+        display: none !important;
       }
       .mobile-dock {
-        display: flex;
+        display: flex !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--surface-card);
+        border-top: 1px solid var(--border);
+        z-index: 1000;
+        padding: 6px 4px max(8px, env(safe-area-inset-bottom));
+        justify-content: space-around;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+      }
+      .mobile-dock-btn {
+        flex: 1;
+        min-width: 0;
+        padding: 5px 2px;
+        font-size: 10.5px;
+        gap: 3px;
+      }
+      .mobile-dock-btn svg {
+        width: 18px;
+        height: 18px;
+      }
+      .mobile-dock-btn span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       main {
-        padding-bottom: 96px;
+        padding: 16px 14px 104px !important;
+        max-width: 100% !important;
+      }
+      .header-container {
+        padding: 10px 14px !important;
+        gap: 8px !important;
+      }
+      .brand-title {
+        font-size: 19px !important;
+      }
+      .brand-sub {
+        display: none !important;
+      }
+      .brand-mark {
+        width: 34px !important;
+        height: 34px !important;
+        font-size: 13px !important;
+      }
+      .course-bar {
+        padding-bottom: 4px;
+      }
+      .course-btn {
+        padding: 6px 13px !important;
+        font-size: 12.5px !important;
       }
       .metrics-row {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        margin-bottom: 16px !important;
+      }
+      .metric-panel {
+        padding: 12px 14px !important;
+      }
+      .metric-value {
+        font-size: 22px !important;
+      }
+      .metric-label {
+        font-size: 10.5px !important;
       }
       .study-card {
-        padding: 24px 20px;
+        padding: 18px 14px !important;
+        border-radius: var(--radius-md) !important;
       }
       .question-headline {
-        font-size: 18px;
+        font-size: 17px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 18px !important;
+      }
+      .option-row-btn {
+        padding: 12px 14px !important;
+        gap: 12px !important;
+        font-size: 14px !important;
+      }
+      .option-row-btn .opt-badge, .clay-option-letter {
+        width: 26px !important;
+        height: 26px !important;
+        font-size: 12px !important;
+      }
+      .clay-option-label {
+        word-break: break-word;
+        overflow-wrap: break-word;
+      }
+      .card-footer-actions {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px !important;
+      }
+      .card-footer-actions #q-star-btn {
+        grid-column: span 2 !important;
+        width: 100% !important;
+      }
+      .toolbar-bar {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+        margin-bottom: 16px !important;
+      }
+      .toolbar-bar > * {
+        width: 100% !important;
+        min-width: 0 !important;
+        flex: none !important;
+      }
+      .toolbar-bar .tag-pill {
+        align-self: flex-start !important;
       }
       .custom-select-wrap {
-        min-width: 100%;
+        min-width: 100% !important;
+      }
+      .exam-timer {
+        font-size: 22px !important;
+        text-align: center;
+      }
+      .palette-grid {
+        grid-template-columns: repeat(auto-fill, minmax(34px, 1fr)) !important;
+        gap: 6px !important;
+      }
+      .palette-btn {
+        height: 34px !important;
+        font-size: 12px !important;
+      }
+      .flashcard-stage {
+        max-width: 100% !important;
+      }
+      .flashcard-flipper {
+        min-height: 320px !important;
+      }
+      .flashcard-face {
+        padding: 20px 16px !important;
+      }
+      .subjective-card {
+        padding: 18px 14px !important;
+      }
+      .subjective-question-text {
+        font-size: 15px !important;
+      }
+      .subjective-answer-panel {
+        padding: 14px 12px !important;
+        font-size: 13.5px !important;
+      }
+      .modal-card {
+        padding: 22px 18px !important;
+        max-width: 92% !important;
       }
     }
 
@@ -996,7 +1160,7 @@
   <!-- HEADER -->
   <header>
     <div class="header-container">
-      <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+      <div class="header-top-row">
         <a href="#" class="brand-group">
           <div class="brand-mark">VU</div>
           <div>
@@ -1005,6 +1169,42 @@
           </div>
         </a>
 
+        <div class="header-right-actions">
+          <!-- Desktop Nav Tabs -->
+          <nav class="nav-tabs">
+            <button class="nav-tab-btn active" onclick="switchClayView('practice')">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+              Practice
+            </button>
+            <button class="nav-tab-btn" onclick="switchClayView('exam')">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 6 12 12 16 14"/></svg>
+              Timed Exam
+            </button>
+            <button class="nav-tab-btn" onclick="switchClayView('flashcards')">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 8h10M7 12h7"/></svg>
+              Flashcards
+            </button>
+            <button class="nav-tab-btn" onclick="switchClayView('explorer')">
+              <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Bank Explorer
+            </button>
+            <button class="nav-tab-btn" onclick="switchClayView('subjective')">
+              <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              Subjective Q&A
+            </button>
+            <button class="nav-tab-btn" onclick="switchClayView('bookmarks')">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              Starred (<span id="star-count-text">0</span>)
+            </button>
+          </nav>
+
+          <button class="icon-action-btn" id="theme-toggle-btn" onclick="toggleClayTheme()" title="Toggle Theme" aria-label="Toggle Theme">
+            <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="course-bar">
         <div class="course-pill-group">
           <button class="course-btn active" id="course-btn-cs101" onclick="switchSubject('CS101')">CS101</button>
           <button class="course-btn" id="course-btn-eng101" onclick="switchSubject('ENG101')">ENG101</button>
@@ -1014,38 +1214,6 @@
           <button class="course-btn" id="course-btn-sta301" onclick="switchSubject('STA301')">STA301</button>
         </div>
       </div>
-
-      <!-- Desktop Nav Tabs -->
-      <nav class="nav-tabs">
-        <button class="nav-tab-btn active" onclick="switchClayView('practice')">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-          Practice
-        </button>
-        <button class="nav-tab-btn" onclick="switchClayView('exam')">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 6 12 12 16 14"/></svg>
-          Timed Exam
-        </button>
-        <button class="nav-tab-btn" onclick="switchClayView('flashcards')">
-          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 8h10M7 12h7"/></svg>
-          Flashcards
-        </button>
-        <button class="nav-tab-btn" onclick="switchClayView('explorer')">
-          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          Bank Explorer
-        </button>
-        <button class="nav-tab-btn" onclick="switchClayView('subjective')">
-          <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-          Subjective Q&A
-        </button>
-        <button class="nav-tab-btn" onclick="switchClayView('bookmarks')">
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          Starred (<span id="star-count-text">0</span>)
-        </button>
-      </nav>
-
-      <button class="icon-action-btn" onclick="toggleClayTheme()" title="Toggle Theme">
-        <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
     </div>
   </header>
 
@@ -1229,52 +1397,54 @@
           <div class="select-menu-box" id="fc-topic-menu"></div>
         </div>
 
-        <div class="custom-select-wrap" id="fc-type-dropdown" style="width: 170px;">
-          <button class="select-trigger-btn" onclick="toggleClaySelect('fc-type-dropdown')">
-            <span id="fc-type-label">All (MCQs & T/F)</span>
-            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="select-menu-box" id="fc-type-menu">
-            <div class="select-option-item selected" onclick="selectFcType('ALL', 'All (MCQs & T/F)')">All (MCQs & T/F)</div>
-            <div class="select-option-item" onclick="selectFcType('MCQ', 'MCQs Only')">MCQs Only</div>
-            <div class="select-option-item" onclick="selectFcType('TF', 'True / False Only')">True / False Only</div>
-          </div>
-        </div>
-
         <span class="tag-pill" id="fc-counter-badge">Card 1 of 50</span>
       </div>
 
       <div class="flashcard-stage" onclick="flipFlashcard()">
         <div class="flashcard-flipper" id="active-flipper">
+          <!-- CARD FRONT: Pure Active Recall (No Multiple Choice Options) -->
           <div class="flashcard-face">
             <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
               <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
                 <span class="tag-pill tag-pill-id" id="fc-id-badge">ID #1</span>
-                <span class="tag-pill" id="fc-type-badge">MCQ</span>
                 <span class="tag-pill tag-pill-accent" id="fc-front-topic">Topic</span>
               </div>
-              <p style="font-size: 13px; color: var(--muted); margin: 0;">Tap anywhere to flip card</p>
+              <p style="font-size: 12px; color: var(--muted); margin: 0; font-weight: 500;">Active Recall Mode</p>
             </div>
-            <div class="question-headline" id="fc-front-question" style="margin-bottom: 12px;">Flashcard Question Text</div>
-            <div id="fc-front-options" style="display: flex; flex-direction: column; gap: 8px; width: 100%; margin: 8px 0 16px;"></div>
-            <div style="font-size: 13px; font-weight: 600; color: var(--accent); display: flex; align-items: center; gap: 6px;">
-              <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2;"><polyline points="1 4 1 10 7 10"/></svg>
-              Click to Flip
+
+            <div style="margin: auto 0; padding: 24px 0; text-align: center; width: 100%;">
+              <div class="question-headline" id="fc-front-question" style="margin-bottom: 0; font-size: 20px; line-height: 1.55;">Flashcard Question Text</div>
+            </div>
+
+            <div style="font-size: 13px; font-weight: 600; color: var(--accent); display: flex; align-items: center; justify-content: center; gap: 6px; padding-top: 12px; border-top: 1px dashed var(--border-subtle);">
+              <svg viewBox="0 0 24 24" style="width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2;"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+              Tap anywhere to reveal answer
             </div>
           </div>
+
+          <!-- CARD BACK: Verified Answer + Explanation -->
           <div class="flashcard-face back">
             <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
               <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
                 <span class="tag-pill tag-pill-id" id="fc-back-id-badge">ID #1</span>
-                <span class="tag-pill tag-pill-accent">Model Answer / Explanation</span>
+                <span class="tag-pill tag-pill-accent">Verified Solution</span>
               </div>
+              <p style="font-size: 12px; color: var(--muted); margin: 0; font-weight: 500;">Tap to flip back</p>
             </div>
-            <div style="margin: 20px 0;">
-              <div style="font-size: 13px; color: var(--muted); margin-bottom: 6px;">Verified Answer:</div>
-              <div style="font-family: var(--font-body); font-size: 20px; font-weight: 700; color: var(--success); line-height: 1.45;" id="fc-back-answer">Answer Text</div>
+
+            <div style="margin: 16px 0; text-align: left; width: 100%;">
+              <div style="font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 6px; font-weight: 600;">Verified Answer:</div>
+              <div style="font-family: var(--font-body); font-size: 22px; font-weight: 700; color: var(--success); line-height: 1.45; word-break: break-word;" id="fc-back-answer">Answer Text</div>
             </div>
-            <div class="expl-source" id="fc-back-ref">Reference notes</div>
-            <div style="font-size: 12px; color: var(--muted); margin-top: 12px;">Click to flip back to question</div>
+
+            <div class="explanation-panel" id="fc-back-expl" style="display: none; margin: 10px 0; text-align: left; width: 100%;"></div>
+
+            <div class="expl-source" id="fc-back-ref" style="margin-top: 8px; text-align: left; width: 100%;">Reference notes</div>
+
+            <div style="font-size: 13px; font-weight: 600; color: var(--subtle); display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: auto; padding-top: 12px; border-top: 1px dashed var(--border-subtle);">
+              <svg viewBox="0 0 24 24" style="width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2;"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+              Tap card to return to question
+            </div>
           </div>
         </div>
       </div>
@@ -1519,7 +1689,48 @@
         .replace(/"/g, '&quot;');
     }
 
+    /* THEME SWITCHER */
+    function getCurrentTheme() {
+      return document.documentElement.getAttribute('data-theme') || 
+        localStorage.getItem('vu_theme') || 
+        (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    }
+
+    function updateThemeIcon(theme) {
+      const btn = document.getElementById('theme-toggle-btn');
+      if (!btn) return;
+      if (theme === 'dark') {
+        // Sun icon for dark mode
+        btn.innerHTML = `<svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2;"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
+        btn.setAttribute('title', 'Switch to Light Theme');
+        btn.setAttribute('aria-label', 'Switch to Light Theme');
+      } else {
+        // Moon icon for light mode
+        btn.innerHTML = `<svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+        btn.setAttribute('title', 'Switch to Dark Theme');
+        btn.setAttribute('aria-label', 'Switch to Dark Theme');
+      }
+    }
+
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('vu_theme', theme);
+      updateThemeIcon(theme);
+    }
+
+    function toggleClayTheme() {
+      const current = getCurrentTheme();
+      const next = current === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+    }
+
+    function initTheme() {
+      const current = getCurrentTheme();
+      applyTheme(current);
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
+      initTheme();
       switchSubject(currentSubject, false);
     });
 
@@ -2173,9 +2384,6 @@ Correct: ${correct} · Incorrect: ${wrong} · Unanswered: ${unanswered}`,
       if (topic !== undefined) fcTopic = topic;
       flashcardList = ALL_QUESTIONS.filter(q => {
         if (fcTopic !== 'ALL' && q.topic !== fcTopic) return false;
-        const isTF = q.options && q.options.length === 2 && q.options.includes('True') && q.options.includes('False');
-        if (fcType === 'TF' && !isTF) return false;
-        if (fcType === 'MCQ' && isTF) return false;
         return true;
       });
       flashcardIdx = 0;
@@ -2187,42 +2395,38 @@ Correct: ${correct} · Incorrect: ${wrong} · Unanswered: ${unanswered}`,
       if (flipper) flipper.classList.remove('flipped');
 
       if (!flashcardList.length) {
-        document.getElementById('fc-front-question').textContent = 'No flashcards match the selected topic and question type.';
-        const optsContainer = document.getElementById('fc-front-options');
-        if (optsContainer) optsContainer.innerHTML = '';
+        document.getElementById('fc-front-question').textContent = 'No flashcards match the selected topic.';
         document.getElementById('fc-counter-badge').textContent = '0 Cards';
         return;
       }
 
       flashcardIdx = Math.max(0, Math.min(idx, flashcardList.length - 1));
       const q = flashcardList[flashcardIdx];
-      const isTF = q.options && q.options.length === 2 && q.options.includes('True') && q.options.includes('False');
 
       document.getElementById('fc-id-badge').textContent = `ID #${q.id}`;
       document.getElementById('fc-back-id-badge').textContent = `ID #${q.id}`;
-      const typeBadge = document.getElementById('fc-type-badge');
-      if (typeBadge) {
-        typeBadge.textContent = isTF ? 'True / False' : 'MCQ';
-      }
       document.getElementById('fc-front-topic').textContent = q.topic;
       document.getElementById('fc-front-question').textContent = q.question;
 
-      const optsContainer = document.getElementById('fc-front-options');
-      if (optsContainer) {
-        optsContainer.innerHTML = '';
-        if (q.options && q.options.length) {
-          q.options.forEach((opt, oIdx) => {
-            const div = document.createElement('div');
-            div.className = 'fc-opt-pill';
-            const letter = ['A', 'B', 'C', 'D', 'E'][oIdx] || String(oIdx + 1);
-            div.textContent = isTF ? opt : `${letter}. ${opt}`;
-            optsContainer.appendChild(div);
-          });
+      document.getElementById('fc-back-answer').textContent = q.answer || 'Answer verification pending';
+
+      const explEl = document.getElementById('fc-back-expl');
+      if (explEl) {
+        const explText = q.explanation || q.solution_notes || '';
+        if (explText && explText.trim()) {
+          explEl.innerHTML = `<div class="expl-header">Explanation & Reference Notes</div><div class="expl-text">${escapeHtml(explText)}</div>`;
+          explEl.style.display = 'block';
+        } else {
+          explEl.innerHTML = '';
+          explEl.style.display = 'none';
         }
       }
 
-      document.getElementById('fc-back-answer').textContent = q.answer || 'Answer verification pending';
-      document.getElementById('fc-back-ref').textContent = q.solution_notes || (q.sources && q.sources.length ? 'Sources: ' + q.sources.join(', ') : (currentSubject + ' Study Bank'));
+      const refEl = document.getElementById('fc-back-ref');
+      if (refEl) {
+        refEl.textContent = (q.sources && q.sources.length) ? 'Sources: ' + q.sources.join(', ') : (currentSubject + ' Study Bank');
+      }
+
       document.getElementById('fc-counter-badge').textContent = `Card ${flashcardIdx + 1} of ${flashcardList.length}`;
     }
 
